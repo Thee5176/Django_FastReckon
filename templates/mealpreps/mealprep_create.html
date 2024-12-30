@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Create PrepCard{% endblock title %}
+
+{% block content %}
+<h2 class="my-3">Create PrepCard</h2>
+<form method="post" class="form-control p-3">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <input class="btn btn-primary" type="submit" value="Create">
+</form>
+
+{% endblock content %}

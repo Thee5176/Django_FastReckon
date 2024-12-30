@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+{% load static %}
+{% block title %}Meal Prep List{% endblock title %}
+
+{% block content %}
+<h2 class="my-3">Mealprep List</h2>
+
+{% for prepcard in prepcard_list %}
+<div class="card m-3 container">
+    <div class="card-header row">{{ prepcard }}</div>
+    <div class="card-body row">
+        <span class="card-title row">
+            <span class="col-8">by {{ prepcard.owner }}</span>
+            <small class="col-4">Date: {{ prepcard.date }}</small>
+        </span>
+        <p class="card-text row">Prep Duration: {{ prepcard.prep_duration }}</p>
+        <div class="row container">
+            <p class="card-text row">Ingredient: </p>
+            {% include "partials/mealpreps/ingredient_table.html" %}
+        </div>
+    </div>
+    <div class="card-footer row justify-content-between">
+        <a class="btn btn-primary col-6" href="{{ prepcard.get_absolute_url }}">Update</a>
+        <a class="btn btn-danger col-6" href="{% url "mealprep_delete" prepcard.pk %}">Delete</a>
+    </div>
+</div>
+    {% endfor %}
+<div class="card m-3 container">
+    <div class="card-body row justify-content-middle">
+        <a class="btn btn-success" href="{% url "mealprep_create" %}">Create</a>
+    </div>
+</div>
+
+{% endblock content %}
