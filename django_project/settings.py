@@ -58,8 +58,9 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     # Local
     'accounts.apps.AccountsConfig',
+    'ingredients.apps.IngredientsConfig',
+    'prepcards.apps.PrepcardsConfig',
     'pages.apps.PagesConfig',
-    'mealpreps.apps.MealprepsConfig',
 ]
 
 MIDDLEWARE = [

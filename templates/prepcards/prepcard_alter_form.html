@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ view_name }} PrepCard {% endblock title %}
+
+{% block content %}
+<h2 class="my-3">{{ view_name }} PrepCard </h2>
+<form method="post" class="form-control p-3">
+    {% csrf_token %}
+    <div class="container">
+    {{ form | crispy }}
+    </div>
+    <div class="container">
+        {% for form in ingredient_formset %}
+        <div class="row">
+            {{ form | crispy }}
+        </div>
+        {% endfor %}
+    </div>
+    <input class="btn btn-primary" type="submit" value="{{ view_name }}">
+</form>
+
+{% endblock content %}

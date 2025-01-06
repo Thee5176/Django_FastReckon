@@ -17,18 +17,18 @@
         <p class="card-text row">Prep Duration: {{ prepcard.prep_duration }}</p>
         <div class="row container">
             <p class="card-text row">Ingredient: </p>
-            {% include "partials/mealpreps/ingredient_table.html" %}
+            {% include "partials/prepcards/ingredient_table.html" %}
         </div>
     </div>
     <div class="card-footer row justify-content-between">
         <a class="btn btn-primary col-6" href="{{ prepcard.get_absolute_url }}">Update</a>
-        <a class="btn btn-danger col-6" href="{% url "mealprep_delete" prepcard.pk %}">Delete</a>
+        <a class="btn btn-danger col-6" href="{% url "prepcard_delete" prepcard.pk %}">Delete</a>
     </div>
 </div>
     {% endfor %}
 <div class="card m-3 container">
     <div class="card-body row justify-content-middle">
-        <a class="btn btn-success" href="{% url "mealprep_create" %}">Create</a>
+        <a class="btn btn-success" href="{% url "prepcard_create" %}">Create</a>
     </div>
 </div>
 

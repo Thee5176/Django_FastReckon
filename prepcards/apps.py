@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MealprepsConfig(AppConfig):
+class PrepcardsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'mealpreps'
+    name = 'prepcards'
