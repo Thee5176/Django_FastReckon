@@ -7,26 +7,39 @@ from django.contrib.auth.mixins import (
 from django.views.generic import ListView
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
 
-from .models import PrepCard
-    
-class PrepCreateView(LoginRequiredMixin, CreateView):
-    model = PrepCard
-    template_name = "mealpreps/mealprep_create.html"
-    fields = ("date","prep_duration")
-    
-    # Auto add owner field
-    def form_valid(self, form):
-        form.instance.owner = self.request.user
-        return super().form_valid(form)
+from .models import PrepCard, IngredientUsed
+from .forms import PrepCardForm, IngredientFormSet
 
 class PrepListView(LoginRequiredMixin, ListView):
     model = PrepCard
     template_name = "mealpreps/mealprep_list.html"
 # TODO: turn template into calendar format
     
+class PrepCreateView(LoginRequiredMixin, CreateView):
+    form = PrepCard
+    template_name = "mealpreps/mealprep_alter_form.html"
+    success_url = reverse(prepcard_list)    
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["ingredient_formset"] = IngredientFormSet(query=IngredietUsed.objects.none())
+        return context
+    
+    # Auto add owner field
+    def form_valid(self, form):
+        form.instance.save(commit=False)
+        
+        formset = EngredientFormSet(self.request.POST)
+        if formset.is_valid():
+            formset.save(commit=False)
+            
+        form.instance.owner = self.request.user
+
+        return super().form_valid(form)
+    
 class PrepUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = PrepCard
-    template_name = "mealpreps/mealprep_create.html"
+    template_name = "mealpreps/mealprep_alter_form.html"
     fields = ("date","prep_duration")
     
     # Only creator can edit the card
