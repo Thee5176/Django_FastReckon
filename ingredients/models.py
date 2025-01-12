@@ -19,9 +19,9 @@ class Ingredient(models.Model):
     }
     
     name = models.CharField(max_length=50)
-    catagory = models.IntegerField(choices=INGREDIENT_CATAGORIES)
-    unit = models.IntegerField(choices=UNIT)
+    category = models.IntegerField(choices=INGREDIENT_CATAGORIES)
     cost_per_unit = models.DecimalField(max_digits=5, decimal_places=2)
+    unit = models.IntegerField(choices=UNIT)
     # nutritient = models.ForeignKey
     
     class Meta:

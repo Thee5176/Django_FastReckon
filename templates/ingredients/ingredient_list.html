@@ -1,0 +1,41 @@
+{% extends "_base.html" %}
+
+{% block title %}My Ingredient Table{% endblock title %}
+
+{% block content %}
+<div class="container justify-content-between row my-3">
+    <h2 class="col-8">My Ingredient Table</h2>
+    <a class="btn btn-success col-4" href="{% url "ingredient_create" %}">Add Ingredient</a>
+</div>
+<div
+class="table-responsive container"
+>
+    <table
+    class="table table-light"
+    >
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">category</th>
+                <th scope="col">price</th>
+                <th scope="col">unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ingredient in ingredient_list %}
+            <tr>
+                <td scope="row">{{ ingredient.name }}</td>
+                <td>{{ ingredient.category }}</td>
+                <td>{{ ingredient.cost_per_unit }} per {{ ingredient.unit }}</td>
+                <td>per {{ ingredient.unit }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan=4 class="text-danger"><small>No Ingredient Found</small></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

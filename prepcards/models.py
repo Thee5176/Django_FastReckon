@@ -5,7 +5,7 @@ from django.db import models
 from ingredients.models import Ingredient
 
 class PrepCard(models.Model):
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL , on_delete=models.CASCADE)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL , on_delete=models.CASCADE)
     date = models.DateField()
     duration = models.DurationField(null=True, blank=True)
     

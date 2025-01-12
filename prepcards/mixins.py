@@ -1,3 +1,5 @@
+from .forms import IngredientFormSet
+
 class CustomFormValidator: 
     def form_valid(self, form):
         prepcard = form.save(commit=False)
@@ -15,10 +17,10 @@ class CustomFormValidator:
                 self.get_context_date(form=form, formset=formset)
             )
         
-        prepcard.owner = self.request.user
+        prepcard.created_by = self.request.user
         prepcard.save()
         
-        for item in ingrediets:
+        for item in ingredients:
             item.save()
         
         return super().form_valid(form)
