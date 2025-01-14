@@ -110,11 +110,10 @@ class Entry(models.Model):
         related_name ="entries",
         on_delete=models.CASCADE
     )
-    
     code = models.ForeignKey(
         Account,
         related_name ="entries",
-        on_delete=models.CASCADE
+        on_delete=models.DO_NOTHING
     )
     entry_type = models.IntegerField(choices=ENTRY_TYPES)
     amount = models.DecimalField(max_digits=12, decimal_places=2)

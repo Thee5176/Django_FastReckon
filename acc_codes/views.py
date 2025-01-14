@@ -6,7 +6,8 @@ from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
 from .mixins import AccountColorCodeMixin, UserOwnedQuerysetMixin
-from transactions.models import Entry
+from acc_books.models import Book
+from transactions.models import Transaction, Entry
 
 class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
     model = Account
@@ -25,6 +26,11 @@ class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
             
         return queryset   
     
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+    
+    
 class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, DetailView):
     model = Account
     template_name = "acc_codes/account_detail.html"
@@ -39,9 +45,10 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
         
         obj = self.get_object()
         if obj:
-            context["entry_list"] = Entry.objects.select_related('transaction').filter(code=obj.id)
+            context["entry_list"] = Entry.objects.select_related('transaction__book').filter(code=obj.id)
+            book = Book.objects.get(transactions=context['entry_list'].first().transaction)
+            context["currency_sign"] = book.currency_sign
         return context
-    
     
 class AccountCreateView(LoginRequiredMixin, CreateView):
     model = Account
