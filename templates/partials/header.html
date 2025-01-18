@@ -19,15 +19,12 @@
         <ul class="container navbar-nav bs-auto mb-2 mgb-lg-0 justify-content-center">
           {% if user.is_authenticated %}
           <!--Nav Menu-->
-          {% include "partials/header_menu/journals.html" %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-cart-check"></i> Start Mealplanning
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item disabled" href="#">Meal Prep Card</a></li>
-            </ul>
-          </li>
+
+          <!--Journal Menu-->
+          {% include "partials/journals/nav_menu.html" %}
+        
+          <!--Mealprep Menu-->
+          {% include "partials/prepcards/nav_menu.html" %}
           <!--Nav User-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

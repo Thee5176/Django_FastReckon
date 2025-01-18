@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'acc_books.apps.AccBooksConfig',
     'acc_codes.apps.AccCodesConfig',
+    'ingredients.apps.IngredientsConfig',
+    'prepcards.apps.PrepcardsConfig',
     'pages.apps.PagesConfig',
     'transactions.apps.TransactionsConfig',
 ]
@@ -172,12 +174,13 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT = 'home'
+<<<<<<< HEAD
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
+=======
+>>>>>>> mealpreps-app
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_UNIQUEUSERNAME = True
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_UNIQUE_EMAIL = True
 
 SOCIALACCOUNT_AUTO_SIGNUP = True
 
