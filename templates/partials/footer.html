@@ -1,8 +1,16 @@
-<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+<ul class="nav justify-content-center border-bottom pb-3 my-5">
     <li class="nav-item"><a href="{% url "home" %}" class="nav-link px-2 text-muted">Home</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
     <li class="nav-item"><a href="{% url "about" %}" class="nav-link px-2 text-muted">About</a></li>
 </ul>
-<p class="text-center text-muted">© 2024 Company, Inc</p>
+<p class="text-center text-muted">© <span id='footer-year'></span> Company, Inc</p>
+
+<script>
+    var today = new Date()
+    var year = today.getFullYear()
+
+    var elYear = document.getElementById('footer-year')
+    elYear.textContent = year
+</script>

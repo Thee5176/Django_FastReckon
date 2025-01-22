@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import modelformset_factory
-
+from datetime import datetime
 from .models import Transaction, Entry
 
 class TransactionForm(forms.ModelForm):
@@ -8,8 +8,16 @@ class TransactionForm(forms.ModelForm):
         model = Transaction
         fields = ["date","book","description","shop","has_receipt"]
         widgets = {
-            'date': forms.TextInput(attrs={'class':'datepicker'})
+            'date': forms.DateInput(
+                format='%Y-%m-%d',
+                attrs={
+                    'class':'datepicker',
+                    'autocomplete':'off',
+                    'value':datetime.today().strftime('%Y-%m-%d')
+                },
+            )
         }
+        
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry

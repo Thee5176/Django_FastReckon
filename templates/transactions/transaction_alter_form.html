@@ -6,11 +6,11 @@
 <h2 class="my-3">{{ view_name }} Transaction</h2>
 <form method="post" class="form-control p-3">
     {% csrf_token %}
-    <div class="container">
+    <div class="container" id='transaction_form'>
         {{ form | crispy }}
     </div>
-    <div class="container">
-        <h2 class="my-3">{{ view_name }} Entries</h2>
+    <h2 class="my-3">{{ view_name }} Entries</h2>
+    <div class="container" id='entry_form'>
         {{ entry_formset.management_form }}
         {% for error in formset.non_form_errors %}
         <div class="alert alert-danger" role="alert">{{ error }}</div>
@@ -34,12 +34,38 @@
 </form>
 
 <script>
+    //JSON datepicker
     $(document).ready(function() {
         $('.datepicker').datepicker({
             format: 'yyyy-mm-dd',
             autoclose: true,
         });
     });
+    //Auto-fill Amount based on first entry form
+    var AmountInput = document.querySelectorAll('.form-row>span>div[id$="-amount"] input');
+    function updateAmount(myamount){
+        AmountInput.forEach(input => {
+            input.value = myamount;
+        });
+    };
+    //TODO: If filled all the transaction and want to edit first one???
+
+    var my_first_amount = document.getElementById('id_form-0-amount');
+    my_first_amount.addEventListener('change', function() {
+        updateAmount(this.value);
+    });
+
+    //Auto-fill EntryType first is DR and the rest is CR
+    var EntryTypeSelect = document.querySelectorAll('.form-row>span>div[id$="-entry_type"] select');
+    EntryTypeSelect.forEach((select,index) => {
+        if(index == 0){
+            option = select.options[1];
+        } else {
+            option = select.options[2];
+        }
+        option.selected = true;
+    });
+    
 </script>
     
 {% endblock content %}
