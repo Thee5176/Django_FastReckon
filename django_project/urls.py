@@ -25,9 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include('allauth.urls')),
     path("", include('pages.urls')),
-    #mealprep
-    path("ingredients/", include('ingredients.urls')),
-    path("prepcards/", include('prepcards.urls')),
     #accounting
     path("bookofaccounts/", include('acc_books.urls')),
     path("codeofaccounts/", include('acc_codes.urls')),
