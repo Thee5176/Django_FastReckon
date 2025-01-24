@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block title %}{{ view_name }} Transaction{% endblock title %}
 
 {% block content %}
@@ -40,32 +41,38 @@
             format: 'yyyy-mm-dd',
             autoclose: true,
         });
-    });
+    });  
+
     //Auto-fill Amount based on first entry form
     var AmountInput = document.querySelectorAll('.form-row>span>div[id$="-amount"] input');
-    function updateAmount(myamount){
+    function updateAmount(myamount) {
         AmountInput.forEach(input => {
             input.value = myamount;
         });
     };
-    //TODO: If filled all the transaction and want to edit first one???
 
-    var my_first_amount = document.getElementById('id_form-0-amount');
-    my_first_amount.addEventListener('change', function() {
+    var my_first_amount = document.getElementById('id_entries-0-amount');
+    my_first_amount.addEventListener('change', function () {
         updateAmount(this.value);
     });
-
+</script>
+{% if view_name == "Create" %}
+<script>
     //Auto-fill EntryType first is DR and the rest is CR
     var EntryTypeSelect = document.querySelectorAll('.form-row>span>div[id$="-entry_type"] select');
-    EntryTypeSelect.forEach((select,index) => {
-        if(index == 0){
+    EntryTypeSelect.forEach((select, index) => {
+        if (index == 0) {
             option = select.options[1];
         } else {
             option = select.options[2];
         }
         option.selected = true;
     });
-    
 </script>
-    
+{% else %}
+<script>
+    console.log("UpdateView: Don't Fill Dr/Cr")
+</script>
+{% endif %}
+
 {% endblock content %}

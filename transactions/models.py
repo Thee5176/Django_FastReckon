@@ -7,8 +7,77 @@ from django.utils.text import slugify
 from acc_books.models import Book
 from acc_codes.models import Account, AccountLevel3
 
+class MonthRefMixin(models.Model):
+    """
+    Mixin to handle intra_month_ref generation method
+    """
+    class Meta:
+        abstract = True
     
-class Transaction(models.Model):
+    def new_month_ref(self):
+        """
+        Automatically add intra_month_ref and slug
+        """
+        if not self.intra_month_ref:
+            # Filter ref for designated month
+            this_month = self.date.strftime("%m")
+            # Get latest transaction's ref for the same month
+            latest_ref = Transaction.objects.filter(date__month=this_month).aggregate(max_ref=Max('intra_month_ref'))
+            if latest_ref['max_ref']:
+                self.intra_month_ref = latest_ref['max_ref'] + 1
+            else:
+                self.intra_month_ref = 1
+
+class BalanceMixin(models.Model):
+    """
+    Mixin to handle data validation method (called by forms.py)
+    """
+    class Meta:
+        abstract = True
+        
+    # Entry Dr/Cr Validator   
+    def total_debits(self, entries=None):
+        if entries is None:
+            entries = self.entries.all()
+        return sum(entry.amount for entry in entries if entry.entry_type == 1)
+    
+    def total_credits(self, entries=None):
+        if entries is None:
+            entries = self.entries.all()
+        return sum(entry.amount for entry in entries if entry.entry_type == 2)
+
+    def is_balance(self, entries=None):
+        """Check if all associated 'entries' are Dr/Cr balanced."""
+        if entries is None:
+            entries = self.entries.all()
+        return self.total_debits(entries) == self.total_credits(entries)
+    
+    # calculate amount 
+    def total_amount(self, entries=None):
+        total = 0
+        if entries is None:
+            entries = self.entries.all()
+            
+        for entry in entries:          
+            total += entry.amount
+        return total/2
+
+class SlugMixin(models.Model):
+    class Meta:
+        abstract = True
+    
+    def update_slug(self):
+        """
+        create slug by concatenate created(year/month) with intra_month_ref(integer)
+        """
+        book = self.book.abbr
+        formatted_date = self.date.strftime("%y%m")
+        ref = self.intra_month_ref
+        latest_slug = slugify(f"{book}{formatted_date}-{ref}")
+        if self.slug != latest_slug :
+            self.slug = latest_slug
+
+class Transaction(MonthRefMixin, BalanceMixin, SlugMixin, models.Model):
     SHOPNAME = {
         1:"まいばすけっと",
         2:"OK",
@@ -37,59 +106,10 @@ class Transaction(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['date','intra_month_ref'], name='unique_intra_month_ref')
         ]
-    
-    def auto_narration(self):
-        pass
-        # self.description = f"Being {dr_account} {action_kw} by {cr_account}."
-        #dr/cr_account might be in list
-        #action_kw is determine by combination of account
-        
-    def total_debits(self):
-        entries = self.entries.all()
-        return sum(entry.amount for entry in entries if entry.entry_type == 1)
-    
-    def total_credits(self):
-        entries = self.entries.all()
-        return sum(entry.amount for entry in entries if entry.entry_type == 2)
-
-    def is_balance(self):
-        """Check if all associated 'entries' are Dr/Cr balanced."""
-        return self.total_debits() == self.total_credits()
-        
-    def total_amount(self):
-        total = 0
-        for entry in self.entries.all():          
-            total += entry.amount
-        return total/2
-            
-    def update_slug(self):
-        """
-        update slug by concatenate created(year/month) with intra_month_ref(integer)
-        """    
-        book = self.book.abbr
-        formatted_date = self.date.strftime("%y%m")
-        ref = self.intra_month_ref
-        latest_slug = slugify(f"{book}{formatted_date}-{ref}")
-        if self.slug != latest_slug :
-            self.slug = latest_slug
-            
-    def new_month_ref(self):
-        """
-        Automatically add intra_month_ref and slug
-        """
-        if not self.intra_month_ref:
-            # Filter ref for designated month
-            this_month = self.date.strftime("%m")
-            # Get latest transaction's ref for the same month
-            latest_ref = Transaction.objects.filter(date__month=this_month).aggregate(max_ref=Max('intra_month_ref'))
-            if latest_ref['max_ref']:
-                self.intra_month_ref = latest_ref['max_ref'] + 1
-            else:
-                self.intra_month_ref = 1
 
     def save(self, *args, **kwargs):
-        self.new_month_ref()
-        self.update_slug()
+        self.new_month_ref()    #from MonthRefMixin
+        self.update_slug()      #from SlugMixin
         super().save(*args, **kwargs)
     
     def get_absolute_url(self):

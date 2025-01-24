@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import modelformset_factory
+from django.forms import modelformset_factory, inlineformset_factory
 from datetime import datetime
 from .models import Transaction, Entry
 
@@ -23,5 +23,4 @@ class EntryForm(forms.ModelForm):
         model = Entry
         fields = ["code","entry_type", "amount"]
         
-EntryFormSet = modelformset_factory(Entry, form=EntryForm, extra=2)
-EntryFormSet_update = modelformset_factory(Entry, form=EntryForm, extra=0)
+EntryInlineFormSet = inlineformset_factory(Transaction, Entry, form=EntryForm, extra=0, min_num=2, can_delete=False, can_delete_extra=True)

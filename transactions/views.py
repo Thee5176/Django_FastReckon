@@ -6,9 +6,9 @@ from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormMixin
 from datetime import datetime
 
-from .forms import TransactionForm, EntryFormSet, EntryFormSet_update
-from .mixins import TransactionFormValidator
+from .forms import TransactionForm, EntryInlineFormSet
 from .models import Transaction, Entry
+from .mixins import TransactionFormValidator
 from acc_codes.mixins import UserOwnedQuerysetMixin
 
 class TransactionListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
@@ -50,7 +50,7 @@ class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormVi
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["entry_formset"] = EntryFormSet(queryset=Entry.objects.none())
+        context["entry_formset"] = EntryInlineFormSet(queryset=Entry.objects.none())
         context["view_name"] = "Create"
         return context
         
@@ -63,7 +63,7 @@ class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, Transaction
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         transaction = self.get_object()
-        context["entry_formset"] = EntryFormSet_update(queryset=Entry.objects.select_related('transaction').filter(transaction=transaction))
+        context["entry_formset"] = EntryInlineFormSet(instance=transaction)
         context["view_name"] = "Update"
         return context
     
