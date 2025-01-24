@@ -17,20 +17,17 @@ class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
         queryset = super().get_queryset()
         name = self.request.GET.get("name")
         code = self.request.GET.get("code")
-        
         if name:
             queryset = queryset.filter(name__icontains=name)
-              
         if code:
-            queryset = queryset.filter(code__startswith=code)
-            
+            queryset = queryset.filter(code__startswith=code) 
         return queryset   
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
-    
-    
+
+
 class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, DetailView):
     model = Account
     template_name = "acc_codes/account_detail.html"
@@ -39,17 +36,17 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
         queryset = super().get_queryset()
         queryset = queryset.select_related("level3__level2__level1")
         return queryset    
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        
+
         obj = self.get_object()
         if obj:
             context["entry_list"] = Entry.objects.select_related('transaction__book').filter(code=obj.id)
             book = Book.objects.get(transactions=context['entry_list'].first().transaction)
             context["currency_sign"] = book.currency_sign
         return context
-    
+
 class AccountCreateView(LoginRequiredMixin, CreateView):
     model = Account
     template_name = "acc_codes/account_alter_form.html"
