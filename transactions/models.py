@@ -130,7 +130,7 @@ class Entry(models.Model):
         related_name ="entries",
         on_delete=models.CASCADE
     )
-    code = models.ForeignKey(
+    code = models.ForeignKey( #change to "account"
         Account,
         related_name ="entries",
         on_delete=models.DO_NOTHING

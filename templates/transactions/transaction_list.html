@@ -4,7 +4,7 @@
 {% block title %}Transaction Records{% endblock title %}
 
 {% block content %}
-<div class="row my-3">
+<div class="row m-3 justify-content-between">
     <h2 class="text-muted col-8">Transaction List</h2>
     <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
 </div>
@@ -19,6 +19,6 @@
 <div
         class="container"
     >
-    {% include "transactions/table.html" %}
+    {% include "transactions/tran_table.html" %}
 </div>
 {% endblock content %}

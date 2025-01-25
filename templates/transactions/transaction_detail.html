@@ -3,7 +3,10 @@
 {% block title %}Transaction Detail{% endblock title %}
 
 {% block content %}
-<h2 class="my-3 text-muted">Transaction Detail</h2>
+<div class="row m-3 justify-content-between">
+    <h2 class="text-muted col-auto">Transaction Detail</h2>
+    <a class="btn btn-warning col-3" href="{% url "transaction_list" %}">Back to list</a>
+</div>
 <div class="container-fluid justify-content-begin">
     <p class="row">
         <span class="col-12">Book: {{ object.book }}</span>
@@ -18,30 +21,7 @@
     </p>
 </div>
 <div class="container table-responsive">
-    <div
-        class="table-responsive-md"
-    >
-        <table
-            class="table table-light"
-        >
-            <thead>
-                <tr>
-                    <th scope="col-2">Type</th>
-                    <th scope="col-4">Account</th>
-                    <th scope="col-4">Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for entry in entries %}
-                    <tr class="table-{ color_by_code }}">
-                        <th scope="row">{{ entry.entry_type }}</th>
-                        <td>{{ entry.code }}</td>
-                        <td>{{ entry.amount }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+    {% include "transactions/ent_table.html" %}
     <div class="row justify-content-between my-3">
         <a class="btn btn-primary col-4" href="{% url "transaction_update" object.slug %}">! Update Transaction</a>
         <a class="btn btn-danger col-4" href="{% url "transaction_delete" object.slug %}">- Delete Transaction</a>

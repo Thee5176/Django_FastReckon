@@ -1,3 +1,5 @@
+from django.shortcuts import redirect
+
 from .forms import TransactionForm, EntryInlineFormSet
 from .models import Transaction
 
@@ -47,13 +49,16 @@ class TransactionFormValidator:
             
             #Assign transaction before save to entries
             try:
-                for entry in new_entries:
+                for entry in all_entries:
                     entry.transaction = transaction
                     entry.save()   
             except Exception as e:
                 print("Error saving entry:", e)
-        
-        return super().form_valid(form)
+
+            # send list of account instance via session
+            self.request.session['account_list'] = [entry.code.code for entry in all_entries]
+            
+        return redirect('transaction_confirm', slug=transaction.slug)
         
     def form_invalid(self, form):
         """

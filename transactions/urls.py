@@ -6,12 +6,14 @@ from .views import (
     TransactionCreateView, 
     TransactionUpdateView, 
     TransactionDeleteView,
+    TransactionConfirmView,
 )
 
 urlpatterns = [
     path("", TransactionListView.as_view(), name="transaction_list"),
     path("create/", TransactionCreateView.as_view(), name="transaction_create"),
     path("<slug:slug>", TransactionDetailView.as_view(), name="transaction_detail"),
+    path("<slug:slug>/confirm/", TransactionConfirmView.as_view(), name="transaction_confirm"),
     path("<slug:slug>/update/", TransactionUpdateView.as_view(), name="transaction_update"),
     path("<slug:slug>/delete/", TransactionDeleteView.as_view(), name="transaction_delete"),
 ]

@@ -1,0 +1,26 @@
+<div class="table-responsive-md">
+    <table
+        class="table table-hover table-light align-middle"
+    >
+        <thead class="table-light">
+            <tr>
+                <th scope="col-2">Type</th>
+                <th scope="col-4">Account</th>
+                <th scope="col-4">Amount</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for entry in entries %}
+            <tr class="table-{ color_by_code }} position-relative">
+                <td>
+                    <a href="{% url "transaction_detail" entry.transaction.slug%}" class="stretched-link text-decoration-none text-uppercase text-dark">
+                    {{ entry.entry_type }}
+                    </a>
+                </td>
+                <td>{{ entry.code }}</td>
+                <td>{{ entry.amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Q
 from django.urls import reverse_lazy, reverse
-from django.views.generic import ListView, DetailView, FormView, View
+from django.views.generic import TemplateView, ListView, DetailView, FormView, View
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormMixin
 from datetime import datetime
@@ -9,6 +9,7 @@ from datetime import datetime
 from .forms import TransactionForm, EntryInlineFormSet
 from .models import Transaction, Entry
 from .mixins import TransactionFormValidator
+from acc_codes.models import Account
 from acc_codes.mixins import UserOwnedQuerysetMixin
 
 class TransactionListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
@@ -45,7 +46,6 @@ class TransactionDetailView(LoginRequiredMixin, UserOwnedQuerysetMixin, DetailVi
 
 class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormView):
     form_class = TransactionForm        
-    success_url = reverse_lazy("transaction_list")    
     template_name = "transactions/transaction_alter_form.html"
     
     def get_context_data(self, **kwargs):
@@ -57,7 +57,6 @@ class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormVi
 class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, TransactionFormValidator, UpdateView):
     model = Transaction
     form_class = TransactionForm
-    success_url = reverse_lazy("transaction_list")    
     template_name = "transactions/transaction_alter_form.html"
     
     def get_context_data(self, **kwargs):
@@ -71,7 +70,24 @@ class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, Transaction
         obj = self.get_object()
         return obj.created_by == self.request.user
     
+class TransactionConfirmView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+    model = Transaction
+    template_name = "transactions/confirm_account_balance.html"
 
+    def test_func(self):
+        self.account_list = self.request.session.get("account_list")
+        if self.account_list:
+            obj = self.get_object()
+        return obj.created_by == self.request.user
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.account_list:        # Session data loaded in test_func
+            context["account_list"] = Account.objects.filter(code__in=self.account_list)
+        transaction = self.get_object()
+        context["entries"] = transaction.entries.all()
+        return context
+    
 class TransactionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Transaction
     template_name = "transactions/transaction_delete.html"
