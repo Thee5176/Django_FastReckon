@@ -14,7 +14,10 @@
     <div class="container" id='entry_form'>
         {{ entry_formset.management_form }}
         {% for error in formset.non_form_errors %}
-        <div class="alert alert-danger" role="alert">{{ error }}</div>
+        <div class="alert alert-error" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ error }}
+        </div>
         {% endfor %}
         <table class="table-light">
             <hr />
