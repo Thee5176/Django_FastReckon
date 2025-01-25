@@ -6,9 +6,10 @@ class CustomUser(AbstractUser):
         ('M','Male'),
         ('F','Female'),
     ]
-    
+    # profile = 
+    # uuid = models.UUIDField(primary_key=True, unique=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
-    occupancy = models.CharField(max_length=50, null=True, blank=True)
+    occupation = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=50, null=True, blank=True)    #TODO:get dropdown choices
     annual_income = models.PositiveIntegerField(null=True, blank=True)
     
