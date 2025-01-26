@@ -50,7 +50,7 @@
         </header>
         <main class="min-vh-100">
             {% for message in messages %}
-                <div class="alert" role="alert">
+                <div class="alert" role="alert alert-dark alert-dismissible">
                     <strong>{% trans "Messages:" %} {{ message }}</strong>
                     <button type="button" class="btn-close btn-close-white" data-dismiss="alert" aria-label="Close"></button>
                 </div>

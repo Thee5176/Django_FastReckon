@@ -143,6 +143,3 @@ GitHub.sublime-settings
 
 # Docker
 docker-compose-prod.yml
-
-#development static directory
-static/*

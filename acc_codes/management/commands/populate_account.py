@@ -1,17 +1,21 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from django.conf import settings
-import os, sys
 import pandas as pd
-
+import os, sys
 from acc_codes.models import AccountLevel1, AccountLevel2, AccountLevel3, Account
 
 class AccountPopulator:
     # Prepare file path
-    level1_path = os.path.join(settings.BASE_DIR, "static/csv/level1.csv")
-    level2_path = os.path.join(settings.BASE_DIR, "static/csv/level2.csv")
-    level3_path = os.path.join(settings.BASE_DIR, "static/csv/level3.csv")
-    base_path   = os.path.join(settings.BASE_DIR, "static/csv/base.csv")
+    level1_path = os.path.join(settings.STATIC_ROOT, "csv/level1.csv")
+    level2_path = os.path.join(settings.STATIC_ROOT, "csv/level2.csv")
+    level3_path = os.path.join(settings.STATIC_ROOT, "csv/level3.csv")
+    base_path   = os.path.join(settings.STATIC_ROOT, "csv/base.csv")
+    
+    print(level1_path)
+    
+    if not all([level1_path, level2_path, level3_path, base_path]):
+        raise FileNotFoundError("One or more static files are missing!")
     
     # Read CSV file into DataFrame
     df_1    = pd.read_csv(level1_path, delimiter=";", quotechar='"')
