@@ -10,7 +10,7 @@ from .forms import TransactionForm, EntryInlineFormSet
 from .models import Transaction, Entry
 from .mixins import TransactionFormValidator
 from acc_codes.models import Account
-from acc_codes.mixins import UserOwnedQuerysetMixin
+from accounts.mixins import UserOwnedQuerysetMixin
 
 class TransactionListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
     model = Transaction

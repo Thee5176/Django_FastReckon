@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
     # Third Party
     'crispy_forms',
@@ -176,7 +175,7 @@ ACCOUNT_LOGOUT_REDIRECT = 'home'
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_UNIQUEUSERNAME = True
-
+CHANGE_EMAIL = True
 SOCIALACCOUNT_AUTO_SIGNUP = True
 
 AUTHENTICATION_BACKEND = [
@@ -206,24 +205,6 @@ SOCIALACCOUNT_PROVIDERS = {
             "access_type": "online",
         },
         'EMAIL_AUTHENTICATION': True
-    },
-    
-    'facebook': {
-        "APP": {
-            "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
-            "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
-        },
-        'METHOD': 'oauth2',  # Set to 'js_sdk' to use the Facebook connect SDK
-        'SCOPE': ['email', 'public_profile'],
-        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-        'INIT_PARAMS': {'cookie': True},
-        'FIELDS': [
-            'id',
-            'name',
-            'picture',
-        ],
-        'EXCHANGE_TOKEN': True,
-        'VERIFIED_EMAIL': True,
     },
     
     "github": {

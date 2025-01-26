@@ -24,6 +24,7 @@ if settings.DEBUG:
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include('allauth.urls')),
+    path("accounts/", include('accounts.urls')),
     path("", include('pages.urls')),
     #accounting
     path("bookofaccounts/", include('acc_books.urls')),

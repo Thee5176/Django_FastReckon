@@ -5,7 +5,8 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
-from .mixins import AccountColorCodeMixin, UserOwnedQuerysetMixin
+from .mixins import AccountColorCodeMixin
+from accounts.mixins import UserOwnedQuerysetMixin
 from acc_books.models import Book
 from transactions.models import Transaction, Entry
 

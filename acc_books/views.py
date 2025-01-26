@@ -3,7 +3,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 from .models import Book
-from acc_codes.mixins import UserOwnedQuerysetMixin
+from accounts.mixins import UserOwnedQuerysetMixin
 
 class BookListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
     model = Book

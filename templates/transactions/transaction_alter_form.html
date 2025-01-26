@@ -15,18 +15,18 @@
         {{ entry_formset.management_form }}
         {% for error in formset.non_form_errors %}
         <div class="alert alert-error" role="alert">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
             {{ error }}
+            <button type="button" class="btn-close btn-close-white" data-dismiss="alert" aria-label="Close"></button>
         </div>
         {% endfor %}
-        <table class="table-light">
+        <div id="entry-forms">
             <hr />
             {% for form in entry_formset %} <!--TODO decomponent and style-->
             <div class="form-row">
                 <span class="ms-auto">{{ form | crispy }}</span>
             </div>
             {% endfor %}
-        </table>
+        </div>
     </div>
     <div class="container d-flex justify-content-begin">
         <input class="btn btn-primary" type="submit" value="{{ view_name }}">
@@ -38,14 +38,6 @@
 </form>
 
 <script>
-    //JSON datepicker
-    $(document).ready(function() {
-        $('.datepicker').datepicker({
-            format: 'yyyy-mm-dd',
-            autoclose: true,
-        });
-    });  
-
     //Auto-fill Amount based on first entry form
     var AmountInput = document.querySelectorAll('.form-row>span>div[id$="-amount"] input');
     function updateAmount(myamount) {

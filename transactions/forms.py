@@ -11,7 +11,7 @@ class TransactionForm(forms.ModelForm):
             'date': forms.DateInput(
                 format='%Y-%m-%d',
                 attrs={
-                    'class':'datepicker',
+                    'type':'date',
                     'autocomplete':'off',
                     'value':datetime.today().strftime('%Y-%m-%d')
                 },

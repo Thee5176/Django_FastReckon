@@ -39,10 +39,10 @@ class TransactionFormValidator:
                     f"Amount is invalid. - Dr/Cr Amount :"
                     f"{transaction.total_debits(all_entries)}/{transaction.total_credits(all_entries)}"
                 )
-                print("Entry fields has invalid value")
                 return self.render_to_response(
                     self.get_context_data(form=form, formset=formset)
                 )
+                
             #Assign User before save transaction
             transaction.created_by = self.request.user
             transaction.save()

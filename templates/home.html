@@ -3,15 +3,15 @@
 {% block title %}HomePage{% endblock title %}
 
 {% block content %}
-<div class="container-fluid vh-100 justify-content-center">
-    <div class="background bg-dark h-100 w-100">
-        <video autoplay loop muted playsinline class=" h-75" id="background-video">
+<div class="container-fluid jumbotron vh-100 d-flex justify-content-center align-items-center">
+    <div class="background bg-dark h-100 w-100 position-absolute">
+        <video autoplay loop muted playsinline class="h-75 w-100 object-fit-cover" id="background-video">
           <source src="{% static "footages/closeup_clock.mp4" %}" type="video/mp4">
         </video>
-        <div class="fade-overlay"></div>
-      </div>
-    <div class="content mx-auto py-5 text-center align-items-center">
-        <h1 class="display-2 font-weight-bold">Unrecorded Day is a Missed Opportunity.</h1>
+        <div class="fade-overlay position-absolute top-0 start-0 h-100 w-100"></div>
+    </div>
+    <div class="content mx-auto text-center align-items-center">
+        <h1 class="display-4 font-weight-bold">Every Unrecorded Day is a Missed Opportunity.</h1>
         <p class="lead">Without records, there are no insights.</p>
         <p class="lead">Without insights, there’s no clarity.</p>
         <p class="lead">And without clarity, your plans are just guesses.</p>
@@ -25,28 +25,17 @@
 </div>
 <style>
     .background {
-        position: absolute;
-        top: auto;
-        left: 0;
         z-index: 0;
         overflow: hidden;
     }
     .background video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         filter: brightness(50%);
     }
 
     .fade-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        bakground: rgba(0,0,0,1);
+        background: rgba(0,0,0,1);
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 3s ease-in-out;
     }
 
     .content {
@@ -56,6 +45,7 @@
         text-alight: center;
     }
 </style>
+
 <script>
     const video = document.getElementById("background-video")
     const fadeOverlay = document.querySelector(".fade-overlay")
@@ -66,8 +56,13 @@
     });
     video.addEventListener("timeupdate", () => {
         const timeLeft = video.duration - video.currentTime;
-        if (timeLeft < 1) {                 //Fade out in the last second
-            fadeOverlay.style.opacity = 1;
+        
+        if (timeLeft > 0 && timeLeft <= 3) { //Fade out in the last second
+            fadeOverlay.style.opacity = 1; 
+        }
+
+        if (timeLeft > 3) {                 //Fade in otherwise
+            fadeOverlay.style.opacity = 0;
         }
     });
 </script>
