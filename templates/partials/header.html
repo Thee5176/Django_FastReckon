@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container-fluid">
+    <div class="container-fluid justify-content-between">
       <!--Navbar Brand-->
       <a class="navbar-brand logo-line" href="{% url 'home' %}">FastReckon</a>
-
-      <!--Navbar Toggler-->
+       <!--Navbar Toggler-->
       <button 
         class="navbar-toggler" 
         type="button" 
@@ -14,12 +13,11 @@
         aria-label="Toggle navigation">
         <span class="btn btn-sm navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="container navbar-nav bs-auto mb-2 mgb-lg-0 justify-content-center">
+        <ul class="navbar-nav bs-auto mb-2 mgb-lg-0" >
           {% if user.is_authenticated %}
           <!--Nav Menu-->
-
+        
           <!--Journal Menu-->
           {% include "partials/journals/nav_menu.html" %}
         
@@ -53,5 +51,7 @@
             
         </ul>
       </div>
+      
+     
     </div>
   </nav>
