@@ -12,8 +12,6 @@ class AccountPopulator:
     level3_path = os.path.join(settings.STATIC_ROOT, "csv/level3.csv")
     base_path   = os.path.join(settings.STATIC_ROOT, "csv/base.csv")
     
-    print(level1_path)
-    
     if not all([level1_path, level2_path, level3_path, base_path]):
         raise FileNotFoundError("One or more static files are missing!")
     

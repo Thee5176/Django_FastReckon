@@ -23,4 +23,4 @@ class EntryForm(forms.ModelForm):
         model = Entry
         fields = ["code","entry_type", "amount"]
         
-EntryInlineFormSet = inlineformset_factory(Transaction, Entry, form=EntryForm, extra=0, min_num=2, can_delete=False, can_delete_extra=True)
+EntryInlineFormSet = inlineformset_factory(Transaction, Entry, form=EntryForm, extra=0, min_num=2)

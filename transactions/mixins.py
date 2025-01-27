@@ -19,9 +19,10 @@ class TransactionFormValidator:
         """
         transaction = form.save(commit=False)       #this is the model's object itself
         formset = EntryInlineFormSet(self.request.POST, instance=transaction)
-
+        
         if formset.is_valid():
             new_entries = formset.save(commit=False)
+            print(new_entries)
             for entry in formset.deleted_objects:
                 entry.delete()
             
@@ -57,6 +58,8 @@ class TransactionFormValidator:
 
             # send list of account instance via session
             self.request.session['account_list'] = [entry.code.code for entry in all_entries]
+        else:
+            print("formset value not valid")
             
         return redirect('transaction_confirm', slug=transaction.slug)
         

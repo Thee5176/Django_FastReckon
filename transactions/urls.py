@@ -7,6 +7,7 @@ from .views import (
     TransactionUpdateView, 
     TransactionDeleteView,
     TransactionConfirmView,
+    add_entry_form,
 )
 
 urlpatterns = [
@@ -16,4 +17,5 @@ urlpatterns = [
     path("<slug:slug>/confirm/", TransactionConfirmView.as_view(), name="transaction_confirm"),
     path("<slug:slug>/update/", TransactionUpdateView.as_view(), name="transaction_update"),
     path("<slug:slug>/delete/", TransactionDeleteView.as_view(), name="transaction_delete"),
+    path("htmx/get_extra_entryform/", add_entry_form, name="get_extra_entryform")
 ]

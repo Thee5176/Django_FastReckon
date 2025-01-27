@@ -96,3 +96,20 @@ class TransactionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView)
     def test_func(self):
         obj = self.get_object()
         return obj.created_by == self.request.user
+
+from django.shortcuts import render
+from django.forms import inlineformset_factory
+from .forms import EntryForm
+
+def add_entry_form(request):
+    if request.method == "POST":
+        # get current form count
+        total_forms = int(request.POST.get("entries-TOTAL_FORMS",0)) + 1
+        print("Total forms: ",total_forms)
+        EntryForm_extra = inlineformset_factory(Transaction, Entry, form=EntryForm, max_num=total_forms)
+        new_forms = EntryForm_extra(queryset=Entry.objects.none())[-1]
+        
+        response_context = {
+            "form" : new_forms
+        }
+        return render(request, "transactions/partials/entry_form.html", response_context)
