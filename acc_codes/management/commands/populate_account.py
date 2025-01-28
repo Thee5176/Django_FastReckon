@@ -3,22 +3,18 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import pandas as pd
 import os, sys
-from acc_codes.models import AccountLevel1, AccountLevel2, AccountLevel3, Account
+from acc_codes.models import Account, RootAccount
 
 class AccountPopulator:
     # Prepare file path
-    level1_path = os.path.join(settings.STATIC_ROOT, "csv/level1.csv")
-    level2_path = os.path.join(settings.STATIC_ROOT, "csv/level2.csv")
-    level3_path = os.path.join(settings.STATIC_ROOT, "csv/level3.csv")
-    base_path   = os.path.join(settings.STATIC_ROOT, "csv/base.csv")
+    root_path = os.path.join(settings.STATIC_ROOT, "csv/root.csv")
+    base_path = os.path.join(settings.STATIC_ROOT, "csv/base.csv")
     
-    if not all([level1_path, level2_path, level3_path, base_path]):
+    if not all([root_path, base_path]):
         raise FileNotFoundError("One or more static files are missing!")
     
     # Read CSV file into DataFrame
-    df_1    = pd.read_csv(level1_path, delimiter=";", quotechar='"')
-    df_2    = pd.read_csv(level2_path, delimiter=";", quotechar='"')
-    df_3    = pd.read_csv(level3_path, delimiter=";", quotechar='"')
+    df_root = pd.read_csv(root_path, delimiter=";", quotechar='"')
     df_base = pd.read_csv(base_path, delimiter=";", quotechar='"')
 
     # Adjust nan value to None
@@ -40,76 +36,56 @@ class AccountPopulator:
                     func(c,n,b,g, *args, **kwargs)
             return wrapper_func
         return decorator
-    
-    @csv_to_variable(df_1)   
-    def populate_Level1(c,n,b,g):            
-        try:
-            AccountLevel1.objects.get_or_create(
-                code=c,
-                name=n,
-                balance=b,
-                guideline=g
-            )
-        except:
-            print(f"Encounter error when creating account: {c}")
-            sys.exit(1)
 
-    @csv_to_variable(df_2)
-    def populate_Level2(c,n,b,g):
-        level1_code = c[0]        
-        level1_instance = AccountLevel1.objects.get(code=level1_code)
+    @csv_to_variable(df_root)      
+    def populate_root(c,n,b,g):
         try:
-            AccountLevel2.objects.get_or_create(
-                code=c,
-                name=n,
-                balance=b,
-                guideline=g,
-                level1=level1_instance
-            )
-        except:
-            print(f"Encounter error when creating account: {c}")
-            sys.exit(1)
-
-    @csv_to_variable(df_3)      
-    def populate_Level3(c,n,b,g):
-        level2_code = c[:2]        
-        level2_instance = AccountLevel2.objects.get(code=level2_code)
-        try:
-            AccountLevel3.objects.get_or_create(
-                code=c,
-                name=n,
-                balance=b,
-                guideline=g,
-                level2=level2_instance
-            )
-        except:
-            print(f"Encounter error when creating account: {c}")
+                root_account = RootAccount.objects.filter(code=c).first()
+                if root_account:
+                    pass
+                    # Do Nothing and Update CSV with existing account
+                else:
+                    # Import account from CSV
+                    root_account = RootAccount(
+                        code=c,
+                        name=n,
+                        guideline=g,
+                        balance=b,
+                    )
+                # Save account, trigger the custom save() method     
+                root_account.save()
+        except Exception as e:
+            print(f"Encounter error when creating account: {c} with error {e}")
             sys.exit(1)
 
     @csv_to_variable(df_base)
     def populate_base(c,n,b,g,user_instance=None):
         if not user_instance == None:
-            level3_code = c[:4]        
-            level3_instance = AccountLevel3.objects.get(code=level3_code)
-            
+            root_code = int(c[:4])        
             try:
-                if b is not None:
-                    Account.objects.get_or_create(
-                        level3=level3_instance,     #code 1/2
+                root_instance = RootAccount.objects.get(code=root_code)
+            except RootAccount.DoesNotExist:
+                print(f"Account with code {root_code} does not exist.")
+                sys.exit(1)
+                
+            try:
+                account = Account.objects.filter(code=c).first()
+                if account:
+                    pass
+                    # Do Nothing and Update CSV with existing account
+                else:
+                    # Import account from CSV
+                    account = Account(
+                        root=root_instance,     #code 1/2
                         sub_account=c[-2:],         #code 2/2
                         name=n,
                         guideline=g,
                         balance=b,
                         created_by=user_instance
                     )
-                else:
-                    Account.objects.get_or_create(
-                        level3=level3_instance,     #code 1/2
-                        sub_account=c[-2:],         #code 2/2
-                        name=n,
-                        guideline=g,
-                        created_by=user_instance
-                    )
+                # Save account, trigger the custom save() method     
+                account.save()
+                
             except Exception as e:
                 print(f"Encounter error creating account: {c} with error {e}")
                 sys.exit(1)
@@ -123,10 +99,6 @@ class Command(BaseCommand):
     
     def handle(self, *args, **kwargs):
         print("Running script populate_account...")
-        AccountPopulator.populate_Level1()
-        print("Succesfully populated account level1")
-        AccountPopulator.populate_Level2()
-        print("Succesfully populated account level2")
-        AccountPopulator.populate_Level3()
-        print("Succesfully populated account level3")
+        AccountPopulator.populate_root()
+        print("Succesfully populated root account")
     

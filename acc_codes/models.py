@@ -1,63 +1,41 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.conf import settings
 from django.db import models
 from django.urls import reverse
 
-class AccountLevel1(models.Model):
+class RootAccount(models.Model):
     BALANCE_TYPE = [
         (1, "Dr"),
         (2, "Cr"),
     ]
-    code = models.CharField(max_length=1, unique=True)
-    name = models.CharField(max_length=50)
-    guideline = models.TextField(null=True, blank=True)
-    balance = models.IntegerField(choices=BALANCE_TYPE)
-
     
-    class Meta:
-        ordering = ["code"]
-        verbose_name = ("AccountLevel1")
-        verbose_name_plural = ("AccountLevel1s")
-
-    def __str__(self):
-        return f"{self.code} | {self.name}"
-
-class AccountLevel2(models.Model):
-    BALANCE_TYPE = [
-        (1, "Dr"),
-        (2, "Cr"),
-    ]
-    level1 = models.ForeignKey(AccountLevel1, related_name="level2", on_delete=models.CASCADE)
-    code = models.CharField(max_length=2, unique=True)
+    code = models.IntegerField(
+        primary_key=True, 
+        validators=[
+            MaxValueValidator(9999),
+            MinValueValidator(1000)
+        ])
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     balance = models.IntegerField(choices=BALANCE_TYPE)
 
     class Meta:
         ordering = ["code"]
-        verbose_name = ("AccountLevel2")
-        verbose_name_plural = ("AccountLevel2s")
+        verbose_name = ("RootAccount")
+        verbose_name_plural = ("RootAccounts")
 
     def __str__(self):
         return f"{self.code} | {self.name}"
-
-class AccountLevel3(models.Model):
-    BALANCE_TYPE = [
-        (1, "Dr"),
-        (2, "Cr"),
-    ]
-    level2 = models.ForeignKey(AccountLevel2 ,related_name="level3", on_delete=models.CASCADE)
-    code = models.CharField(max_length=4, unique=True, primary_key=True)
-    name = models.CharField(max_length=50)
-    guideline = models.TextField(null=True, blank=True)
-    balance = models.IntegerField(choices=BALANCE_TYPE)
-
-    class Meta:
-        ordering = ["code"]
-        verbose_name = ("AccountLevel3")
-        verbose_name_plural = ("AccountLevel3s")
-
-    def __str__(self):
-        return f"{self.code} | {self.name}"
+    
+    @property
+    def get_account_type(self):
+        code = str(self.code)[0]
+        return code
+    
+    @property
+    def get_account_group(self):
+        code = str(self.code)[:2]
+        return code
     
 class Account(models.Model):
     
@@ -66,7 +44,7 @@ class Account(models.Model):
         (2, "Cr"),
     ]
     
-    level3 = models.ForeignKey(AccountLevel3, related_name="accounts", on_delete=models.CASCADE)
+    root = models.ForeignKey(RootAccount, related_name="accounts", on_delete=models.CASCADE)
     sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
     code = models.CharField(max_length=9, blank=True)
@@ -77,12 +55,12 @@ class Account(models.Model):
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name=("accounts"), on_delete=models.CASCADE)
     
     class Meta:
-        ordering = ["level3","sub_account","detailed_account"]
+        ordering = ["root","sub_account","detailed_account"]
         verbose_name = ("Account")
         verbose_name_plural = ("Accounts")
     
     def update_code(self):
-        self.code = f"{self.level3.code}{self.sub_account}"
+        self.code = f"{self.root.code}{self.sub_account}"
         if self.detailed_account :
             self.code += f"-{self.detailed_account}"
             
@@ -95,7 +73,7 @@ class Account(models.Model):
         return self.entries.all().count
 
     def get_account_type(self):
-        return self.balance if self.balance else self.level3.balance
+        return self.balance if self.balance else self.root.balance
     
     def get_account_balance(self):
         balance = 0

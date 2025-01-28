@@ -3,7 +3,7 @@
         "model": "acc_codes.account",
         "pk": 1,
         "fields": {
-            "level3": "1101",
+            "root": "1101",
             "sub_account": "01",
             "detailed_account": null,
             "code": "110101",
@@ -17,7 +17,7 @@
         "model": "acc_codes.account",
         "pk": 2,
         "fields": {
-            "level3": "3002",
+            "root": "3002",
             "sub_account": "01",
             "detailed_account": null,
             "code": "300201",
@@ -31,7 +31,7 @@
         "model": "acc_codes.account",
         "pk": 3,
         "fields": {
-            "level3": "3002",
+            "root": "3002",
             "sub_account": "02",
             "detailed_account": null,
             "code": "300202",
@@ -45,7 +45,7 @@
         "model": "acc_codes.account",
         "pk": 4,
         "fields": {
-            "level3": "3001",
+            "root": "3001",
             "sub_account": "01",
             "detailed_account": null,
             "code": "300101",
@@ -59,7 +59,7 @@
         "model": "acc_codes.account",
         "pk": 5,
         "fields": {
-            "level3": "3001",
+            "root": "3001",
             "sub_account": "02",
             "detailed_account": null,
             "code": "300102",
@@ -73,7 +73,7 @@
         "model": "acc_codes.account",
         "pk": 6,
         "fields": {
-            "level3": "3001",
+            "root": "3001",
             "sub_account": "03",
             "detailed_account": null,
             "code": "300103",
@@ -87,7 +87,7 @@
         "model": "acc_codes.account",
         "pk": 7,
         "fields": {
-            "level3": "3001",
+            "root": "3001",
             "sub_account": "04",
             "detailed_account": null,
             "code": "300104",
@@ -101,7 +101,7 @@
         "model": "acc_codes.account",
         "pk": 8,
         "fields": {
-            "level3": "3001",
+            "root": "3001",
             "sub_account": "05",
             "detailed_account": null,
             "code": "300105",
@@ -115,7 +115,7 @@
         "model": "acc_codes.account",
         "pk": 9,
         "fields": {
-            "level3": "1102",
+            "root": "1102",
             "sub_account": "02",
             "detailed_account": null,
             "code": "110202",
@@ -129,7 +129,7 @@
         "model": "acc_codes.account",
         "pk": 10,
         "fields": {
-            "level3": "1102",
+            "root": "1102",
             "sub_account": "01",
             "detailed_account": "01",
             "code": "110201-01",
@@ -143,7 +143,7 @@
         "model": "acc_codes.account",
         "pk": 11,
         "fields": {
-            "level3": "1102",
+            "root": "1102",
             "sub_account": "01",
             "detailed_account": "02",
             "code": "110201-02",
@@ -157,7 +157,7 @@
         "model": "acc_codes.account",
         "pk": 12,
         "fields": {
-            "level3": "1102",
+            "root": "1102",
             "sub_account": "01",
             "detailed_account": "03",
             "code": "110201-03",
@@ -171,7 +171,7 @@
         "model": "acc_codes.account",
         "pk": 13,
         "fields": {
-            "level3": "1103",
+            "root": "1103",
             "sub_account": "01",
             "detailed_account": null,
             "code": "110301",
@@ -185,7 +185,7 @@
         "model": "acc_codes.account",
         "pk": 14,
         "fields": {
-            "level3": "1103",
+            "root": "1103",
             "sub_account": "02",
             "detailed_account": null,
             "code": "110302",
@@ -199,7 +199,7 @@
         "model": "acc_codes.account",
         "pk": 15,
         "fields": {
-            "level3": "1103",
+            "root": "1103",
             "sub_account": "03",
             "detailed_account": null,
             "code": "110303",
@@ -213,7 +213,7 @@
         "model": "acc_codes.account",
         "pk": 16,
         "fields": {
-            "level3": "1103",
+            "root": "1103",
             "sub_account": "04",
             "detailed_account": null,
             "code": "110304",
@@ -227,7 +227,7 @@
         "model": "acc_codes.account",
         "pk": 17,
         "fields": {
-            "level3": "1104",
+            "root": "1104",
             "sub_account": "01",
             "detailed_account": null,
             "code": "110401",
@@ -241,7 +241,7 @@
         "model": "acc_codes.account",
         "pk": 18,
         "fields": {
-            "level3": "1104",
+            "root": "1104",
             "sub_account": "02",
             "detailed_account": null,
             "code": "110402",
@@ -255,7 +255,7 @@
         "model": "acc_codes.account",
         "pk": 19,
         "fields": {
-            "level3": "1105",
+            "root": "1105",
             "sub_account": "01",
             "detailed_account": null,
             "code": "110501",
@@ -269,7 +269,7 @@
         "model": "acc_codes.account",
         "pk": 20,
         "fields": {
-            "level3": "1106",
+            "root": "1106",
             "sub_account": "01",
             "detailed_account": null,
             "code": "110601",
@@ -283,7 +283,7 @@
         "model": "acc_codes.account",
         "pk": 21,
         "fields": {
-            "level3": "1106",
+            "root": "1106",
             "sub_account": "02",
             "detailed_account": null,
             "code": "110602",
@@ -297,7 +297,7 @@
         "model": "acc_codes.account",
         "pk": 22,
         "fields": {
-            "level3": "1106",
+            "root": "1106",
             "sub_account": "03",
             "detailed_account": null,
             "code": "110603",
@@ -311,7 +311,7 @@
         "model": "acc_codes.account",
         "pk": 23,
         "fields": {
-            "level3": "2101",
+            "root": "2101",
             "sub_account": "01",
             "detailed_account": null,
             "code": "210101",
@@ -325,7 +325,7 @@
         "model": "acc_codes.account",
         "pk": 24,
         "fields": {
-            "level3": "2101",
+            "root": "2101",
             "sub_account": "02",
             "detailed_account": null,
             "code": "210102",
@@ -339,7 +339,7 @@
         "model": "acc_codes.account",
         "pk": 25,
         "fields": {
-            "level3": "2101",
+            "root": "2101",
             "sub_account": "03",
             "detailed_account": null,
             "code": "210103",
@@ -353,7 +353,7 @@
         "model": "acc_codes.account",
         "pk": 26,
         "fields": {
-            "level3": "2102",
+            "root": "2102",
             "sub_account": "01",
             "detailed_account": null,
             "code": "210201",
@@ -367,7 +367,7 @@
         "model": "acc_codes.account",
         "pk": 27,
         "fields": {
-            "level3": "4102",
+            "root": "4102",
             "sub_account": "01",
             "detailed_account": null,
             "code": "410201",
@@ -381,7 +381,7 @@
         "model": "acc_codes.account",
         "pk": 28,
         "fields": {
-            "level3": "4102",
+            "root": "4102",
             "sub_account": "02",
             "detailed_account": null,
             "code": "410202",
@@ -395,7 +395,7 @@
         "model": "acc_codes.account",
         "pk": 29,
         "fields": {
-            "level3": "4102",
+            "root": "4102",
             "sub_account": "03",
             "detailed_account": null,
             "code": "410203",
@@ -409,7 +409,7 @@
         "model": "acc_codes.account",
         "pk": 30,
         "fields": {
-            "level3": "4104",
+            "root": "4104",
             "sub_account": "01",
             "detailed_account": null,
             "code": "410401",
@@ -423,7 +423,7 @@
         "model": "acc_codes.account",
         "pk": 31,
         "fields": {
-            "level3": "4104",
+            "root": "4104",
             "sub_account": "02",
             "detailed_account": null,
             "code": "410402",
@@ -437,7 +437,7 @@
         "model": "acc_codes.account",
         "pk": 32,
         "fields": {
-            "level3": "4107",
+            "root": "4107",
             "sub_account": "01",
             "detailed_account": null,
             "code": "410701",
@@ -451,7 +451,7 @@
         "model": "acc_codes.account",
         "pk": 33,
         "fields": {
-            "level3": "4107",
+            "root": "4107",
             "sub_account": "02",
             "detailed_account": "01",
             "code": "410702-01",
@@ -465,7 +465,7 @@
         "model": "acc_codes.account",
         "pk": 34,
         "fields": {
-            "level3": "4107",
+            "root": "4107",
             "sub_account": "02",
             "detailed_account": "02",
             "code": "410702-02",
@@ -479,7 +479,7 @@
         "model": "acc_codes.account",
         "pk": 35,
         "fields": {
-            "level3": "5101",
+            "root": "5101",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510101",
@@ -493,7 +493,7 @@
         "model": "acc_codes.account",
         "pk": 36,
         "fields": {
-            "level3": "5101",
+            "root": "5101",
             "sub_account": "02",
             "detailed_account": null,
             "code": "510102",
@@ -507,7 +507,7 @@
         "model": "acc_codes.account",
         "pk": 37,
         "fields": {
-            "level3": "5101",
+            "root": "5101",
             "sub_account": "03",
             "detailed_account": null,
             "code": "510103",
@@ -521,7 +521,7 @@
         "model": "acc_codes.account",
         "pk": 38,
         "fields": {
-            "level3": "5102",
+            "root": "5102",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510201",
@@ -535,7 +535,7 @@
         "model": "acc_codes.account",
         "pk": 39,
         "fields": {
-            "level3": "5102",
+            "root": "5102",
             "sub_account": "02",
             "detailed_account": null,
             "code": "510202",
@@ -549,7 +549,7 @@
         "model": "acc_codes.account",
         "pk": 40,
         "fields": {
-            "level3": "5103",
+            "root": "5103",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510301",
@@ -563,7 +563,7 @@
         "model": "acc_codes.account",
         "pk": 41,
         "fields": {
-            "level3": "5103",
+            "root": "5103",
             "sub_account": "02",
             "detailed_account": null,
             "code": "510302",
@@ -577,7 +577,7 @@
         "model": "acc_codes.account",
         "pk": 42,
         "fields": {
-            "level3": "5103",
+            "root": "5103",
             "sub_account": "03",
             "detailed_account": null,
             "code": "510303",
@@ -591,7 +591,7 @@
         "model": "acc_codes.account",
         "pk": 43,
         "fields": {
-            "level3": "5104",
+            "root": "5104",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510401",
@@ -605,7 +605,7 @@
         "model": "acc_codes.account",
         "pk": 44,
         "fields": {
-            "level3": "5105",
+            "root": "5105",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510501",
@@ -619,7 +619,7 @@
         "model": "acc_codes.account",
         "pk": 45,
         "fields": {
-            "level3": "5105",
+            "root": "5105",
             "sub_account": "02",
             "detailed_account": null,
             "code": "510502",
@@ -633,7 +633,7 @@
         "model": "acc_codes.account",
         "pk": 46,
         "fields": {
-            "level3": "5106",
+            "root": "5106",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510601",
@@ -647,7 +647,7 @@
         "model": "acc_codes.account",
         "pk": 47,
         "fields": {
-            "level3": "5107",
+            "root": "5107",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510701",
@@ -661,7 +661,7 @@
         "model": "acc_codes.account",
         "pk": 48,
         "fields": {
-            "level3": "5109",
+            "root": "5109",
             "sub_account": "00",
             "detailed_account": null,
             "code": "510900",
@@ -675,7 +675,7 @@
         "model": "acc_codes.account",
         "pk": 49,
         "fields": {
-            "level3": "5109",
+            "root": "5109",
             "sub_account": "01",
             "detailed_account": null,
             "code": "510901",
@@ -689,7 +689,7 @@
         "model": "acc_codes.account",
         "pk": 50,
         "fields": {
-            "level3": "5110",
+            "root": "5110",
             "sub_account": "01",
             "detailed_account": null,
             "code": "511001",
@@ -703,7 +703,7 @@
         "model": "acc_codes.account",
         "pk": 51,
         "fields": {
-            "level3": "5106",
+            "root": "5106",
             "sub_account": "02",
             "detailed_account": null,
             "code": "510602",
@@ -717,7 +717,7 @@
         "model": "acc_codes.account",
         "pk": 52,
         "fields": {
-            "level3": "1202",
+            "root": "1202",
             "sub_account": "01",
             "detailed_account": null,
             "code": "120201",

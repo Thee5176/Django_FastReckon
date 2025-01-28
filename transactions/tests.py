@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from transactions.models import Transaction, Entry
-from acc_codes.models import Account, AccountLevel3
+from acc_codes.models import Account
 from acc_books.models import Book
 
 class TestCreateTransaction(TestCase):
