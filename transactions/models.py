@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 from acc_books.models import Book
-from acc_codes.models import Account, AccountLevel3
+from acc_codes.models import Account
 
 class MonthRefMixin(models.Model):
     """

@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
-from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
+from .models import Account
 from .mixins import AccountColorCodeMixin
 from accounts.mixins import UserOwnedQuerysetMixin
 from acc_books.models import Book
@@ -35,7 +35,6 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
     
     def get_queryset(self):
         queryset = super().get_queryset()
-        queryset = queryset.select_related("level3__level2__level1")
         return queryset    
 
     def get_context_data(self, **kwargs):
@@ -51,7 +50,7 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
 class AccountCreateView(LoginRequiredMixin, CreateView):
     model = Account
     template_name = "acc_codes/account_alter_form.html"
-    fields = ["name","level3","sub_account","detailed_account","guideline"]
+    fields = ["name","root","sub_account","detailed_account","guideline"]
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -65,7 +64,7 @@ class AccountCreateView(LoginRequiredMixin, CreateView):
 class AccountUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Account
     template_name = "acc_codes/account_alter_form.html"
-    fields = ["name","level3","sub_account","detailed_account","guideline"]
+    fields = ["name","root","sub_account","detailed_account","guideline"]
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
