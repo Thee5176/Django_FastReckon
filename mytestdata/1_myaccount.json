@@ -1,11 +1,125 @@
 [
     {
         "model": "acc_codes.account",
+        "pk": 1,
         "fields": {
-            "name": "ゆうちょ 1861",
+            "level3": "1101",
+            "sub_account": "01",
+            "detailed_account": null,
+            "code": "110101",
+            "name": "Cash in hand",
+            "balance": 1,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 2,
+        "fields": {
+            "level3": "3002",
+            "sub_account": "01",
+            "detailed_account": null,
+            "code": "300201",
+            "name": "Capital Contribution",
+            "balance": 2,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 3,
+        "fields": {
+            "level3": "3002",
+            "sub_account": "02",
+            "detailed_account": null,
+            "code": "300202",
+            "name": "Capital Withdrawal",
+            "balance": 1,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 4,
+        "fields": {
+            "level3": "3001",
+            "sub_account": "01",
+            "detailed_account": null,
+            "code": "300101",
+            "name": "Preferred Stock",
+            "balance": 2,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 5,
+        "fields": {
+            "level3": "3001",
+            "sub_account": "02",
+            "detailed_account": null,
+            "code": "300102",
+            "name": "Additional Paid-in Capital",
+            "balance": 2,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 6,
+        "fields": {
+            "level3": "3001",
+            "sub_account": "03",
+            "detailed_account": null,
+            "code": "300103",
+            "name": "Retained Earning",
+            "balance": 2,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 7,
+        "fields": {
+            "level3": "3001",
+            "sub_account": "04",
+            "detailed_account": null,
+            "code": "300104",
+            "name": "Other Comprehensive Income",
+            "balance": 2,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 8,
+        "fields": {
+            "level3": "3001",
+            "sub_account": "05",
+            "detailed_account": null,
+            "code": "300105",
+            "name": "Treasury Stock",
+            "balance": 2,
+            "guideline": "coming soon",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 9,
+        "fields": {
             "level3": "1102",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "110202",
+            "name": "ゆうちょ 1861",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -13,11 +127,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 10,
         "fields": {
-            "name": "KBank 0333 (J-checking)",
             "level3": "1102",
             "sub_account": "01",
             "detailed_account": "01",
+            "code": "110201-01",
+            "name": "KBank 0333 (J-checking)",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -25,11 +141,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 11,
         "fields": {
-            "name": "KBank 2911 (T-checking)",
             "level3": "1102",
             "sub_account": "01",
             "detailed_account": "02",
+            "code": "110201-02",
+            "name": "KBank 2911 (T-checking)",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -37,11 +155,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 12,
         "fields": {
-            "name": "KBank 8119 (Room 723)",
             "level3": "1102",
             "sub_account": "01",
             "detailed_account": "03",
+            "code": "110201-03",
+            "name": "KBank 8119 (Room 723)",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -49,11 +169,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 13,
         "fields": {
-            "name": "Suica IC",
             "level3": "1103",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "110301",
+            "name": "Suica IC",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -61,11 +183,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 14,
         "fields": {
-            "name": "FamiPay",
             "level3": "1103",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "110302",
+            "name": "FamiPay",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -73,11 +197,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 15,
         "fields": {
-            "name": "PayPay",
             "level3": "1103",
             "sub_account": "03",
             "detailed_account": null,
+            "code": "110303",
+            "name": "PayPay",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -85,11 +211,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 16,
         "fields": {
-            "name": "MerPay",
             "level3": "1103",
             "sub_account": "04",
             "detailed_account": null,
+            "code": "110304",
+            "name": "MerPay",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -97,11 +225,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 17,
         "fields": {
-            "name": "YouTrip",
             "level3": "1104",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "110401",
+            "name": "YouTrip",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -109,11 +239,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 18,
         "fields": {
-            "name": "Boarding Card",
             "level3": "1104",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "110402",
+            "name": "Boarding Card",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -121,11 +253,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 19,
         "fields": {
-            "name": "Dad AR",
             "level3": "1105",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "110501",
+            "name": "Dad AR",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -133,23 +267,27 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 20,
         "fields": {
-            "name": "SuperHotel AW",
             "level3": "1106",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "110601",
+            "name": "SuperHotel AW",
             "balance": null,
-            "guideline": "",
+            "guideline": "Payment Date: 25th",
             "created_by": 1
         }
     },
     {
         "model": "acc_codes.account",
+        "pk": 21,
         "fields": {
-            "name": "En AW",
             "level3": "1106",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "110602",
+            "name": "En AW",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -157,11 +295,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 22,
         "fields": {
-            "name": "Katsuya AW",
             "level3": "1106",
             "sub_account": "03",
             "detailed_account": null,
+            "code": "110603",
+            "name": "Katsuya AW",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -169,11 +309,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 23,
         "fields": {
-            "name": "MerCard",
             "level3": "2101",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "210101",
+            "name": "MerCard",
             "balance": null,
             "guideline": "Limit Amount : 10,000 円",
             "created_by": 1
@@ -181,11 +323,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 24,
         "fields": {
-            "name": "Kbank The Passion VISA",
             "level3": "2101",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "210102",
+            "name": "Kbank The Passion VISA",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -193,11 +337,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 25,
         "fields": {
-            "name": "SCB JCB Platinum",
             "level3": "2101",
             "sub_account": "03",
             "detailed_account": null,
+            "code": "210103",
+            "name": "SCB JCB Platinum",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -205,11 +351,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 26,
         "fields": {
-            "name": "Mom AP",
             "level3": "2102",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "210201",
+            "name": "Mom AP",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -217,11 +365,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 27,
         "fields": {
-            "name": "SuperHotel Wage",
             "level3": "4102",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "410201",
+            "name": "SuperHotel Wage",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -229,11 +379,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 28,
         "fields": {
-            "name": "En Wage",
             "level3": "4102",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "410202",
+            "name": "En Wage",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -241,11 +393,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 29,
         "fields": {
-            "name": "Katsuya Wage",
             "level3": "4102",
             "sub_account": "03",
             "detailed_account": null,
+            "code": "410203",
+            "name": "Katsuya Wage",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -253,11 +407,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 30,
         "fields": {
-            "name": "KBank Deposit Interest",
             "level3": "4104",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "410401",
+            "name": "KBank Deposit Interest",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -265,11 +421,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 31,
         "fields": {
-            "name": "ゆうちょ Deposit Interest",
             "level3": "4104",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "410402",
+            "name": "ゆうちょ Deposit Interest",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -277,11 +435,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 32,
         "fields": {
-            "name": "JASSO Scholarship",
             "level3": "4107",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "410701",
+            "name": "JASSO Scholarship",
             "balance": null,
             "guideline": "Duraion: 1 year (2024/4-2025/3)",
             "created_by": 1
@@ -289,11 +449,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 33,
         "fields": {
-            "name": "Allowance from Dad",
             "level3": "4107",
-            "sub_account": "01",
-            "detailed_account": null,
+            "sub_account": "02",
+            "detailed_account": "01",
+            "code": "410702-01",
+            "name": "Allowance from Dad",
             "balance": null,
             "guideline": "Monthly Amount: 40,000 円",
             "created_by": 1
@@ -301,11 +463,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 34,
         "fields": {
-            "name": "Allowance from Mom",
             "level3": "4107",
             "sub_account": "02",
-            "detailed_account": null,
+            "detailed_account": "02",
+            "code": "410702-02",
+            "name": "Allowance from Mom",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -313,11 +477,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 35,
         "fields": {
-            "name": "MealPrep",
             "level3": "5101",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510101",
+            "name": "MealPrep",
             "balance": null,
             "guideline": "Main Ingredient:\r\n- Veg\r\nCabbage\r\nGreen Cabbage\r\nCarrot\r\nPumpkin\r\nPotato\r\nBean Sprout\r\n\r\n- Cond\r\nOnion\r\nGarlic\r\nChilly\r\n\r\n- Protein\r\nTofu\r\nNutto\r\nEgg\r\nMushroom\r\n\r\n- Carb\r\nBread\r\nUdon\r\nRice",
             "created_by": 1
@@ -325,11 +491,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 36,
         "fields": {
-            "name": "Snack",
             "level3": "5101",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "510102",
+            "name": "Snack",
             "balance": null,
             "guideline": "Milk\r\nSoy Milk\r\nPeanut\r\nBakery",
             "created_by": 1
@@ -337,11 +505,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 37,
         "fields": {
-            "name": "Eat-out",
             "level3": "5101",
             "sub_account": "03",
             "detailed_account": null,
+            "code": "510103",
+            "name": "Eat-out",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -349,11 +519,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 38,
         "fields": {
-            "name": "Commuter Pass",
             "level3": "5102",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510201",
+            "name": "Commuter Pass",
             "balance": null,
             "guideline": "埼京線：十条駅→池袋駅\r\n１ヵ月:　 2,710　¥\r\n３ヵ月:　 7,730　¥\r\n６ヵ月:　14,650　¥",
             "created_by": 1
@@ -361,11 +533,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 39,
         "fields": {
-            "name": "Non-Commuter Pass",
             "level3": "5102",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "510202",
+            "name": "Non-Commuter Pass",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -373,11 +547,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 40,
         "fields": {
-            "name": "Glocery",
             "level3": "5103",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510301",
+            "name": "Glocery",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -385,11 +561,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 41,
         "fields": {
-            "name": "Appliances and Gadgets",
             "level3": "5103",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "510302",
+            "name": "Appliances and Gadgets",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -397,11 +575,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 42,
         "fields": {
-            "name": "Clothing",
             "level3": "5103",
             "sub_account": "03",
             "detailed_account": null,
+            "code": "510303",
+            "name": "Clothing",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -409,11 +589,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 43,
         "fields": {
-            "name": "STEP CLOUD Utilities",
             "level3": "5104",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510401",
+            "name": "STEP CLOUD Utilities",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -421,11 +603,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 44,
         "fields": {
-            "name": "National Health Insurance",
             "level3": "5105",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510501",
+            "name": "National Health Insurance",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -433,11 +617,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 45,
         "fields": {
-            "name": "Medical Bills",
             "level3": "5105",
             "sub_account": "02",
             "detailed_account": null,
+            "code": "510502",
+            "name": "Medical Bills",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -445,11 +631,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 46,
         "fields": {
-            "name": "TIU Tuition Fee",
             "level3": "5106",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510601",
+            "name": "TIU Tuition Fee",
             "balance": null,
             "guideline": "2024/4  : 410,000\r\n2024/10 : 410,000\r\n2025/4  : 460,000\r\n2025/10 : 460,000\r\n2026/4  : 460,000\r\n2026/10 : 460,000",
             "created_by": 1
@@ -457,11 +645,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 47,
         "fields": {
-            "name": "Meal Treat",
             "level3": "5107",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510701",
+            "name": "Meal Treat",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -469,11 +659,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 48,
         "fields": {
-            "name": "Other Expenses",
             "level3": "5109",
             "sub_account": "00",
             "detailed_account": null,
+            "code": "510900",
+            "name": "Other Expenses",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -481,11 +673,13 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 49,
         "fields": {
-            "name": "Services Fee",
             "level3": "5109",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "510901",
+            "name": "Services Fee",
             "balance": null,
             "guideline": "",
             "created_by": 1
@@ -493,11 +687,41 @@
     },
     {
         "model": "acc_codes.account",
+        "pk": 50,
         "fields": {
-            "name": "STEP CLOUD Rent",
             "level3": "5110",
             "sub_account": "01",
             "detailed_account": null,
+            "code": "511001",
+            "name": "STEP CLOUD Rent",
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 51,
+        "fields": {
+            "level3": "5106",
+            "sub_account": "02",
+            "detailed_account": null,
+            "code": "510602",
+            "name": "Book",
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 52,
+        "fields": {
+            "level3": "1202",
+            "sub_account": "01",
+            "detailed_account": null,
+            "code": "120201",
+            "name": "Personal Gadgets",
             "balance": null,
             "guideline": "",
             "created_by": 1
