@@ -23,7 +23,7 @@ class AccountListView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerys
             queryset = queryset.filter(name__icontains=name)
         
         if code:
-            queryset = queryset.filter(code__startswith=code) 
+            queryset = queryset.filter(account__startswith=code) 
         
         return queryset
 
@@ -40,9 +40,8 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
 
         obj = self.get_object()
         if obj:
-            context["entry_list"] = Entry.objects.select_related('transaction__book').filter(code=obj.id)
-            book = Book.objects.get(transactions=context['entry_list'].first().transaction)
-            context["currency_sign"] = book.currency_sign
+            context["entry_list"] = Entry.objects.filter(account=obj.id)
+
         return context
 
 class AccountCreateView(LoginRequiredMixin, CreateView):

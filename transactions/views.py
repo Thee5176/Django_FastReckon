@@ -44,7 +44,7 @@ class TransactionDetailView(LoginRequiredMixin, UserOwnedQuerysetMixin, DetailVi
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         transaction = self.get_object()
-        context["entries"] = Entry.objects.select_related('transaction','code__root').filter(transaction_id=transaction.id)
+        context["entries"] = Entry.objects.select_related('transaction','account__root').filter(transaction_id=transaction.id)
         return context
 
 class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormView):

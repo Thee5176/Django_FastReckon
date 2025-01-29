@@ -69,9 +69,9 @@ class Account(models.Model):
         self.update_code()
         super(Account, self).save(*args, **kwargs)
     
-    @property
     def record_count(self):
-        return self.entries.all().count
+        if self.entries.all():
+            return len(self.entries.all())
 
     def get_account_type(self):
         return self.balance if self.balance else self.root.balance

@@ -23,8 +23,8 @@
                     </a>
                 </td>
                 <td>{{ account.name }}</td>
-                <td></td>
-                <td>{{ account.get_account_balance }}</td>
+                <td>{{ account.record_count|default_if_none:"<span class='text-danger'>-</span>"|safe }}</td>
+                <td class="myamount">{{ account.get_account_balance }}</td>
             </tr>
         {% empty %}
             <tr class="table-light">

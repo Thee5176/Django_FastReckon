@@ -25,7 +25,7 @@
                 </td>
                 <td>{{ entry.transaction.description }}</td>
                 <td>{% if entry.transaction.has_receipt %}<i class="bi bi-check-circle success"></i>{% else %}<i class="bi bi-dash-circle-dotted"></i>{% endif %}</td>
-                <td class="myamount">{{ entry.get_entry_balance }} {{ currency_sign }}</td>
+                <td class="myamount">{{ entry.get_entry_balance }}</td>
             </tr>
         </tbody>
         {% empty %}
@@ -42,7 +42,6 @@
                 <td colspan=4>remaining</td>
                 <td>
                     <script src="{% static "js/table_amount_footer.js" %}"></script>
-                    <span> {{ currency_sign }}</span>
                 </td>
             </tr>
         </tfoot>
