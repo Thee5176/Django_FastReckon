@@ -3,6 +3,7 @@
         "model": "acc_codes.account",
         "pk": 1,
         "fields": {
+            "book": 2,
             "root": "1101",
             "sub_account": "01",
             "detailed_account": null,
@@ -17,6 +18,7 @@
         "model": "acc_codes.account",
         "pk": 2,
         "fields": {
+            "book": 2,
             "root": "3002",
             "sub_account": "01",
             "detailed_account": null,
@@ -31,6 +33,7 @@
         "model": "acc_codes.account",
         "pk": 3,
         "fields": {
+            "book": 2,
             "root": "3002",
             "sub_account": "02",
             "detailed_account": null,
@@ -45,6 +48,7 @@
         "model": "acc_codes.account",
         "pk": 4,
         "fields": {
+            "book": 2,
             "root": "3001",
             "sub_account": "01",
             "detailed_account": null,
@@ -59,6 +63,7 @@
         "model": "acc_codes.account",
         "pk": 5,
         "fields": {
+            "book": 2,
             "root": "3001",
             "sub_account": "02",
             "detailed_account": null,
@@ -73,6 +78,7 @@
         "model": "acc_codes.account",
         "pk": 6,
         "fields": {
+            "book": 2,
             "root": "3001",
             "sub_account": "03",
             "detailed_account": null,
@@ -87,6 +93,7 @@
         "model": "acc_codes.account",
         "pk": 7,
         "fields": {
+            "book": 2,
             "root": "3001",
             "sub_account": "04",
             "detailed_account": null,
@@ -101,6 +108,7 @@
         "model": "acc_codes.account",
         "pk": 8,
         "fields": {
+            "book": 2,
             "root": "3001",
             "sub_account": "05",
             "detailed_account": null,
@@ -115,6 +123,7 @@
         "model": "acc_codes.account",
         "pk": 9,
         "fields": {
+            "book": 2,
             "root": "1102",
             "sub_account": "02",
             "detailed_account": null,
@@ -129,6 +138,7 @@
         "model": "acc_codes.account",
         "pk": 10,
         "fields": {
+            "book": 2,
             "root": "1102",
             "sub_account": "01",
             "detailed_account": "01",
@@ -143,6 +153,7 @@
         "model": "acc_codes.account",
         "pk": 11,
         "fields": {
+            "book": 2,
             "root": "1102",
             "sub_account": "01",
             "detailed_account": "02",
@@ -157,6 +168,7 @@
         "model": "acc_codes.account",
         "pk": 12,
         "fields": {
+            "book": 2,
             "root": "1102",
             "sub_account": "01",
             "detailed_account": "03",
@@ -171,6 +183,7 @@
         "model": "acc_codes.account",
         "pk": 13,
         "fields": {
+            "book": 2,
             "root": "1103",
             "sub_account": "01",
             "detailed_account": null,
@@ -185,6 +198,7 @@
         "model": "acc_codes.account",
         "pk": 14,
         "fields": {
+            "book": 2,
             "root": "1103",
             "sub_account": "02",
             "detailed_account": null,
@@ -199,6 +213,7 @@
         "model": "acc_codes.account",
         "pk": 15,
         "fields": {
+            "book": 2,
             "root": "1103",
             "sub_account": "03",
             "detailed_account": null,
@@ -213,6 +228,7 @@
         "model": "acc_codes.account",
         "pk": 16,
         "fields": {
+            "book": 2,
             "root": "1103",
             "sub_account": "04",
             "detailed_account": null,
@@ -227,6 +243,7 @@
         "model": "acc_codes.account",
         "pk": 17,
         "fields": {
+            "book": 2,
             "root": "1104",
             "sub_account": "01",
             "detailed_account": null,
@@ -241,6 +258,7 @@
         "model": "acc_codes.account",
         "pk": 18,
         "fields": {
+            "book": 2,
             "root": "1104",
             "sub_account": "02",
             "detailed_account": null,
@@ -255,6 +273,7 @@
         "model": "acc_codes.account",
         "pk": 19,
         "fields": {
+            "book": 2,
             "root": "1105",
             "sub_account": "01",
             "detailed_account": null,
@@ -269,6 +288,7 @@
         "model": "acc_codes.account",
         "pk": 20,
         "fields": {
+            "book": 2,
             "root": "1106",
             "sub_account": "01",
             "detailed_account": null,
@@ -283,6 +303,7 @@
         "model": "acc_codes.account",
         "pk": 21,
         "fields": {
+            "book": 2,
             "root": "1106",
             "sub_account": "02",
             "detailed_account": null,
@@ -297,6 +318,7 @@
         "model": "acc_codes.account",
         "pk": 22,
         "fields": {
+            "book": 2,
             "root": "1106",
             "sub_account": "03",
             "detailed_account": null,
@@ -311,6 +333,7 @@
         "model": "acc_codes.account",
         "pk": 23,
         "fields": {
+            "book": 2,
             "root": "2101",
             "sub_account": "01",
             "detailed_account": null,
@@ -325,6 +348,7 @@
         "model": "acc_codes.account",
         "pk": 24,
         "fields": {
+            "book": 2,
             "root": "2101",
             "sub_account": "02",
             "detailed_account": null,
@@ -339,6 +363,7 @@
         "model": "acc_codes.account",
         "pk": 25,
         "fields": {
+            "book": 2,
             "root": "2101",
             "sub_account": "03",
             "detailed_account": null,
@@ -353,6 +378,7 @@
         "model": "acc_codes.account",
         "pk": 26,
         "fields": {
+            "book": 2,
             "root": "2102",
             "sub_account": "01",
             "detailed_account": null,
@@ -367,6 +393,7 @@
         "model": "acc_codes.account",
         "pk": 27,
         "fields": {
+            "book": 2,
             "root": "4102",
             "sub_account": "01",
             "detailed_account": null,
@@ -381,6 +408,7 @@
         "model": "acc_codes.account",
         "pk": 28,
         "fields": {
+            "book": 2,
             "root": "4102",
             "sub_account": "02",
             "detailed_account": null,
@@ -395,6 +423,7 @@
         "model": "acc_codes.account",
         "pk": 29,
         "fields": {
+            "book": 2,
             "root": "4102",
             "sub_account": "03",
             "detailed_account": null,
@@ -409,6 +438,7 @@
         "model": "acc_codes.account",
         "pk": 30,
         "fields": {
+            "book": 2,
             "root": "4104",
             "sub_account": "01",
             "detailed_account": null,
@@ -423,6 +453,7 @@
         "model": "acc_codes.account",
         "pk": 31,
         "fields": {
+            "book": 2,
             "root": "4104",
             "sub_account": "02",
             "detailed_account": null,
@@ -437,6 +468,7 @@
         "model": "acc_codes.account",
         "pk": 32,
         "fields": {
+            "book": 2,
             "root": "4107",
             "sub_account": "01",
             "detailed_account": null,
@@ -451,6 +483,7 @@
         "model": "acc_codes.account",
         "pk": 33,
         "fields": {
+            "book": 2,
             "root": "4107",
             "sub_account": "02",
             "detailed_account": "01",
@@ -465,6 +498,7 @@
         "model": "acc_codes.account",
         "pk": 34,
         "fields": {
+            "book": 2,
             "root": "4107",
             "sub_account": "02",
             "detailed_account": "02",
@@ -479,6 +513,7 @@
         "model": "acc_codes.account",
         "pk": 35,
         "fields": {
+            "book": 2,
             "root": "5101",
             "sub_account": "01",
             "detailed_account": null,
@@ -493,6 +528,7 @@
         "model": "acc_codes.account",
         "pk": 36,
         "fields": {
+            "book": 2,
             "root": "5101",
             "sub_account": "02",
             "detailed_account": null,
@@ -507,6 +543,7 @@
         "model": "acc_codes.account",
         "pk": 37,
         "fields": {
+            "book": 2,
             "root": "5101",
             "sub_account": "03",
             "detailed_account": null,
@@ -521,6 +558,7 @@
         "model": "acc_codes.account",
         "pk": 38,
         "fields": {
+            "book": 2,
             "root": "5102",
             "sub_account": "01",
             "detailed_account": null,
@@ -535,6 +573,7 @@
         "model": "acc_codes.account",
         "pk": 39,
         "fields": {
+            "book": 2,
             "root": "5102",
             "sub_account": "02",
             "detailed_account": null,
@@ -549,6 +588,7 @@
         "model": "acc_codes.account",
         "pk": 40,
         "fields": {
+            "book": 2,
             "root": "5103",
             "sub_account": "01",
             "detailed_account": null,
@@ -563,6 +603,7 @@
         "model": "acc_codes.account",
         "pk": 41,
         "fields": {
+            "book": 2,
             "root": "5103",
             "sub_account": "02",
             "detailed_account": null,
@@ -577,6 +618,7 @@
         "model": "acc_codes.account",
         "pk": 42,
         "fields": {
+            "book": 2,
             "root": "5103",
             "sub_account": "03",
             "detailed_account": null,
@@ -591,6 +633,7 @@
         "model": "acc_codes.account",
         "pk": 43,
         "fields": {
+            "book": 2,
             "root": "5104",
             "sub_account": "01",
             "detailed_account": null,
@@ -605,6 +648,7 @@
         "model": "acc_codes.account",
         "pk": 44,
         "fields": {
+            "book": 2,
             "root": "5105",
             "sub_account": "01",
             "detailed_account": null,
@@ -619,6 +663,7 @@
         "model": "acc_codes.account",
         "pk": 45,
         "fields": {
+            "book": 2,
             "root": "5105",
             "sub_account": "02",
             "detailed_account": null,
@@ -633,6 +678,7 @@
         "model": "acc_codes.account",
         "pk": 46,
         "fields": {
+            "book": 2,
             "root": "5106",
             "sub_account": "01",
             "detailed_account": null,
@@ -647,6 +693,7 @@
         "model": "acc_codes.account",
         "pk": 47,
         "fields": {
+            "book": 2,
             "root": "5107",
             "sub_account": "01",
             "detailed_account": null,
@@ -661,6 +708,7 @@
         "model": "acc_codes.account",
         "pk": 48,
         "fields": {
+            "book": 2,
             "root": "5109",
             "sub_account": "00",
             "detailed_account": null,
@@ -675,6 +723,7 @@
         "model": "acc_codes.account",
         "pk": 49,
         "fields": {
+            "book": 2,
             "root": "5109",
             "sub_account": "01",
             "detailed_account": null,
@@ -689,6 +738,7 @@
         "model": "acc_codes.account",
         "pk": 50,
         "fields": {
+            "book": 2,
             "root": "5110",
             "sub_account": "01",
             "detailed_account": null,
@@ -703,6 +753,7 @@
         "model": "acc_codes.account",
         "pk": 51,
         "fields": {
+            "book": 2,
             "root": "5106",
             "sub_account": "02",
             "detailed_account": null,
@@ -717,6 +768,7 @@
         "model": "acc_codes.account",
         "pk": 52,
         "fields": {
+            "book": 2,
             "root": "1202",
             "sub_account": "01",
             "detailed_account": null,

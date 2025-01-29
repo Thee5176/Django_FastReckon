@@ -4,13 +4,9 @@ from django.dispatch import receiver
 
 from .management.commands.populate_account import AccountPopulator
 
-User = get_user_model()
-
-@staticmethod
-@receiver(post_save, sender=User)
-def handle_post_migrate(sender, created, instance,**kwargs):
-    if created:
-        AccountPopulator.populate_root()
-        print(f"populated root account")
-        AccountPopulator.populate_base(user_instance=instance)
-        print(f"populated initial account structure for new user: {instance.username}")
+# @staticmethod
+# @receiver(post_save, sender=Book)
+# def handle_post_migrate(sender, created, instance, user=None, **kwargs):
+#     if created and user:
+#         AccountPopulator.populate_base(book=instance,user=user_instance)
+#         print(f"populated initial account structure for user: {user.username} on book: {book.name}")

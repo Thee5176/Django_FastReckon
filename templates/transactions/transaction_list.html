@@ -10,13 +10,13 @@
     </div>
     <hr />
     <div class='container row ms-auto'>
-        <div class='col-auto'>
+        <div class='col-4'>
             {% include "partials/htmx/tran_book_selector.html" %}
         </div>
-        <div class='row col-8'>
+        <div class='col-8 '>
             <form method="get" action="{% url "transaction_list" %}" class='d-flex'>
-                <input class='form-control me-2 col-9' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
-                <input class='form-control me-2 col-3' type="date" name="created" value="{{ request.GET.created|escape }}">
+                <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
+                <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
                 <input class="btn btn-success" type="submit" value="Search">
             </form>
         </div>

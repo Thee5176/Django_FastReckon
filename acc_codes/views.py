@@ -94,4 +94,4 @@ def filter_account_by_book(request):
             book_instance = Book.objects.all()
             print(f"{len(book_instance)} Books are selected.")
         
-        return render(request, "transactions/partials/base_list_table.html", {'book_list':book_instance})
+        return render(request, "transactions/partials/base_acc_table.html", {'book_list':book_instance})

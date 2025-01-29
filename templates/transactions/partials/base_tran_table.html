@@ -1,7 +1,7 @@
 {% load static %}
 
-{% for book in book_list %}
-    <div class="table-responsive col-auto">
+<div class="table-responsive col-auto">
+        {% for book in book_list %}
         <h4 class="m-2">{{ book.abbr }}|{{ book.name }}</h4>
 
         <table class="table table-hover table-light align-middle" >
@@ -41,10 +41,28 @@
             {% else %}
                 <tbody>
                     <tr class="table-light">
-                        <td colspan=6 class='text-danger'>No Transaction in record</td>
+                        <td colspan=6 class='text-danger'>No Transaction loaded</td>
                     </tr>
                 </tbody>
             {% endif %}
         </table>
-    </div>
-{% endfor %}
+    {% empty %}
+    <table class="table table-hover table-light align-middle" >
+        <h4 class="m-2" class='text-danger'>No Book Found</h4>
+        <thead class="table-light">
+            <tr>
+                <th>Date</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Receipt</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-light">
+                <td colspan=6 class='text-danger'>No Transaction loaded</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endfor %}
+</div>

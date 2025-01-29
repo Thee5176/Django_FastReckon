@@ -22,6 +22,6 @@ class Book(models.Model):
     @property
     def record_count(self):
         return self.transactions.all().count
-    
+       
     def __str__(self):
         return self.abbr

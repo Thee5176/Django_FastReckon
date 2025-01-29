@@ -1,23 +1,23 @@
 [
     {
         "model": "acc_books.book",
-        "pk": 1,
-        "fields": {
-            "name": "Thai Account",
-            "abbr": "TA",
-            "guideline": "",
-            "currency_sign": "¥",
-            "created_by": 1
-        }
-    },
-    {
-        "model": "acc_books.book",
         "pk": 2,
         "fields": {
             "name": "Japanese Account",
             "abbr": "JA",
             "guideline": "",
             "currency_sign": "฿",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_books.book",
+        "pk": 1,
+        "fields": {
+            "name": "Thai Account",
+            "abbr": "TA",
+            "guideline": "",
+            "currency_sign": "¥",
             "created_by": 1
         }
     }
