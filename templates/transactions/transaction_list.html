@@ -9,7 +9,7 @@
         <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
     </div>
     <hr />
-    <div class='container row ms-auto'>
+    <div class='row ms-auto'>
         <div class='col-4'>
             {% include "partials/htmx/tran_book_selector.html" %}
         </div>
@@ -21,7 +21,7 @@
             </form>
         </div>
     </div>
-    <div class="container m-3 ms-auto" id="transaction-container">
+    <div class="m-3 ms-auto" id="transaction-container">
         {% include "transactions/partials/base_tran_table.html" %}
     </div>
 {% endblock content %}

@@ -82,6 +82,8 @@ class AccountDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         obj = self.get_object()
         return obj.created_by == self.request.user
     
+from django.shortcuts import render,get_object_or_404
+
 def filter_account_by_book(request):
     if request.method == "POST":
         query = request.POST.get("book-filter")
@@ -94,4 +96,4 @@ def filter_account_by_book(request):
             book_instance = Book.objects.all()
             print(f"{len(book_instance)} Books are selected.")
         
-        return render(request, "transactions/partials/base_acc_table.html", {'book_list':book_instance})
+        return render(request, "acc_codes/partials/base_acc_table.html", {'book_list':book_instance})

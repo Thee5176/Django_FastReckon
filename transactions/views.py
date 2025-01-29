@@ -4,7 +4,6 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import TemplateView, ListView, DetailView, FormView, View
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormMixin
-from django.shortcuts import get_object_or_404
 from datetime import datetime
 
 from .forms import TransactionForm, EntryInlineFormSet
@@ -101,7 +100,7 @@ class TransactionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView)
         obj = self.get_object()
         return obj.created_by == self.request.user
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.forms import inlineformset_factory
 from .forms import EntryForm
 

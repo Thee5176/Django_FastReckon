@@ -9,7 +9,7 @@
         <a class="btn btn-success col-4" href="{% url "account_create" %}">+ New Account</a>
     </div>
     <hr />
-    <div class='container row ms-auto'>
+    <div class='row ms-auto'>
         <div class='col-4'>
             {% include "partials/htmx/acc_book_selector.html" %}
         </div>
@@ -21,7 +21,7 @@
             </form>
         </div>
     </div>
-    <div class="container m-3 ms-auto" id="account-container">
+    <div class="container-fluid row m-3 ms-auto" id="account-container">
         {% include "acc_codes/partials/base_acc_table.html" %}
     </div> 
 {% endblock content %}
