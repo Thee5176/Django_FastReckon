@@ -11,10 +11,17 @@ class BookListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
     
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
+    fields = ["name","abbr","guideline","currency_sign"]
     template_name = "acc_books/book_alter_form.html"
-    fields = "__all__"
     success_url = reverse_lazy("book_list")
 
+    def form_valid(self, form):
+        if form.is_valid():
+            book = form.save(commit=False)
+            book.created_by = self.request.user
+            book = form.save()
+        return super().form_valid(form)
+        
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["view_name"] = "Create"
@@ -22,14 +29,21 @@ class BookCreateView(LoginRequiredMixin, CreateView):
     
 class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Book
+    fields = ["name","abbr","guideline"]
     template_name = "acc_books/book_alter_form.html"
-    fields = "__all__"
     success_url = reverse_lazy("book_list")
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["view_name"] = "Update"
         return context
+    
+    def form_valid(self, form):
+        if form.is_valid():
+            book = form.save(commit=False)
+            book.created_by = self.request.user
+            book = form.save()
+        return super().form_valid(form)
     
     def test_func(self):
         obj = self.get_object()
