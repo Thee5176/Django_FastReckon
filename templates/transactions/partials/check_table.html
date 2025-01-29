@@ -11,7 +11,7 @@
         </thead>
         <tbody class="table-group-divider">
             {% for account in account_list %}
-            <tr>
+            <tr class="position-relative">
                 <td scope="row">
                     <a href="{% url "account_detail" account.pk%}" class="stretched-link text-decoration-none text-uppercase text-dark">
                         {{ account }}

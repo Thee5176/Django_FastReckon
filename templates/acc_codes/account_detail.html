@@ -15,16 +15,16 @@
             <legend>Account Detail:</legend>
             <ul>
                 <li class="d-flex align-items-start">
-                    <span class="col-3">Chart of Account: </span>
-                    <span class="badge bg-{{ object.color_code }}">{{ object.level3.level2.level1 }}</span>                    
-                </li>
-                <li class="d-flex align-items-start">
                     <span class="col-3">Account Type: </span>
-                    <span class="badge bg-secondary">{{ object.level3.level2 }}</span>                  
+                    <span class="badge bg-{{ object.color_code }}">{{ object.root.get_type }}</span>                    
                 </li>
                 <li class="d-flex align-items-start">
                     <span class="col-3">Group of Account: </span>
-                    <span class="badge bg-secondary">{{ object.level3 }}</span>
+                    <span class="badge bg-secondary">{{ object.root.get_group }}</span>                  
+                </li>
+                <li class="d-flex align-items-start">
+                    <span class="col-3">Root Account: </span>
+                    <span class="badge bg-secondary">{{ object.root }}</span>
                 </li>
             </ul>
         </fieldset>

@@ -4,30 +4,24 @@
 {% block title %}Transaction Records{% endblock title %}
 
 {% block content %}
-<div class="row m-3 justify-content-between">
-    <h2 class="text-muted col-8">Transaction List</h2>
-    <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
-</div>
-<hr />
-<div class='container row'>
-    <!--HTMX Book Selector-->
-    <select class="form-control" name="book" id="book-selector"
-            hx-post="{% url "" %}"
-            hx-target="#transaction-container"
-            hx-swap="innerHTML"
-    >
-        <option value="all">-ALL BOOK-</option>
-        {% for book in book_list %}
-        <option value="book.pk">{{ book }}</option>
-        {% endfor %}
-    </select>
-    <form method="get" action="{% url "transaction_list" %}" class='d-flex my-2 col-10'>
-        <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
-        <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
-        <input class="btn btn-success" type="submit" value="Search">
-    </form>
-</div>
-<div class="container" id="transaction-container">
-    {% include "transactions/partials/tran_table.html" %}
-</div>
+    <div class="row m-3 justify-content-between">
+        <h2 class="col-8 text-muted">Transaction List</h2>
+        <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
+    </div>
+    <hr />
+    <div class='container row ms-auto'>
+        <div class='col-auto'>
+            {% include "partials/htmx/tran_book_selector.html" %}
+        </div>
+        <div class='col-8'>
+            <form method="get" action="{% url "transaction_list" %}" class='d-flex'>
+                <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
+                <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
+                <input class="btn btn-success" type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+    <div class="container m-3 ms-auto" id="transaction-container">
+        {% include "transactions/partials/base_tran_table.html" %}
+    </div>
 {% endblock content %}

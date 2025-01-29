@@ -24,7 +24,9 @@ class TransactionListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
         date = self.request.GET.get("created")
         
         if kw:
-            queryset = queryset.filter(Q(description__icontains=kw)| Q(slug__icontains=kw) | Q(shop__icontains=kw))
+            queryset = queryset.filter(
+                Q(description__icontains=kw)| Q(slug__icontains=kw) | Q(shop__icontains=kw)
+            )
             
         if date:
             try:
@@ -43,7 +45,7 @@ class TransactionDetailView(LoginRequiredMixin, UserOwnedQuerysetMixin, DetailVi
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         transaction = self.get_object()
-        context["entries"] = Entry.objects.select_related('transaction','code__level3__level2__level1').filter(transaction_id=transaction.id)
+        context["entries"] = Entry.objects.select_related('transaction','code__root').filter(transaction_id=transaction.id)
         return context
 
 class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormView):
@@ -125,4 +127,4 @@ def filter_transaction_by_book(request):
             book_instance = Book.objects.all()
             print(f"{len(book_instance)} Books are selected.")
         
-        return render(request, "transactions/partials/base_list_table.html", {'book_list':book_instance})
+        return render(request, "transactions/partials/base_tran_table.html", {'book_list':book_instance})

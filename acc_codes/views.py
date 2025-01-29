@@ -8,26 +8,24 @@ from .models import Account
 from .mixins import AccountColorCodeMixin
 from accounts.mixins import UserOwnedQuerysetMixin
 from acc_books.models import Book
-from transactions.models import Transaction, Entry
+from transactions.models import Entry
 
-class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
-    model = Account
+class AccountListView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
+    model = Book
     template_name = "acc_codes/account_list.html"      
 
     def get_queryset(self):
         queryset = super().get_queryset()
         name = self.request.GET.get("name")
         code = self.request.GET.get("code")
+        
         if name:
             queryset = queryset.filter(name__icontains=name)
+        
         if code:
             queryset = queryset.filter(code__startswith=code) 
-        return queryset   
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-
+        
+        return queryset
 
 class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, DetailView):
     model = Account
@@ -83,3 +81,17 @@ class AccountDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         obj = self.get_object()
         return obj.created_by == self.request.user
+    
+def filter_account_by_book(request):
+    if request.method == "POST":
+        query = request.POST.get("book-filter")
+        
+        if query and query != "all":
+            book_filter = get_object_or_404(Book, pk=query)
+            print(f"{book_filter.abbr} Book is selected.")
+            book_instance = [book_filter]
+        else:
+            book_instance = Book.objects.all()
+            print(f"{len(book_instance)} Books are selected.")
+        
+        return render(request, "transactions/partials/base_list_table.html", {'book_list':book_instance})

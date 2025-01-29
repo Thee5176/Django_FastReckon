@@ -40,20 +40,21 @@ class AccountPopulator:
     @csv_to_variable(df_root)      
     def populate_root(c,n,b,g):
         try:
-                root_account = RootAccount.objects.filter(code=c).first()
-                if root_account:
-                    pass
-                    # Do Nothing and Update CSV with existing account
-                else:
-                    # Import account from CSV
-                    root_account = RootAccount(
-                        code=c,
-                        name=n,
-                        guideline=g,
-                        balance=b,
-                    )
-                # Save account, trigger the custom save() method     
-                root_account.save()
+            root_account = RootAccount.objects.filter(code=c).first()
+            if root_account:
+                pass
+                # Do Nothing and Update CSV with existing account
+            else:
+                # Import account from CSV
+                root_account = RootAccount(
+                    code=c,
+                    name=n,
+                    guideline=g,
+                    balance=b,
+                )
+            # Save account, trigger the custom save() method     
+            root_account.save()
+                
         except Exception as e:
             print(f"Encounter error when creating account: {c} with error {e}")
             sys.exit(1)

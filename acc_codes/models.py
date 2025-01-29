@@ -14,7 +14,8 @@ class RootAccount(models.Model):
         validators=[
             MaxValueValidator(9999),
             MinValueValidator(1000)
-        ])
+        ]
+    )
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     balance = models.IntegerField(choices=BALANCE_TYPE)
@@ -28,22 +29,22 @@ class RootAccount(models.Model):
         return f"{self.code} | {self.name}"
     
     @property
-    def get_account_type(self):
+    def get_type(self):
         code = str(self.code)[0]
         return code
     
     @property
-    def get_account_group(self):
+    def get_group(self):
         code = str(self.code)[:2]
         return code
     
 class Account(models.Model):
-    
     BALANCE_TYPE = [
         (1, "Dr"),
         (2, "Cr"),
     ]
     
+    book = models.ForeignKey("acc_books.Book", related_name="accounts", on_delete=models.CASCADE)
     root = models.ForeignKey(RootAccount, related_name="accounts", on_delete=models.CASCADE)
     sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
