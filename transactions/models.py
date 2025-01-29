@@ -4,7 +4,6 @@ from django.db.models import Max
 from django.urls import reverse
 from django.utils.text import slugify
 
-from acc_books.models import Book
 from acc_codes.models import Account
 
 class MonthRefMixin(models.Model):
@@ -84,7 +83,7 @@ class Transaction(MonthRefMixin, BalanceMixin, SlugMixin, models.Model):
     }
     
     book = models.ForeignKey(
-        Book,
+        "acc_books.Book",
         related_name ="transactions",
         on_delete=models.CASCADE
     )
@@ -131,7 +130,7 @@ class Entry(models.Model):
         on_delete=models.CASCADE
     )
     code = models.ForeignKey( #change to "account"
-        Account,
+        "acc_codes.Account",
         related_name ="entries",
         on_delete=models.DO_NOTHING
     )

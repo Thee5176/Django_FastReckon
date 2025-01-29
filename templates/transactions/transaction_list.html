@@ -9,16 +9,25 @@
     <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
 </div>
 <hr />
-<div class='container'>
-    <form method="get" action="{% url "transaction_list" %}" class='d-flex my-2'>
+<div class='container row'>
+    <!--HTMX Book Selector-->
+    <select class="form-control" name="book" id="book-selector"
+            hx-post="{% url "" %}"
+            hx-target="#transaction-container"
+            hx-swap="innerHTML"
+    >
+        <option value="all">-ALL BOOK-</option>
+        {% for book in book_list %}
+        <option value="book.pk">{{ book }}</option>
+        {% endfor %}
+    </select>
+    <form method="get" action="{% url "transaction_list" %}" class='d-flex my-2 col-10'>
         <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
         <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
         <input class="btn btn-success" type="submit" value="Search">
     </form>
 </div>
-<div
-        class="container"
-    >
-    {% include "transactions/tran_table.html" %}
+<div class="container" id="transaction-container">
+    {% include "transactions/partials/tran_table.html" %}
 </div>
 {% endblock content %}

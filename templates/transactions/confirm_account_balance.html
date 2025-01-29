@@ -6,9 +6,9 @@
     <a class="btn btn-warning col-3" href="{% url "transaction_list" %}">Back to list</a>
 </div>
 <div class="container m-3">
-    {% include "transactions/check_table.html" %}
+    {% include "transactions/partials/check_table.html" %}
     <hr />
     <h4>Transaction <span class="text-uppercase">{{transaction.slug}}</span></h4>
-    {% include "transactions/ent_table.html" %}
+    {% include "transactions/partials/ent_table.html" %}
 </div>
 {% endblock content %}

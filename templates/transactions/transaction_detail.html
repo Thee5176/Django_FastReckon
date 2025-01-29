@@ -21,7 +21,7 @@
     </p>
 </div>
 <div class="container table-responsive">
-    {% include "transactions/ent_table.html" %}
+    {% include "transactions/partials/ent_table.html" %}
     <div class="row justify-content-between my-3">
         <a class="btn btn-primary col-4" href="{% url "transaction_update" object.slug %}">! Update Transaction</a>
         <a class="btn btn-danger col-4" href="{% url "transaction_delete" object.slug %}">- Delete Transaction</a>
