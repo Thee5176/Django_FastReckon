@@ -36,7 +36,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 
 ## to verify setup run: docker run hello-world
-
+chmod +x `ls _script/*.sh`
 
 # OCI instance
 ORACLE_IP="168.138.213.57"
