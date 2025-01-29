@@ -57,7 +57,7 @@ class TransactionFormValidator:
                 print("Error saving entry:", e)
 
             # send list of account instance via session
-            self.request.session['account_list'] = [entry.code.code for entry in all_entries]
+            self.request.session['account_list'] = [entry.account.code for entry in all_entries]
         else:
             print("formset value not valid")
             

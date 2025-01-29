@@ -21,6 +21,6 @@ class TransactionForm(forms.ModelForm):
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry
-        fields = ["code","entry_type", "amount"]
+        fields = ["account","entry_type", "amount"]
         
 EntryInlineFormSet = inlineformset_factory(Transaction, Entry, form=EntryForm, extra=0, min_num=2)

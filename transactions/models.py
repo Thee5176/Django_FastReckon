@@ -129,7 +129,7 @@ class Entry(models.Model):
         related_name ="entries",
         on_delete=models.CASCADE
     )
-    code = models.ForeignKey( #change to "account"
+    account = models.ForeignKey(
         "acc_codes.Account",
         related_name ="entries",
         on_delete=models.DO_NOTHING
@@ -140,10 +140,10 @@ class Entry(models.Model):
     class Meta:
         verbose_name = ("Entry")
         verbose_name_plural = ("Entries")
-        ordering = ["entry_type","code","amount"]
+        ordering = ["entry_type","account","amount"]
     
     def get_entry_balance(self):
-        if self.entry_type == self.code.get_account_type():
+        if self.entry_type == self.account.get_account_type():
             return self.amount 
         else:
             return self.amount * -1
