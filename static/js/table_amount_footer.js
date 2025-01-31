@@ -1,10 +1,17 @@
-var el = document.getElementsByClassName('myamount');
-var sum = 0;
+// must specify 'classQuery' before import this code
+if (typeof classQuery !== "undefined") {
+    var el = document.getElementsByClassName(classQuery);
+    var sum = 0;
 
-for (var element of el) {
-    value = element.innerText.trim()
-    sum += parseFloat(value) || 0;
-    console.log(sum)
+    console.log("Retrived amount element", el)
+
+    for (var element of el) {
+        value = element.innerText.trim()
+        sum += parseFloat(value) || 0;
+        console.log(sum)
+    }
+
+    document.write(sum);
+} else {
+    console.error("classQuery is not defined.");
 }
-
-document.write(sum);

@@ -5,12 +5,11 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
 from .models import Account
-from .mixins import AccountColorCodeMixin
 from accounts.mixins import UserOwnedQuerysetMixin
 from acc_books.models import Book
 from transactions.models import Entry
 
-class AccountListView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
+class AccountListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
     model = Book
     template_name = "acc_codes/account_list.html"      
 
@@ -27,7 +26,7 @@ class AccountListView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerys
         
         return queryset
 
-class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, DetailView):
+class AccountDetailView(LoginRequiredMixin, UserOwnedQuerysetMixin, DetailView):
     model = Account
     template_name = "acc_codes/account_detail.html"
     

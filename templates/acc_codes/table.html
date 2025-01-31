@@ -41,7 +41,10 @@
             <tr>
                 <td colspan=4>remaining</td>
                 <td>
-                    <script src="{% static "js/table_amount_footer.js" %}"></script>
+                    <script>
+                        var classQuery = "myamount";
+                    </script>
+                    <script src="{% static "js/table_amount_footer.js"%}"></script>
                 </td>
             </tr>
         </tfoot>

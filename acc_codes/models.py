@@ -85,7 +85,7 @@ class Account(models.Model):
                 balance -= entry.amount
         return balance
     
-    def get_color_code(self):
+    def get_bs_color_code(self):
         color_by_code = {
             0:"dark",
             1:"primary",

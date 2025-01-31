@@ -16,7 +16,7 @@
         </thead>
         <tbody class="table-group-divider">
         {% for account in book.accounts.all %}
-            <tr class="table-{{ account.color_code }} position-relative">
+            <tr class="table-{{ account.get_bs_color_code }} position-relative">
                 <td scope="row">
                     <a href="{{ account.get_absolute_url }}" class="stretched-link text-decoration-none text-dark">
                         {{ account.code }}
@@ -24,7 +24,7 @@
                 </td>
                 <td>{{ account.name }}</td>
                 <td>{{ account.record_count|default_if_none:"<span class='text-danger'>-</span>"|safe }}</td>
-                <td class="myamount">{{ account.get_account_balance }}</td>
+                <td class="myamount-{{book.abbr}}">{{ account.get_account_balance }}</td>
             </tr>
         {% empty %}
             <tr class="table-light">
@@ -36,7 +36,10 @@
             <tr>
                 <td colspan=3>total</td>
                 <td>
-                    <script src="{% static "js/table_amount_footer.js" %}"></script>
+                    <script>
+                        var classQuery = "myamount-{{ book.abbr }}";
+                    </script>
+                    <script src="{% static "js/table_amount_footer.js"%}"></script>
                 </td>
             </tr>
         </tfoot>

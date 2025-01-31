@@ -82,8 +82,8 @@ class AccountPopulator:
                     # Import account from CSV
                     account = Account(
                         book=book_instance,
-                        root=root_instance,     #code 1/2
-                        sub_account=c[-2:],         #code 2/2
+                        root=root_instance,
+                        sub_account=c[-2:],
                         name=n,
                         guideline=g,
                         balance=b,
