@@ -1,11 +1,12 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
-{% block title %}Account List{% endblock title %}
+{% block title %}{% trans "Account List" %}{% endblock title %}
 
 {% block content %}
     <div class="row m-3 justify-content-between">
-        <h2 class="col-8 text-muted">Book of Account</h2>
-        <a class="btn btn-success col-4" href="{% url "book_create" %}">+ New Book</a>
+        <h2 class="col-8 text-muted">{% trans "Book of Account" %}</h2>
+        <a class="btn btn-success col-4" href="{% url "book_create" %}">+ {% trans "New Book" %}</a>
     </div>
     <hr>
     <div
@@ -16,10 +17,10 @@
         >
             <thead class="table-light">
                 <tr>
-                    <th>Abbreviation</th>
-                    <th>Name</th>
-                    <th>Guideline</th>
-                    <th>#Records</th>
+                    <th>{% trans "Abbreviation" %}</th>
+                    <th>{% trans "Name" %}</th>
+                    <th>{% trans "Guideline" %}</th>
+                    <th>{% trans "#Records" %}</th>
                 </tr>
             </thead>
             {% for book in book_list %}
@@ -33,7 +34,11 @@
                         </a>
                     </td>
                     <td>{{ book.name }}</td>
-                    <td>{{ book.guideline }}</td>
+                    <td>
+                        {% blocktrans trimmed %}
+                            {{ book.guideline }}
+                        {% endblocktrans %}
+                    </td>
                     <td>{{ book.record_count }}</td>
                 </tr>
             </tbody>
@@ -42,7 +47,7 @@
                 <tr
                     class="table-light"
                 >
-                    <td class='text-danger' colspan=4>No Book Found</td>
+                    <td class="text-danger" colspan=4>{% trans "No Book Found" %}</td>
                 </tr>
             </tbody>
             {% endfor %}

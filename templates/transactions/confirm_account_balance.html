@@ -1,14 +1,16 @@
+{% load i18n %}
+
 {% extends "_base.html" %}
 <!--TODO: Display as BS Modal: https://getbootstrap.com/docs/5.0/components/modal/-->
 {% block content %}
 <div class="row m-3 justify-content-between">
-    <h2 class="col-auto">Confirm Your Account Balance</h2>
-    <a class="btn btn-warning col-3" href="{% url "transaction_list" %}">Back to list</a>
+    <h2 class="col-auto">{% trans "Confirm Your Account Balance" %}</h2>
+    <a class="btn btn-warning col-3" href="{% url "transaction_list" %}">{% trans "Back to list" %}</a>
 </div>
 <div class="container m-3">
     {% include "transactions/partials/check_table.html" %}
     <hr />
-    <h4>Transaction <span class="text-uppercase">{{transaction.slug}}</span></h4>
+    <h4>{% trans "Transaction" %} <span class="text-uppercase">{{transaction.slug}}</span></h4>
     {% include "transactions/partials/ent_table.html" %}
 </div>
 {% endblock content %}

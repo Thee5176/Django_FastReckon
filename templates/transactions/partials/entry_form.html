@@ -1,4 +1,5 @@
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 <div class="col-md-4">
     <div class="card p-3">
@@ -6,8 +7,8 @@
     </div>
 </div>
 <script>
-    console.log('HTMX request finished!');
+    console.log("{% trans "HTMX request finished!" %}");
     //Increment management form: TOTAL_FORMS
-    const totalFormsInput = document.getElementById('id_entries-TOTAL_FORMS');
+    const totalFormsInput = document.getElementById("id_entries-TOTAL_FORMS");
     totalFormsInput.value = parseInt(totalFormsInput.value) + 1;
 </script>

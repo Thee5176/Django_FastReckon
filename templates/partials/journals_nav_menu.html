@@ -1,11 +1,13 @@
+{% load i18n %}
+
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-journal-check"></i> Start Bookkeeping
+      <i class="bi bi-journal-check"></i> {% trans "Start Bookkeeping"%}
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><a class="dropdown-item" href="{% url "book_list" %}">Book of Account</a></li>
-      <li><a class="dropdown-item" href="{% url "account_list" %}">Code of Account</a></li>
-      <li><a class="dropdown-item" href="{% url "transaction_list" %}">Journal Record</a></li>
-      <li><a class="dropdown-item disabled" href="#">Financial Report</a></li>
+      <li><a class="dropdown-item" href="{% url "book_list" %}">{% trans "Book of Account"%}</a></li>
+      <li><a class="dropdown-item" href="{% url "account_list" %}">{% trans "Code of Account"%}</a></li>
+      <li><a class="dropdown-item" href="{% url "transaction_list" %}">{% trans "Journal Record"%}</a></li>
+      <li><a class="dropdown-item disabled" href="#">{% trans "Financial Report"%}</a></li>
     </ul>
   </li>

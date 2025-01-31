@@ -1,6 +1,6 @@
 {% extends "_base.html" %}
 {% load static %}
-{% block title %}FastReckon{% endblock title %}
+{% load i18n %}
 
 {% block content %}
 <div class="container-fluid jumbotron vh-100 d-flex justify-content-center align-items-center">
@@ -11,14 +11,14 @@
         <div class="fade-overlay position-absolute top-0 start-0 h-100 w-100"></div>
     </div>
     <div class="content mx-auto text-center align-items-center z-1">
-        <h1 class="display-4 font-weight-bold">Every Unrecorded Day is a Missed Opportunity.</h1>
-        <p class="lead">Without records, there are no insights.</p>
-        <p class="lead">Without insights, there’s no clarity.</p>
-        <p class="lead">And without clarity, your plans are just guesses.</p>
-        <p class="lead">Stop guessing through life and start records today.</p>
+        <h1 class="display-4 font-weight-bold"> {% trans "Every Unrecorded Day is a Missed Opportunity." %}</h1>
+        <p class="lead">{% trans "Without records, there are no insights." %}</p>
+        <p class="lead">{% trans "Without insights, there’s no clarity." %}</p>
+        <p class="lead">{% trans "And without clarity, your plans are just guesses." %}</p>
+        <p class="lead">{% trans "Stop guessing through life and start records today." %}</p>
         <p>
           <a class="btn btn-dark text-white btn-lg">
-            Start Reckoning
+            {% trans "Start Reckoning" %}
           </a>
         </p>
       </div>

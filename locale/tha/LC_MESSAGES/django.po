@@ -1,0 +1,524 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: django_project/urls.py:43
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-31 12:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: django_project/settings.py:152
+msgid "English"
+msgstr "ภาษาอังกฤษ (English)"
+
+#: django_project/settings.py:153
+msgid "Japanese"
+msgstr "ภาษาญี่ปุ่น (日本語)"
+
+#: django_project/settings.py:154
+msgid "Thai"
+msgstr "ภาษาไทย"
+
+#: django_project/urls.py:41 django_project/urls.py:42
+msgid "accounts/"
+msgstr "บัญชีผู้ใช้"
+
+#: django_project/urls.py:44
+msgid "books/"
+msgstr "หนังสือ"
+
+#: django_project/urls.py:45
+msgid "codes/"
+msgstr "รหัส"
+
+#: django_project/urls.py:46
+msgid "transactions/"
+msgstr "ธุรกรรม"
+
+#: django_project/urls.py:47
+msgid "__debug__/"
+msgstr "ดีบัก"
+
+#: django_project/urls.py:48
+msgid "i18n/"
+msgstr "i18n"
+
+#: templates/_base.html:8
+msgid "Comprehensable Accounting Solution"
+msgstr "โซลูชันการบัญชีที่เข้าใจง่าย"
+
+#: templates/_base.html:51
+msgid "Messages:"
+msgstr "ข้อความ:"
+
+#: templates/acc_books/book_alter_form.html:6
+#: templates/acc_books/book_alter_form.html:13
+#, python-format
+msgid "%(view_name)s Book"
+msgstr "สมุดบัญชี %(view_name)s"
+
+#: templates/acc_books/book_alter_form.html:22
+#: templates/transactions/transaction_alter_form.html:50
+#, python-format
+msgid "%(view_name)s"
+msgstr "%(view_name)s"
+
+#: templates/acc_books/book_delete.html:3
+#: templates/acc_books/book_delete.html:7
+msgid "Delete Book"
+msgstr "ลบสมุดบัญชี"
+
+#: templates/acc_books/book_delete.html:13
+#, python-format
+msgid ""
+"Are you sure you want to delete accounting book %(object.abbr)s:"
+"%(object.name)s?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบสมุดบัญชี %(object.abbr)s: %(object.name)s?"
+
+#: templates/acc_books/book_delete.html:18
+#: templates/transactions/transaction_delete.html:15
+msgid "Delete"
+msgstr "ลบ"
+
+#: templates/acc_books/book_delete.html:19
+#: templates/transactions/transaction_delete.html:16
+msgid "Back"
+msgstr "กลับ"
+
+#: templates/acc_books/book_list.html:4
+#, fuzzy
+#| msgid "accounts/"
+msgid "Account List"
+msgstr "รายการบัญชี"
+
+#: templates/acc_books/book_list.html:8
+#: templates/partials/journals/nav_menu.html:8
+#: templates/partials/journals_nav_menu.html:8
+msgid "Book of Account"
+msgstr "สมุดบัญชี"
+
+#: templates/acc_books/book_list.html:9
+msgid "New Book"
+msgstr "สมุดบัญชีใหม่"
+
+#: templates/acc_books/book_list.html:20
+msgid "Abbreviation"
+msgstr "ตัวย่อ"
+
+#: templates/acc_books/book_list.html:21
+#: templates/transactions/partials/base_tran_table.html:13
+#: templates/transactions/partials/base_tran_table.html:57
+msgid "Name"
+msgstr "ชื่อ"
+
+#: templates/acc_books/book_list.html:22
+msgid "Guideline"
+msgstr "แนวทาง"
+
+#: templates/acc_books/book_list.html:23
+msgid "#Records"
+msgstr "จำนวนรายการ"
+
+#: templates/acc_books/book_list.html:38
+#, python-format
+msgid "%(book.guideline)s"
+msgstr "%(book.guideline)s"
+
+#: templates/acc_books/book_list.html:50
+#: templates/transactions/partials/base_tran_table.html:52
+msgid "No Book Found"
+msgstr "ไม่พบสมุดบัญชี"
+
+#: templates/account/email.html:5 templates/account/email.html:10
+msgid "Email Addresses"
+msgstr "ที่อยู่อีเมล"
+
+#: templates/account/email.html:15
+msgid "The following email addresses are associated with your account:"
+msgstr "ที่อยู่อีเมลต่อไปนี้เชื่อมโยงกับบัญชีของคุณ:"
+
+#: templates/account/email.html:27
+msgid "Verified"
+msgstr "ยืนยันแล้ว"
+
+#: templates/account/email.html:29
+msgid "Unverified"
+msgstr "ยังไม่ได้ยืนยัน"
+
+#: templates/account/email.html:32
+msgid "Primary"
+msgstr "หลัก"
+
+#: templates/account/email.html:41
+msgid "Make Primary"
+msgstr "ตั้งเป็นหลัก"
+
+#: templates/account/email.html:44
+msgid "Re-send Verification"
+msgstr "ส่งคำยืนยันอีกครั้ง"
+
+#: templates/account/email.html:47
+msgid "Remove"
+msgstr "ลบ"
+
+#: templates/account/email.html:53
+msgid "No email addresses are associated with your account."
+msgstr "ไม่มีที่อยู่อีเมลที่เชื่อมโยงกับบัญชีของคุณ."
+
+#: templates/account/email.html:60
+msgid "Add Email Address"
+msgstr "เพิ่มที่อยู่อีเมล"
+
+#: templates/account/email.html:66
+msgid "Add Email"
+msgstr "เพิ่มอีเมล"
+
+#: templates/account/email.html:77
+msgid "Do you really want to remove the selected email address?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบที่อยู่อีเมลที่เลือก?"
+
+#: templates/account/email_confirm.html:5
+#: templates/account/email_confirm.html:10
+msgid "Confirm Email Address"
+msgstr "ยืนยันที่อยู่อีเมล"
+
+#: templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"\n"
+"                    Please confirm that <a href=\"mailto:%(email)s\" class="
+"\"text-decoration-underline\">%(email)s</a> is an email address for user "
+"<strong>%(user_display)s</strong>.\n"
+"                "
+msgstr ""
+
+#: templates/account/email_confirm.html:24
+#: templates/partials/choose_language.html:17
+msgid "Confirm"
+msgstr "ยืนยัน"
+
+#: templates/account/email_confirm.html:29
+#, python-format
+msgid ""
+"\n"
+"                    Unable to confirm %(confirmation.email_address.email)s "
+"because it is already confirmed by a different account.\n"
+"                "
+msgstr ""
+
+#: templates/account/email_confirm.html:36
+msgid "This email confirmation link expired or is invalid. Please"
+msgstr "ลิงก์ยืนยันอีเมลนี้หมดอายุหรือไม่ถูกต้อง กรุณา"
+
+#: templates/account/email_confirm.html:36
+msgid "issue a new email confirmation request"
+msgstr "ขอการยืนยันอีเมลใหม่"
+
+#: templates/home.html:14
+msgid "Every Unrecorded Day is a Missed Opportunity."
+msgstr "ทุกวันที่ไม่ได้บันทึกคือโอกาสที่พลาดไป"
+
+#: templates/home.html:15
+msgid "Without records, there are no insights."
+msgstr "หากไม่มีบันทึก จะไม่มีข้อมูลเชิงลึก"
+
+#: templates/home.html:16
+msgid "Without insights, there’s no clarity."
+msgstr "หากไม่มีข้อมูลเชิงลึก จะไม่มีความชัดเจน"
+
+#: templates/home.html:17
+msgid "And without clarity, your plans are just guesses."
+msgstr "และหากไม่มีความชัดเจน แผนของคุณก็แค่การคาดเดา"
+
+#: templates/home.html:18
+msgid "Stop guessing through life and start records today."
+msgstr "หยุดการเดาชีวิตและเริ่มบันทึกวันนี้"
+
+#: templates/home.html:21
+msgid "Start Reckoning"
+msgstr "เริ่มต้นการคำนวณ"
+
+#: templates/partials/choose_language.html:9
+msgid "Choose Language:"
+msgstr "ตั้งค่าภาษา"
+
+#: templates/partials/footer.html:5 templates/partials/header.html:41
+msgid "Home"
+msgstr "หน้าแรก"
+
+#: templates/partials/footer.html:6
+msgid "Features"
+msgstr "ฟีเจอร์"
+
+#: templates/partials/footer.html:7
+msgid "Pricing"
+msgstr "ราคา"
+
+#: templates/partials/footer.html:9 templates/partials/header.html:44
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+#: templates/partials/header.html:32
+msgid "Profile"
+msgstr "โปรไฟล์"
+
+#: templates/partials/header.html:33
+msgid "Setting"
+msgstr "การตั้งค่า"
+
+#: templates/partials/header.html:35
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: templates/partials/header.html:47
+msgid "Login"
+msgstr "เข้าสู่ระบบ"
+
+#: templates/partials/header.html:50
+msgid "Sign Up"
+msgstr "สมัครสมาชิก"
+
+#: templates/partials/htmx/acc_book_selector.html:9
+#: templates/partials/htmx/tran_book_selector.html:9
+msgid "-ALL-"
+msgstr "-ทั้งหมด-"
+
+#: templates/partials/journals/nav_menu.html:5
+#: templates/partials/journals_nav_menu.html:5
+msgid "Start Bookkeeping"
+msgstr "เริ่มต้นการทำบัญชี"
+
+#: templates/partials/journals/nav_menu.html:9
+#: templates/partials/journals_nav_menu.html:9
+msgid "Code of Account"
+msgstr "รหัสบัญชี"
+
+#: templates/partials/journals/nav_menu.html:10
+#: templates/partials/journals_nav_menu.html:10
+msgid "Journal Record"
+msgstr "บันทึกบัญชี"
+
+#: templates/partials/journals/nav_menu.html:11
+#: templates/partials/journals_nav_menu.html:11
+msgid "Financial Report"
+msgstr "รายงานงบการเงิน"
+
+#: templates/profile.html:6
+msgid "Edit Profile"
+msgstr "แก้ไขโปรไฟล์"
+
+#: templates/profile.html:11
+msgid "Confirm Change"
+msgstr "ยืนยันการเปลี่ยนแปลง"
+
+#: templates/socialaccount/login.html:5
+msgid "Sign In"
+msgstr "เข้าสู่ระบบ"
+
+#: templates/socialaccount/login.html:13
+msgid "blocktran"
+msgstr "บล็อกธุรกรรม"
+
+#: templates/socialaccount/login.html:16
+#, python-format
+msgid "You are about to connect a new third-party account from %(provider)s."
+msgstr "คุณกำลังจะเชื่อมโยงบัญชีจากผู้ให้บริการ %(provider)s ใหม่"
+
+#: templates/socialaccount/login.html:20
+#, python-format
+msgid "Sign In Via %(provider)s"
+msgstr "เข้าสู่ระบบผ่าน %(provider)s"
+
+#: templates/socialaccount/login.html:23
+#, python-format
+msgid "You are about to sign in using a third-party account from %(provider)s."
+msgstr "คุณกำลังจะเข้าสู่ระบบโดยใช้บัญชีจากผู้ให้บริการ %(provider)s"
+
+#: templates/socialaccount/login.html:30
+msgid "Continue"
+msgstr "ดำเนินการต่อ"
+
+#: templates/transactions/calendar_record.html:5
+msgid "Update Record"
+msgstr "อัปเดตรายการ"
+
+#: templates/transactions/calendar_record.html:15
+msgid "Income and Expense during Week"
+msgstr "รายรับและรายจ่ายระหว่างสัปดาห์"
+
+#: templates/transactions/calendar_record.html:20
+msgid "Mon"
+msgstr "จันทร์"
+
+#: templates/transactions/calendar_record.html:21
+msgid "Tue"
+msgstr "อังคาร"
+
+#: templates/transactions/calendar_record.html:22
+msgid "Wed"
+msgstr "พุธ"
+
+#: templates/transactions/calendar_record.html:23
+msgid "Thu"
+msgstr "พฤหัสบดี"
+
+#: templates/transactions/calendar_record.html:24
+msgid "Fri"
+msgstr "ศุกร์"
+
+#: templates/transactions/calendar_record.html:25
+msgid "Sun"
+msgstr "อาทิตย์"
+
+#: templates/transactions/calendar_record.html:26
+msgid "Sat"
+msgstr "เสาร์"
+
+#: templates/transactions/confirm_account_balance.html:7
+msgid "Confirm Your Account Balance"
+msgstr "ยืนยันยอดบัญชีของคุณ"
+
+#: templates/transactions/confirm_account_balance.html:8
+#: templates/transactions/transaction_detail.html:9
+msgid "Back to list"
+msgstr "กลับไปยังรายการ"
+
+#: templates/transactions/confirm_account_balance.html:13
+#, fuzzy
+#| msgid "transactions/"
+msgid "Transaction"
+msgstr "ธุรกรรม"
+
+#: templates/transactions/partials/base_tran_table.html:11
+#: templates/transactions/partials/base_tran_table.html:55
+#: templates/transactions/transaction_detail.html:16
+msgid "Date"
+msgstr "วันที่"
+
+#: templates/transactions/partials/base_tran_table.html:12
+#: templates/transactions/partials/base_tran_table.html:56
+msgid "Code"
+msgstr "รหัส"
+
+#: templates/transactions/partials/base_tran_table.html:14
+#: templates/transactions/partials/base_tran_table.html:58
+msgid "Receipt"
+msgstr "ใบเสร็จ"
+
+#: templates/transactions/partials/base_tran_table.html:15
+#: templates/transactions/partials/base_tran_table.html:59
+#: templates/transactions/partials/ent_table.html:11
+msgid "Amount"
+msgstr "จำนวนเงิน"
+
+#: templates/transactions/partials/base_tran_table.html:36
+msgid "total"
+msgstr "ยอดรวม"
+
+#: templates/transactions/partials/base_tran_table.html:45
+#: templates/transactions/partials/base_tran_table.html:64
+msgid "No Transaction loaded"
+msgstr "โหลดไม่พบธุรกรรม"
+
+#: templates/transactions/partials/check_table.html:4
+msgid "Account Table"
+msgstr "ตารางบัญชี"
+
+#: templates/transactions/partials/check_table.html:10
+#: templates/transactions/partials/ent_table.html:10
+#, fuzzy
+#| msgid "accounts/"
+msgid "Account"
+msgstr "บัญชี"
+
+#: templates/transactions/partials/check_table.html:11
+msgid "Balance"
+msgstr "ยอดคงเหลือ"
+
+#: templates/transactions/partials/ent_table.html:9
+msgid "Type"
+msgstr "ประเภท"
+
+#: templates/transactions/partials/entry_form.html:10
+msgid "HTMX request finished!"
+msgstr "คำขอ HTMX เสร็จสิ้น!"
+
+#: templates/transactions/transaction_alter_form.html:6
+#: templates/transactions/transaction_alter_form.html:11
+#, python-format
+msgid "%(view_name)s Transaction"
+msgstr "ธุรกรรม %(view_name)s"
+
+#: templates/transactions/transaction_alter_form.html:20
+#, python-format
+msgid "%(view_name)s Entries"
+msgstr "รายการ %(view_name)s"
+
+#: templates/transactions/transaction_alter_form.html:28
+msgid "Add Entry"
+msgstr "เพิ่มรายการ"
+
+#: templates/transactions/transaction_alter_form.html:51
+msgid "Back to List"
+msgstr "กลับไปยังรายการ"
+
+#: templates/transactions/transaction_alter_form.html:53
+#: templates/transactions/transaction_delete.html:5
+#: templates/transactions/transaction_delete.html:8
+#: templates/transactions/transaction_detail.html:28
+#, fuzzy
+#| msgid "transactions/"
+msgid "Delete Transaction"
+msgstr "ลบธุรกรรม"
+
+#: templates/transactions/transaction_delete.html:13
+msgid "Are you sure you want to delete transaction"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบธุรกรรมนี้"
+
+#: templates/transactions/transaction_detail.html:4
+#: templates/transactions/transaction_detail.html:8
+#, fuzzy
+#| msgid "transactions/"
+msgid "Transaction Detail"
+msgstr "รายละเอียดธุรกรรม"
+
+#: templates/transactions/transaction_detail.html:13
+msgid "Book"
+msgstr "สมุดบัญชี"
+
+#: templates/transactions/transaction_detail.html:17
+msgid "Monthly Ref"
+msgstr "อ้างอิงรายเดือน"
+
+#: templates/transactions/transaction_detail.html:20
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#: templates/transactions/transaction_detail.html:21
+msgid "Receipt Status"
+msgstr "สถานะใบเสร็จ"
+
+#: templates/transactions/transaction_detail.html:27
+#, fuzzy
+#| msgid "transactions/"
+msgid "Update Transaction"
+msgstr "อัปเดตธุรกรรม"
+
+#: templates/transactions/transaction_list.html:19
+msgid "Enter keyword"
+msgstr "กรอกคำค้นหา"
+
+#: templates/transactions/transaction_list.html:21
+msgid "Search"
+msgstr "ค้นหา"

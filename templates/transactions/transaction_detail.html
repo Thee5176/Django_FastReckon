@@ -1,30 +1,31 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
-{% block title %}Transaction Detail{% endblock title %}
+{% block title %}{% trans "Transaction Detail" %}{% endblock title %}
 
 {% block content %}
 <div class="row m-3 justify-content-between">
-    <h2 class="text-muted col-auto">Transaction Detail</h2>
-    <a class="btn btn-warning col-3" href="{% url "transaction_list" %}">Back to list</a>
+    <h2 class="text-muted col-auto">{% trans "Transaction Detail" %}</h2>
+    <a class="btn btn-warning col-3" href="{% url "transaction_list" %}">{% trans "Back to list" %}</a>
 </div>
 <div class="container-fluid justify-content-begin">
     <p class="row">
-        <span class="col-12">Book: {{ object.book }}</span>
+        <span class="col-12">{% trans "Book" %}: {{ object.book }}</span>
     </p>
     <p class="row">
-        <span class="col-8">Date: {{ object.date }}</span>
-        <span class="col-4">Monthly Ref: {{ object.intra_month_ref }}</span>
+        <span class="col-8">{% trans "Date" %}: {{ object.date }}</span>
+        <span class="col-4">{% trans "Monthly Ref" %}: {{ object.intra_month_ref }}</span>
     </p>
     <p class="row">
-        <span class="col-8">Description: {{ object.description }}</span>
-        <span class="col-4">Receipt Status: {% if object.has_receipt %}<i class="bi bi-check-circle success"></i>{% else %}<i class="bi bi-dash-circle-dotted"></i>{% endif %}</span>
+        <span class="col-8">{% trans "Description" %}: {{ object.description }}</span>
+        <span class="col-4">{% trans "Receipt Status" %}: {% if object.has_receipt %}<i class="bi bi-check-circle success"></i>{% else %}<i class="bi bi-dash-circle-dotted"></i>{% endif %}</span>
     </p>
 </div>
 <div class="container table-responsive">
     {% include "transactions/partials/ent_table.html" %}
     <div class="row justify-content-between my-3">
-        <a class="btn btn-primary col-4" href="{% url "transaction_update" object.slug %}">! Update Transaction</a>
-        <a class="btn btn-danger col-4" href="{% url "transaction_delete" object.slug %}">- Delete Transaction</a>
+        <a class="btn btn-primary col-4" href="{% url "transaction_update" object.slug %}">! {% trans "Update Transaction" %}</a>
+        <a class="btn btn-danger col-4" href="{% url "transaction_delete" object.slug %}">- {% trans "Delete Transaction" %}</a>
     </div>
 </div>
 

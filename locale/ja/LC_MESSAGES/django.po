@@ -1,0 +1,562 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: django_project/urls.py:43
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-31 12:41+0000\n"
+"PO-Revision-Date: 2025-01-31 19:18+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+
+#: django_project/settings.py:152
+msgid "English"
+msgstr "英語 (English)"
+
+#: django_project/settings.py:153
+msgid "Japanese"
+msgstr "日本語"
+
+#: django_project/settings.py:154
+msgid "Thai"
+msgstr "タイ語 (ไทย)"
+
+#: django_project/urls.py:41 django_project/urls.py:42
+msgid "accounts/"
+msgstr "アカウント"
+
+#: django_project/urls.py:44
+msgid "books/"
+msgstr "書籍"
+
+#: django_project/urls.py:45
+msgid "codes/"
+msgstr "コード"
+
+#: django_project/urls.py:46
+msgid "transactions/"
+msgstr "取引"
+
+#: django_project/urls.py:47
+msgid "__debug__/"
+msgstr "__デバッグ__"
+
+#: django_project/urls.py:48
+msgid "i18n/"
+msgstr "国際化"
+
+#: templates/_base.html:8
+msgid "Comprehensable Accounting Solution"
+msgstr "理解しやすい会計ソリューション"
+
+#: templates/_base.html:51
+msgid "Messages:"
+msgstr "メッセージ："
+
+#: templates/acc_books/book_alter_form.html:6
+#: templates/acc_books/book_alter_form.html:13
+#, python-format
+msgid "%(view_name)s Book"
+msgstr "%(view_name)sの帳簿"
+
+#: templates/acc_books/book_alter_form.html:22
+#: templates/transactions/transaction_alter_form.html:50
+#, python-format
+msgid "%(view_name)s"
+msgstr "%(view_name)s"
+
+#: templates/acc_books/book_delete.html:3
+#: templates/acc_books/book_delete.html:7
+msgid "Delete Book"
+msgstr "帳簿を削除"
+
+#: templates/acc_books/book_delete.html:13
+#, python-format
+msgid ""
+"Are you sure you want to delete accounting book %(object.abbr)s:"
+"%(object.name)s?"
+msgstr "会計帳簿 %(object.abbr)s: %(object.name)s を削除してもよろしいですか？"
+
+#: templates/acc_books/book_delete.html:18
+#: templates/transactions/transaction_delete.html:15
+msgid "Delete"
+msgstr "削除"
+
+#: templates/acc_books/book_delete.html:19
+#: templates/transactions/transaction_delete.html:16
+msgid "Back"
+msgstr "戻る"
+
+#: templates/acc_books/book_list.html:4
+#, fuzzy
+#| msgid "accounts/"
+msgid "Account List"
+msgstr "アカウントリスト"
+
+#: templates/acc_books/book_list.html:8
+#: templates/partials/journals/nav_menu.html:8
+#: templates/partials/journals_nav_menu.html:8
+msgid "Book of Account"
+msgstr "勘定帳簿"
+
+#: templates/acc_books/book_list.html:9
+msgid "New Book"
+msgstr "新しい帳簿"
+
+#: templates/acc_books/book_list.html:20
+msgid "Abbreviation"
+msgstr "略語"
+
+#: templates/acc_books/book_list.html:21
+#: templates/transactions/partials/base_tran_table.html:13
+#: templates/transactions/partials/base_tran_table.html:57
+msgid "Name"
+msgstr "名前"
+
+#: templates/acc_books/book_list.html:22
+msgid "Guideline"
+msgstr "ガイドライン"
+
+#: templates/acc_books/book_list.html:23
+msgid "#Records"
+msgstr "記録数"
+
+#: templates/acc_books/book_list.html:38
+#, python-format
+msgid "%(book.guideline)s"
+msgstr "%(book.guideline)s"
+
+#: templates/acc_books/book_list.html:50
+#: templates/transactions/partials/base_tran_table.html:52
+msgid "No Book Found"
+msgstr "帳簿が見つかりません"
+
+#: templates/account/email.html:5 templates/account/email.html:10
+msgid "Email Addresses"
+msgstr "メールアドレス"
+
+#: templates/account/email.html:15
+msgid "The following email addresses are associated with your account:"
+msgstr "次のメールアドレスがあなたのアカウントに関連付けられています："
+
+#: templates/account/email.html:27
+msgid "Verified"
+msgstr "認証済み"
+
+#: templates/account/email.html:29
+msgid "Unverified"
+msgstr "未認証"
+
+#: templates/account/email.html:32
+msgid "Primary"
+msgstr "主要"
+
+#: templates/account/email.html:41
+msgid "Make Primary"
+msgstr "主要に設定"
+
+#: templates/account/email.html:44
+msgid "Re-send Verification"
+msgstr "確認メールを再送信"
+
+#: templates/account/email.html:47
+msgid "Remove"
+msgstr "削除"
+
+#: templates/account/email.html:53
+msgid "No email addresses are associated with your account."
+msgstr "アカウントに関連付けられたメールアドレスはありません。"
+
+#: templates/account/email.html:60
+msgid "Add Email Address"
+msgstr "メールアドレスを追加"
+
+#: templates/account/email.html:66
+msgid "Add Email"
+msgstr "メールを追加"
+
+#: templates/account/email.html:77
+msgid "Do you really want to remove the selected email address?"
+msgstr "選択したメールアドレスを本当に削除しますか？"
+
+#: templates/account/email_confirm.html:5
+#: templates/account/email_confirm.html:10
+msgid "Confirm Email Address"
+msgstr "メールアドレスの確認"
+
+#: templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"\n"
+"                    Please confirm that <a href=\"mailto:%(email)s\" class="
+"\"text-decoration-underline\">%(email)s</a> is an email address for user "
+"<strong>%(user_display)s</strong>.\n"
+"                "
+msgstr ""
+"\n"
+"                    次のメールアドレス <a href=\"mailto:%(email)s\" class="
+"\"text-decoration-underline\">%(email)s</a> がユーザー <strong>"
+"%(user_display)s</strong> のものであることを確認してください。\n"
+"                "
+
+#: templates/account/email_confirm.html:24
+#: templates/partials/choose_language.html:17
+msgid "Confirm"
+msgstr "確認"
+
+#: templates/account/email_confirm.html:29
+#, python-format
+msgid ""
+"\n"
+"                    Unable to confirm %(confirmation.email_address.email)s "
+"because it is already confirmed by a different account.\n"
+"                "
+msgstr ""
+"\n"
+"                    %(confirmation.email_address.email)s は既に別のアカウント"
+"によって確認されているため、確認できません。\n"
+"                "
+
+#: templates/account/email_confirm.html:36
+msgid "This email confirmation link expired or is invalid. Please"
+msgstr ""
+"このメール確認リンクは期限切れか無効です。新しい確認リクエストを発行してくだ"
+"さい。"
+
+#: templates/account/email_confirm.html:36
+msgid "issue a new email confirmation request"
+msgstr "新しいメール確認リクエストを発行してください。"
+
+#: templates/home.html:14
+msgid "Every Unrecorded Day is a Missed Opportunity."
+msgstr "記録されていない日々は、失われたチャンスです。"
+
+#: templates/home.html:15
+msgid "Without records, there are no insights."
+msgstr "記録がなければ、洞察は得られません。"
+
+#: templates/home.html:16
+msgid "Without insights, there’s no clarity."
+msgstr "洞察がなければ、明確さはありません。"
+
+#: templates/home.html:17
+msgid "And without clarity, your plans are just guesses."
+msgstr "そして、明確さがなければ、計画はただの予測に過ぎません。"
+
+#: templates/home.html:18
+msgid "Stop guessing through life and start records today."
+msgstr "人生を予測で進めるのをやめ、今すぐ記録を始めましょう。"
+
+#: templates/home.html:21
+msgid "Start Reckoning"
+msgstr "記録を始める"
+
+#: templates/partials/choose_language.html:9
+msgid "Choose Language:"
+msgstr "言語設定"
+
+#: templates/partials/footer.html:5 templates/partials/header.html:41
+msgid "Home"
+msgstr "ホーム"
+
+#: templates/partials/footer.html:6
+msgid "Features"
+msgstr "機能"
+
+#: templates/partials/footer.html:7
+msgid "Pricing"
+msgstr "料金"
+
+#: templates/partials/footer.html:9 templates/partials/header.html:44
+msgid "About"
+msgstr "について"
+
+#: templates/partials/header.html:32
+msgid "Profile"
+msgstr "プロフィール"
+
+#: templates/partials/header.html:33
+msgid "Setting"
+msgstr "設定"
+
+#: templates/partials/header.html:35
+msgid "Logout"
+msgstr "ログアウト"
+
+#: templates/partials/header.html:47
+msgid "Login"
+msgstr "ログイン"
+
+#: templates/partials/header.html:50
+msgid "Sign Up"
+msgstr "サインアップ"
+
+#: templates/partials/htmx/acc_book_selector.html:9
+#: templates/partials/htmx/tran_book_selector.html:9
+msgid "-ALL-"
+msgstr "-すべて-"
+
+#: templates/partials/journals/nav_menu.html:5
+#: templates/partials/journals_nav_menu.html:5
+msgid "Start Bookkeeping"
+msgstr "簿記を始める"
+
+#: templates/partials/journals/nav_menu.html:9
+#: templates/partials/journals_nav_menu.html:9
+msgid "Code of Account"
+msgstr "勘定科目コード"
+
+#: templates/partials/journals/nav_menu.html:10
+#: templates/partials/journals_nav_menu.html:10
+msgid "Journal Record"
+msgstr "仕訳帳"
+
+#: templates/partials/journals/nav_menu.html:11
+#: templates/partials/journals_nav_menu.html:11
+msgid "Financial Report"
+msgstr "財務報告"
+
+#: templates/profile.html:6
+msgid "Edit Profile"
+msgstr "プロフィールを編集"
+
+#: templates/profile.html:11
+msgid "Confirm Change"
+msgstr "変更を確認"
+
+#: templates/socialaccount/login.html:5
+msgid "Sign In"
+msgstr "サインイン"
+
+#: templates/socialaccount/login.html:13
+msgid "blocktran"
+msgstr "トランザクションブロック"
+
+#: templates/socialaccount/login.html:16
+#, python-format
+msgid "You are about to connect a new third-party account from %(provider)s."
+msgstr "新しいサードパーティアカウント %(provider)s を接続しようとしています。"
+
+#: templates/socialaccount/login.html:20
+#, python-format
+msgid "Sign In Via %(provider)s"
+msgstr "%(provider)s を通じてサインイン"
+
+#: templates/socialaccount/login.html:23
+#, python-format
+msgid "You are about to sign in using a third-party account from %(provider)s."
+msgstr ""
+"%(provider)s のサードパーティアカウントを使用してサインインしようとしていま"
+"す。"
+
+#: templates/socialaccount/login.html:30
+msgid "Continue"
+msgstr "次へ"
+
+#: templates/transactions/calendar_record.html:5
+msgid "Update Record"
+msgstr ""
+
+#: templates/transactions/calendar_record.html:15
+msgid "Income and Expense during Week"
+msgstr ""
+
+#: templates/transactions/calendar_record.html:20
+msgid "Mon"
+msgstr ""
+
+#: templates/transactions/calendar_record.html:21
+msgid "Tue"
+msgstr ""
+
+#: templates/transactions/calendar_record.html:22
+msgid "Wed"
+msgstr ""
+
+#: templates/transactions/calendar_record.html:23
+msgid "Thu"
+msgstr ""
+#: templates/transactions/calendar_record.html:5
+msgid "Update Record"
+msgstr "記録を更新"
+
+#: templates/transactions/calendar_record.html:15
+msgid "Income and Expense during Week"
+msgstr "週間の収入と支出"
+
+#: templates/transactions/calendar_record.html:20
+msgid "Mon"
+msgstr "月"
+
+#: templates/transactions/calendar_record.html:21
+msgid "Tue"
+msgstr "火"
+
+#: templates/transactions/calendar_record.html:22
+msgid "Wed"
+msgstr "水"
+
+#: templates/transactions/calendar_record.html:23
+msgid "Thu"
+msgstr "木"
+
+#: templates/transactions/calendar_record.html:24
+msgid "Fri"
+msgstr "金"
+
+#: templates/transactions/calendar_record.html:25
+msgid "Sun"
+msgstr "日"
+
+#: templates/transactions/calendar_record.html:26
+msgid "Sat"
+msgstr "土"
+
+#: templates/transactions/confirm_account_balance.html:7
+msgid "Confirm Your Account Balance"
+msgstr "アカウント残高を確認"
+
+#: templates/transactions/confirm_account_balance.html:8
+#: templates/transactions/transaction_detail.html:9
+msgid "Back to list"
+msgstr "リストに戻る"
+
+#: templates/transactions/confirm_account_balance.html:13
+#, fuzzy
+#| msgid "transactions/"
+msgid "Transaction"
+msgstr "取引"
+
+#: templates/transactions/partials/base_tran_table.html:11
+#: templates/transactions/partials/base_tran_table.html:55
+#: templates/transactions/transaction_detail.html:16
+msgid "Date"
+msgstr "日付"
+
+#: templates/transactions/partials/base_tran_table.html:12
+#: templates/transactions/partials/base_tran_table.html:56
+msgid "Code"
+msgstr "コード"
+
+#: templates/transactions/partials/base_tran_table.html:14
+#: templates/transactions/partials/base_tran_table.html:58
+msgid "Receipt"
+msgstr "領収書"
+
+#: templates/transactions/partials/base_tran_table.html:15
+#: templates/transactions/partials/base_tran_table.html:59
+#: templates/transactions/partials/ent_table.html:11
+msgid "Amount"
+msgstr "金額"
+
+#: templates/transactions/partials/base_tran_table.html:36
+msgid "total"
+msgstr "合計"
+
+#: templates/transactions/partials/base_tran_table.html:45
+#: templates/transactions/partials/base_tran_table.html:64
+msgid "No Transaction loaded"
+msgstr "取引がロードされていません"
+
+#: templates/transactions/partials/check_table.html:4
+msgid "Account Table"
+msgstr "アカウント表"
+
+#: templates/transactions/partials/check_table.html:10
+#: templates/transactions/partials/ent_table.html:10
+#, fuzzy
+#| msgid "accounts/"
+msgid "Account"
+msgstr "アカウント"
+
+#: templates/transactions/partials/check_table.html:11
+msgid "Balance"
+msgstr "残高"
+
+#: templates/transactions/partials/ent_table.html:9
+msgid "Type"
+msgstr "種類"
+
+#: templates/transactions/partials/entry_form.html:10
+msgid "HTMX request finished!"
+msgstr "HTMXリクエスト完了！"
+
+#: templates/transactions/transaction_alter_form.html:6
+#: templates/transactions/transaction_alter_form.html:11
+#, python-format
+msgid "%(view_name)s Transaction"
+msgstr "%(view_name)s取引"
+
+#: templates/transactions/transaction_alter_form.html:20
+#, python-format
+msgid "%(view_name)s Entries"
+msgstr "%(view_name)sエントリ"
+
+#: templates/transactions/transaction_alter_form.html:28
+msgid "Add Entry"
+msgstr "エントリを追加"
+
+#: templates/transactions/transaction_alter_form.html:51
+msgid "Back to List"
+msgstr "リストに戻る"
+
+#: templates/transactions/transaction_alter_form.html:53
+#: templates/transactions/transaction_delete.html:5
+#: templates/transactions/transaction_delete.html:8
+#: templates/transactions/transaction_detail.html:28
+#, fuzzy
+#| msgid "transactions/"
+msgid "Delete Transaction"
+msgstr "取引を削除"
+
+#: templates/transactions/transaction_delete.html:13
+msgid "Are you sure you want to delete transaction"
+msgstr "本当に取引を削除しますか？"
+
+#: templates/transactions/transaction_detail.html:4
+#: templates/transactions/transaction_detail.html:8
+#, fuzzy
+#| msgid "transactions/"
+msgid "Transaction Detail"
+msgstr "取引の詳細"
+
+#: templates/transactions/transaction_detail.html:13
+msgid "Book"
+msgstr "帳簿"
+
+#: templates/transactions/transaction_detail.html:17
+msgid "Monthly Ref"
+msgstr "月次参照"
+
+#: templates/transactions/transaction_detail.html:20
+msgid "Description"
+msgstr "説明"
+
+#: templates/transactions/transaction_detail.html:21
+msgid "Receipt Status"
+msgstr "領収書の状態"
+
+#: templates/transactions/transaction_detail.html:27
+#, fuzzy
+#| msgid "transactions/"
+msgid "Update Transaction"
+msgstr "取引を更新"
+
+#: templates/transactions/transaction_list.html:19
+msgid "Enter keyword"
+msgstr "キーワードを入力"
+
+#: templates/transactions/transaction_list.html:21
+msgid "Search"
+msgstr "検索"

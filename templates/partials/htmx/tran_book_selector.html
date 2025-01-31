@@ -1,10 +1,12 @@
+{% load i18n %}
+
 <!--HTMX Book Selector-->
 <select class="form-control  text-wrap" name="book-filter" id="book-selector"
         hx-post="{% url "get_transaction_table" %}"
         hx-target="#transaction-container"
         hx-swap="innerHTML"
 >
-    <option value="all" selected>-ALL BOOK-</option>
+    <option value="all" selected>{% trans "-ALL-"%}</option>
     {% for book in book_list %}
     <option value="{{ book.pk }}">{{ book }}</option>
     {% endfor %}

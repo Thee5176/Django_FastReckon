@@ -1,12 +1,13 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
-{% block title %}Transaction Records{% endblock title %}
+{% block title %}{% trans "Transaction Records" %}{% endblock title %}
 
 {% block content %}
     <div class="row m-3 justify-content-between">
-        <h2 class="col-8 text-muted">Transaction List</h2>
-        <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
+        <h2 class="col-8 text-muted">{% trans "Transaction List" %}</h2>
+        <a class="btn btn-success col-4" href="{% url "transaction_create" %}">{% trans "Add Reckon" %}</a>
     </div>
     <hr />
     <div class='row ms-auto'>
@@ -15,9 +16,9 @@
         </div>
         <div class='col-8 '>
             <form method="get" action="{% url "transaction_list" %}" class='d-flex'>
-                <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
+                <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}" placeholder="{% trans "Enter keyword" %}">
                 <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
-                <input class="btn btn-success" type="submit" value="Search">
+                <input class="btn btn-success" type="submit" value="{% trans "Search" %}">
             </form>
         </div>
     </div>

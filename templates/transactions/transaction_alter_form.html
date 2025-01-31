@@ -1,23 +1,31 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
 {% load static %}
-{% block title %}{{ view_name }} Transaction{% endblock title %}
+{% load i18n %}
+
+{% block title %}{% blocktrans trimmed %}
+{{ view_name }} Transaction
+{% endblocktrans %}{% endblock title %}
 
 {% block content %}
-<h2 class="my-3">{{ view_name }} Transaction</h2>
+<h2 class="my-3">{% blocktrans trimmed %}
+{{ view_name }} Transaction
+{% endblocktrans %}</h2>
 <form method="post" class="form-control p-3">
     {% csrf_token %}
     <div class="container" id='transaction_form'>
         {{ form | crispy }}
     </div>
     <div id="entry_form_button" class="row m-3">
-        <h2 class="col-9">{{ view_name }} Entries</h2>
+        <h2 class="col-9">{% blocktrans trimmed %}
+        {{ view_name }} Entries
+        {% endblocktrans %}</h2>
         <button type="button" id="add_entryform" class="btn btn-secondary col-3"
             hx-post="{% url "get_extra_entryform" %}" 
             hx-target="#entry_form"
             hx-swap="beforeend" 
             hx-include="#id_entries-TOTAL_FORMS"
-            >+ entry
+            >+ {% trans "Add Entry" %}
         </button>
         {{ entry_formset.management_form }}
         {% for error in formset.non_form_errors %}
@@ -38,10 +46,11 @@
         {% endfor %}
     </div>
     <div id="button_container" class="container d-flex justify-content-begin">
-        <input class="btn btn-primary" type="submit" value="{{ view_name }}">
-        <a class="btn btn-warning ms-auto" href="{% url "transaction_list" %}">Back to List</a>
+        <input class="btn btn-primary" type="submit" 
+               value="{% blocktrans trimmed %}{{ view_name }}{% endblocktrans %}">
+        <a class="btn btn-warning ms-auto" href="{% url "transaction_list" %}">{% trans "Back to List" %}</a>
         {% if view_name == "Update" %}
-        <a class="btn btn-danger ms-auto" href="{% url "transaction_delete" object.slug %}">- Delete Transaction</a>
+        <a class="btn btn-danger ms-auto" href="{% url "transaction_delete" object.slug %}">- {% trans "Delete Transaction" %}</a>
         {% endif %}
     </div>
 </form>
