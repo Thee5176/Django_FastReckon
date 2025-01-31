@@ -7,7 +7,7 @@ class AccountColorCodeMixin(View):
         """
         Add `color_code` attribute to each object in queryset based on attribute `code`
         """
-        for obj in queryset:
+        for account:
             try:
                 obj.color_code = self.color_by_code[int(obj.code[0])]
             except(IndexError, ValueError):

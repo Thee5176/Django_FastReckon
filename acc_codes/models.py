@@ -85,6 +85,18 @@ class Account(models.Model):
                 balance -= entry.amount
         return balance
     
+    def get_color_code(self):
+        color_by_code = {
+            0:"dark",
+            1:"primary",
+            2:"success",
+            3:"danger",
+            4:"warning",
+            5:"info"
+        }
+        index = int(self.code[0])
+        return color_by_code[index]
+    
     def __str__(self):
         return f"{self.code} | {self.name}"
     

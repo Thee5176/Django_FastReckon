@@ -60,23 +60,28 @@ class AccountPopulator:
             sys.exit(1)
 
     @csv_to_variable(df_base)
-    def populate_base(c,n,b,g,user_instance=None):
-        if not user_instance == None:
-            root_code = int(c[:4])        
-            try:
-                root_instance = RootAccount.objects.get(code=root_code)
-            except RootAccount.DoesNotExist:
-                print(f"Account with code {root_code} does not exist.")
-                sys.exit(1)
+    def populate_base(c,n,b,g,book_instance=None,user_instance=None):
+        if not book_instance == None:
+            if not user_instance == None:
+                # Check if root_account exist
+                root_code = int(c[:4])        
+                try:
+                    root_instance = RootAccount.objects.get(code=root_code)
+                except RootAccount.DoesNotExist:
+                    print(f"Account with code {root_code} does not exist.")
+                    sys.exit(1)
                 
-            try:
-                account = Account.objects.filter(code=c).first()
-                if account:
+                # Check if account for the book is exist
+                try:
+                    account = Account.objects.get(code=c,book=book_instance)
+                    # Do Nothing CSV with existing account
                     pass
-                    # Do Nothing and Update CSV with existing account
-                else:
+                    print(f"Skip without makeing change on {account.code}")
+                    
+                except Account.DoesNotExist:
                     # Import account from CSV
                     account = Account(
+                        book=book_instance,
                         root=root_instance,     #code 1/2
                         sub_account=c[-2:],         #code 2/2
                         name=n,
@@ -84,13 +89,18 @@ class AccountPopulator:
                         balance=b,
                         created_by=user_instance
                     )
-                # Save account, trigger the custom save() method     
-                account.save()
+                    # Save account, trigger the custom save() method     
+                    account.save()
+                    print(f"Succesfully create account: {account}")
                 
-            except Exception as e:
-                print(f"Encounter error creating account: {c} with error {e}")
+                except Exception as e:
+                    print(f"Encounter error creating account: {c} with error {e}")
+                    sys.exit(1)
+                    
+            else:
+                print(f"Base Account isn't created: no book_instance is parsed.")
                 sys.exit(1)
-                
+               
         else:
             print(f"Base Account isn't created: no user_instance is parsed.")
             sys.exit(1)

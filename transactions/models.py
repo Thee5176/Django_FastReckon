@@ -150,3 +150,8 @@ class Entry(models.Model):
     
     def __str__(self):
         return f"{self.transaction}-{self.entry_type}"
+    
+class Explaination(models.Model):
+    transaction_type = models.CharField(max_length=50)
+    explaination = models.TextField()
+   

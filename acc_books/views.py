@@ -16,10 +16,7 @@ class BookCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy("book_list")
 
     def form_valid(self, form):
-        if form.is_valid():
-            book = form.save(commit=False)
-            book.created_by = self.request.user
-            book = form.save()
+        form.instance.created_by = self.request.user
         return super().form_valid(form)
         
     def get_context_data(self, **kwargs):

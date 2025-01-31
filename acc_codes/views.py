@@ -33,14 +33,14 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
     
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset    
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
         obj = self.get_object()
         if obj:
-            context["entry_list"] = Entry.objects.filter(account=obj.id)
+            context["entry_list"] = Entry.objects.filter(account=obj.id).order_by("transaction__date")
 
         return context
 

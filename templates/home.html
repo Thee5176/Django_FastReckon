@@ -4,13 +4,13 @@
 
 {% block content %}
 <div class="container-fluid jumbotron vh-100 d-flex justify-content-center align-items-center">
-    <div class="background bg-dark h-100 w-100 position-absolute">
+    <div class="background bg-dark h-100 w-100 z-0  overflow-hidden position-absolute">
         <video autoplay loop muted playsinline class="h-75 w-100 object-fit-cover" id="background-video">
           <source src="{% static "footages/closeup_clock.mp4" %}" type="video/mp4">
         </video>
         <div class="fade-overlay position-absolute top-0 start-0 h-100 w-100"></div>
     </div>
-    <div class="content mx-auto text-center align-items-center">
+    <div class="content mx-auto text-center align-items-center z-1">
         <h1 class="display-4 font-weight-bold">Every Unrecorded Day is a Missed Opportunity.</h1>
         <p class="lead">Without records, there are no insights.</p>
         <p class="lead">Without insights, there’s no clarity.</p>
@@ -24,10 +24,6 @@
       </div>
 </div>
 <style>
-    .background {
-        z-index: 0;
-        overflow: hidden;
-    }
     .background video {
         filter: brightness(50%);
     }
@@ -40,9 +36,7 @@
 
     .content {
         position: relative;
-        z-index: 1;
         color: white;
-        text-alight: center;
     }
 </style>
 
