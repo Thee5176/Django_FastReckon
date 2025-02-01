@@ -30,7 +30,7 @@ SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG', default=False)
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','168.138.213.57','parrot-grateful-bat.ngrok-free.app']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','168.138.213.57']
 
 # Application definition
 
@@ -43,18 +43,18 @@ INSTALLED_APPS = [
     # whitenoise
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     # django-allauth
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    # Third Party
+    # bootstrap
     'crispy_forms',
     'crispy_bootstrap5',
+    # dbtb
     'debug_toolbar',
-    'widget_tweaks',
     # Local
     'accounts.apps.AccountsConfig',
     'acc_books.apps.AccBooksConfig',
@@ -77,6 +77,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # allauth
     'allauth.account.middleware.AccountMiddleware',
+    # dbtb
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
@@ -137,19 +138,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
 USE_TZ = True
 
-LANGUAGE_CODE = 'en-us'
-
 USE_I18N = True
+
+# Locale
 
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES =  [
-    ('en',_('English')),
+    ('en', _('English')),
     ('ja',_('Japanese')),
     ('tha',_('Thai')),
 ]

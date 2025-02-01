@@ -17,9 +17,6 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
-#i18n
-from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import gettext_lazy as _
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,13 +35,17 @@ if settings.DEBUG:
     urlpatterns += [
         path("__debug__/", include('debug_toolbar.urls')),
     ]
-    
-urlpatterns += i18n_patterns(
-    path(_("accounts/"), include('allauth.urls')),
-    path(_("accounts/"), include('accounts.urls')),
-    path(_(""), include('pages.urls')),
-    path(_("books/"), include('acc_books.urls')),
-    path(_("codes/"), include('acc_codes.urls')),
-    path(_("transactions/"), include('transactions.urls')),
-    path(_("i18n/"), include('django.conf.urls.i18n')),
-)
+
+if settings.USE_I18N:
+    from django.conf.urls.i18n import i18n_patterns
+    from django.utils.translation import gettext_lazy as _
+        
+    urlpatterns += i18n_patterns(
+        path(_("accounts/"), include('allauth.urls')),
+        path(_("accounts/"), include('accounts.urls')),
+        path(_(""), include('pages.urls')),
+        path(_("books/"), include('acc_books.urls')),
+        path(_("codes/"), include('acc_codes.urls')),
+        path(_("transactions/"), include('transactions.urls')),
+        path(_("i18n/"), include('django.conf.urls.i18n')),
+    )
