@@ -59,3 +59,7 @@ Name : Card_name Provider
 5204;Depreciation;1;-
 5205;Utilities Expense;1;-
 5206;Cost of Sales;1;-
+6100;Operation Gains;2;
+6200;Non-operation Gains;2;
+7100;Operation Losses;1;
+7200;Non-operation Losses;1;

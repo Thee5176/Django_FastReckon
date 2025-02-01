@@ -1,11 +1,16 @@
+from django.apps import apps
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import pandas as pd
 import os, sys
-from acc_codes.models import Account, RootAccount
+
+# Load migration-friendly model
+RootAccount = apps.get_model('acc_codes','RootAccount')
+Account = apps.get_model('acc_codes','Account')
 
 class AccountPopulator:
+    
     # Prepare file path
     root_path = os.path.join(settings.STATIC_ROOT, "csv/root.csv")
     base_path = os.path.join(settings.STATIC_ROOT, "csv/base.csv")
@@ -21,7 +26,8 @@ class AccountPopulator:
     df_base['balance'] = df_base['balance'].replace({pd.NA:None})
     
     def csv_to_variable(df):
-        """_summary_
+        """
+        Loop through all row in dataframe(df) and create new record to models
 
         Args:
             df (File handler): dataframe handler

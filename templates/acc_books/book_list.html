@@ -23,26 +23,26 @@
                     <th>{% trans "#Records" %}</th>
                 </tr>
             </thead>
-            {% for book in book_list %}
             <tbody class="table-group-divider">
-                <tr
-                    class="table-light position-relative"
-                >
-                    <td scope="row">
-                        <a href="{% url "book_update" book.pk %}" class="stretched-link text-decoration-none text-dark">
-                            {{ book.abbr }}
-                        </a>
-                    </td>
-                    <td>{{ book.name }}</td>
-                    <td>
-                        {% blocktrans trimmed %}
-                            {{ book.guideline }}
-                        {% endblocktrans %}
-                    </td>
-                    <td>{{ book.record_count }}</td>
-                </tr>
+                {% for book in book_list %}
+                    <tr
+                        class="table-light position-relative"
+                    >
+                        <td scope="row">
+                            <a href="{% url "book_update" book.pk %}" class="stretched-link text-decoration-none text-dark">
+                                {{ book.abbr }}
+                            </a>
+                        </td>
+                        <td>{{ book.name }}</td>
+                        <td>
+                            {% blocktrans trimmed %}
+                                {{ book.guideline }}
+                            {% endblocktrans %}
+                        </td>
+                        <td>{{ book.record_count }}</td>
+                    </tr>
+                {% empty %}
             </tbody>
-            {% empty %}
             <tbody class="table-group-divider">
                 <tr
                     class="table-light"

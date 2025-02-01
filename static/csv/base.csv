@@ -7,3 +7,7 @@ code;name;balance;guideline
 300103;Retained Earning;2;
 300104;Other Comprehensive Income;2;
 300105;Treasury Stock;2;
+610000;Operation Gains;2;
+620000;Non-operation Gains;2;
+710000;Operation Losses;1;
+720000;Non-operation Losses;1;

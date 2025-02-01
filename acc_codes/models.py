@@ -92,10 +92,17 @@ class Account(models.Model):
             2:"success",
             3:"danger",
             4:"warning",
-            5:"info"
+            5:"info",
+            6:"secondary",
+            7:"secondary",
         }
+        
         index = int(self.code[0])
-        return color_by_code[index]
+        try:
+            color = color_by_code[index]
+            return color 
+        except:
+            print(f"Error: No color assigned to code {code}")
     
     def __str__(self):
         return f"{self.code} | {self.name}"

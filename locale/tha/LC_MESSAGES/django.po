@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: django_project/urls.py:43
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-31 12:41+0000\n"
+"POT-Creation-Date: 2025-02-01 01:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,30 +29,6 @@ msgstr "ภาษาญี่ปุ่น (日本語)"
 msgid "Thai"
 msgstr "ภาษาไทย"
 
-#: django_project/urls.py:41 django_project/urls.py:42
-msgid "accounts/"
-msgstr "บัญชีผู้ใช้"
-
-#: django_project/urls.py:44
-msgid "books/"
-msgstr "หนังสือ"
-
-#: django_project/urls.py:45
-msgid "codes/"
-msgstr "รหัส"
-
-#: django_project/urls.py:46
-msgid "transactions/"
-msgstr "ธุรกรรม"
-
-#: django_project/urls.py:47
-msgid "__debug__/"
-msgstr "ดีบัก"
-
-#: django_project/urls.py:48
-msgid "i18n/"
-msgstr "i18n"
-
 #: templates/_base.html:8
 msgid "Comprehensable Accounting Solution"
 msgstr "โซลูชันการบัญชีที่เข้าใจง่าย"
@@ -68,12 +43,18 @@ msgstr "ข้อความ:"
 msgid "%(view_name)s Book"
 msgstr "สมุดบัญชี %(view_name)s"
 
-#: templates/acc_books/book_alter_form.html:22
+#: templates/acc_books/book_alter_form.html:21
 #: templates/transactions/transaction_alter_form.html:50
 #, python-format
 msgid "%(view_name)s"
 msgstr "%(view_name)s"
 
+#: templates/acc_books/book_alter_form.html:22
+#: templates/transactions/transaction_alter_form.html:51
+msgid "Back to List"
+msgstr "กลับไปยังรายการ"
+
+#: templates/acc_books/book_alter_form.html:24
 #: templates/acc_books/book_delete.html:3
 #: templates/acc_books/book_delete.html:7
 msgid "Delete Book"
@@ -227,23 +208,23 @@ msgstr "ขอการยืนยันอีเมลใหม่"
 
 #: templates/home.html:14
 msgid "Every Unrecorded Day is a Missed Opportunity."
-msgstr "ทุกวันที่ไม่ได้บันทึกคือโอกาสที่พลาดไป"
+msgstr "ทุกวันที่ไม่ได้บันทึกคือโอกาสชีวิตที่พลาดไป"
 
 #: templates/home.html:15
 msgid "Without records, there are no insights."
-msgstr "หากไม่มีบันทึก จะไม่มีข้อมูลเชิงลึก"
+msgstr "หากไม่มีการบันทึก จะไม่มีข้อมูลเชิงลึก"
 
 #: templates/home.html:16
 msgid "Without insights, there’s no clarity."
-msgstr "หากไม่มีข้อมูลเชิงลึก จะไม่มีความชัดเจน"
+msgstr "หากไม่มีข้อมูลเชิงลึก จะขาดความชัดเจน"
 
 #: templates/home.html:17
 msgid "And without clarity, your plans are just guesses."
-msgstr "และหากไม่มีความชัดเจน แผนของคุณก็แค่การคาดเดา"
+msgstr "และหากไม่มีความชัดเจน แผนของคุณก็เป็นแค่การคาดเดา"
 
 #: templates/home.html:18
 msgid "Stop guessing through life and start records today."
-msgstr "หยุดการเดาชีวิตและเริ่มบันทึกวันนี้"
+msgstr "หยุดการเดาทางออกชีวิตและเริ่มบันทึกวันนี้"
 
 #: templates/home.html:21
 msgid "Start Reckoning"
@@ -310,9 +291,36 @@ msgid "Journal Record"
 msgstr "บันทึกบัญชี"
 
 #: templates/partials/journals/nav_menu.html:11
-#: templates/partials/journals_nav_menu.html:11
 msgid "Financial Report"
 msgstr "รายงานงบการเงิน"
+
+#: templates/partials/journals_nav_menu.html:13
+#, fuzzy
+#| msgid "Financial Report"
+msgid "Financial Statements"
+msgstr "รายงานงบการเงิน"
+
+#: templates/partials/journals_nav_menu.html:16
+#, fuzzy
+#| msgid "Balance"
+msgid "Balance Sheet"
+msgstr "ยอดคงเหลือ"
+
+#: templates/partials/journals_nav_menu.html:17
+msgid "Income Statement"
+msgstr ""
+
+#: templates/partials/journals_nav_menu.html:18
+msgid "Cash Flow Statement"
+msgstr ""
+
+#: templates/partials/journals_nav_menu.html:19
+msgid "Statement of Stockholders’ Equity"
+msgstr ""
+
+#: templates/partials/journals_nav_menu.html:20
+msgid "Statement of Comprehensive Income"
+msgstr ""
 
 #: templates/profile.html:6
 msgid "Edit Profile"
@@ -386,8 +394,8 @@ msgid "Sat"
 msgstr "เสาร์"
 
 #: templates/transactions/confirm_account_balance.html:7
-msgid "Confirm Your Account Balance"
-msgstr "ยืนยันยอดบัญชีของคุณ"
+msgid "Account Balance Reconciliation"
+msgstr ""
 
 #: templates/transactions/confirm_account_balance.html:8
 #: templates/transactions/transaction_detail.html:9
@@ -469,10 +477,6 @@ msgstr "รายการ %(view_name)s"
 msgid "Add Entry"
 msgstr "เพิ่มรายการ"
 
-#: templates/transactions/transaction_alter_form.html:51
-msgid "Back to List"
-msgstr "กลับไปยังรายการ"
-
 #: templates/transactions/transaction_alter_form.html:53
 #: templates/transactions/transaction_delete.html:5
 #: templates/transactions/transaction_delete.html:8
@@ -515,6 +519,22 @@ msgstr "สถานะใบเสร็จ"
 msgid "Update Transaction"
 msgstr "อัปเดตธุรกรรม"
 
+#: templates/transactions/transaction_list.html:5
+#, fuzzy
+#| msgid "transactions/"
+msgid "Transaction Records"
+msgstr "ธุรกรรม"
+
+#: templates/transactions/transaction_list.html:9
+#, fuzzy
+#| msgid "transactions/"
+msgid "Transaction List"
+msgstr "ธุรกรรม"
+
+#: templates/transactions/transaction_list.html:10
+msgid "Add Reckon"
+msgstr ""
+
 #: templates/transactions/transaction_list.html:19
 msgid "Enter keyword"
 msgstr "กรอกคำค้นหา"
@@ -522,3 +542,24 @@ msgstr "กรอกคำค้นหา"
 #: templates/transactions/transaction_list.html:21
 msgid "Search"
 msgstr "ค้นหา"
+
+#~ msgid "accounts/"
+#~ msgstr "บัญชีผู้ใช้"
+
+#~ msgid "books/"
+#~ msgstr "หนังสือ"
+
+#~ msgid "codes/"
+#~ msgstr "รหัส"
+
+#~ msgid "transactions/"
+#~ msgstr "ธุรกรรม"
+
+#~ msgid "__debug__/"
+#~ msgstr "ดีบัก"
+
+#~ msgid "i18n/"
+#~ msgstr "i18n"
+
+#~ msgid "Confirm Your Account Balance"
+#~ msgstr "ยืนยันยอดบัญชีของคุณ"
