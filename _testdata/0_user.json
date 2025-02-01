@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$870000$M4nmwYNl9L8DXy3zSwvK8Z$73G9NaEWml6auJmbSC2vHY7yvjx4XqUdw7KE+ZbyipA=",
-        "last_login": "2025-02-01T05:20:44.490Z",
+        "last_login": "2025-02-01T13:56:57.048Z",
         "is_superuser": true,
         "username": "thee5176",
         "first_name": "Theerapong",

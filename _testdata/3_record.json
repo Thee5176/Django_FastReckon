@@ -688,6 +688,54 @@
     }
 },
 {
+    "model": "transactions.transaction",
+    "pk": 50,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-01",
+        "intra_month_ref": 1,
+        "description": "Being MerCard paid with ゆうちょ",
+        "slug": "ja2502-1",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-01T06:35:11.892Z",
+        "modified": "2025-02-01T09:24:49.451Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 51,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-01",
+        "intra_month_ref": 2,
+        "description": "Being Book purchased with MerCard",
+        "slug": "ja2502-2",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-01T09:16:08.203Z",
+        "modified": "2025-02-01T09:16:08.203Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 52,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-01",
+        "intra_month_ref": 3,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2502-3",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-01T09:17:25.814Z",
+        "modified": "2025-02-01T09:17:25.814Z"
+    }
+},
+{
     "model": "transactions.entry",
     "pk": 1,
     "fields": {
@@ -1675,6 +1723,76 @@
         "account": 54,
         "entry_type": 2,
         "amount": "30000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 100,
+    "fields": {
+        "transaction": 50,
+        "account": 23,
+        "entry_type": 1,
+        "amount": "8471.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 101,
+    "fields": {
+        "transaction": 50,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "8570.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 102,
+    "fields": {
+        "transaction": 51,
+        "account": 51,
+        "entry_type": 1,
+        "amount": "120.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 103,
+    "fields": {
+        "transaction": 51,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "120.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 104,
+    "fields": {
+        "transaction": 52,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "913.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 105,
+    "fields": {
+        "transaction": 52,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "913.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 106,
+    "fields": {
+        "transaction": 50,
+        "account": 54,
+        "entry_type": 1,
+        "amount": "99.00"
     }
 }
 ]
