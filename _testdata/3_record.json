@@ -1,1608 +1,1680 @@
 [
-    {
-        "model": "transactions.transaction",
-        "pk": 1,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-01",
-            "intra_month_ref": 2,
-            "description": "Being MealPrep paid by FamiPay",
-            "slug": "ja2501-2",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-03T10:00:09.278Z",
-            "modified": "2025-01-13T08:59:15.200Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 2,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-02",
-            "intra_month_ref": 3,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-3",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-04T03:21:39.657Z",
-            "modified": "2025-01-13T08:59:10.221Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 3,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-03",
-            "intra_month_ref": 4,
-            "description": "Being Train Ticket paid by Suica IC.",
-            "slug": "ja2501-4",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T05:06:16.959Z",
-            "modified": "2025-01-13T08:59:06.716Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 4,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-03",
-            "intra_month_ref": 5,
-            "description": "Being Snacks paid by PayPay",
-            "slug": "ja2501-5",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T05:20:16.482Z",
-            "modified": "2025-01-13T08:59:03.289Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 5,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-04",
-            "intra_month_ref": 6,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-6",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T06:52:06.483Z",
-            "modified": "2025-01-13T08:58:59.748Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 8,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-04",
-            "intra_month_ref": 7,
-            "description": "Being Cash transfer to Suica IC",
-            "slug": "ja2501-7",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T16:00:12.617Z",
-            "modified": "2025-01-13T08:58:55.546Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 9,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-01",
-            "intra_month_ref": 1,
-            "description": "Being previous year's balance brought into book",
-            "slug": "ja2501-1",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T16:19:57.821Z",
-            "modified": "2025-01-26T09:53:22.851Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 10,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-06",
-            "intra_month_ref": 8,
-            "description": "Being MealPrep paid by PayPay",
-            "slug": "ja2501-8",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-07T08:06:39.433Z",
-            "modified": "2025-01-13T08:58:46.817Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 11,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-07",
-            "intra_month_ref": 9,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-9",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-07T14:58:05.514Z",
-            "modified": "2025-01-13T08:58:39.741Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 12,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-08",
-            "intra_month_ref": 10,
-            "description": "Being MealPrep paid by Cash-in-hand",
-            "slug": "ja2501-10",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-08T05:09:17.124Z",
-            "modified": "2025-01-12T02:22:56.955Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 15,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-10",
-            "intra_month_ref": 11,
-            "description": "Being Snack paid by MerCard",
-            "slug": "ja2501-11",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-11T00:53:42.309Z",
-            "modified": "2025-01-13T08:59:27.321Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 16,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-10",
-            "intra_month_ref": 13,
-            "description": "Being Service Fee paid by Cash",
-            "slug": "ja2501-13",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-11T04:12:38.515Z",
-            "modified": "2025-01-12T01:34:28.616Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 17,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-10",
-            "intra_month_ref": 12,
-            "description": "Being Service Fee paid by Cash",
-            "slug": "ja2501-12",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-11T04:13:39.589Z",
-            "modified": "2025-01-13T08:59:31.417Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 18,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-11",
-            "intra_month_ref": 14,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-14",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-11T04:14:46.065Z",
-            "modified": "2025-01-13T08:59:36.070Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 21,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-13",
-            "intra_month_ref": 15,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-15",
-            "has_receipt": true,
-            "shop": 2,
-            "created_by": 1,
-            "created": "2025-01-13T08:59:45.674Z",
-            "modified": "2025-01-26T06:23:34.527Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 22,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-10",
-            "intra_month_ref": 16,
-            "description": "Being Katsuya Wage transfer to ゆうちょ",
-            "slug": "ja2501-16",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-13T12:26:14.625Z",
-            "modified": "2025-01-16T13:10:11.751Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 23,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-06",
-            "intra_month_ref": 17,
-            "description": "Being NHI paid by ゆうちよ",
-            "slug": "ja2501-17",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-13T12:27:53.498Z",
-            "modified": "2025-01-13T12:27:53.498Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 24,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-14",
-            "intra_month_ref": 18,
-            "description": "Being Superhotel Wage transfer to ゆうちょ",
-            "slug": "ja2501-18",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-16T10:09:05.120Z",
-            "modified": "2025-01-25T03:40:12.031Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 25,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-16",
-            "intra_month_ref": 19,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-19",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-16T10:10:23.036Z",
-            "modified": "2025-01-16T10:10:23.036Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 26,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-16",
-            "intra_month_ref": 20,
-            "description": "Being Book purschased with PayPay",
-            "slug": "ja2501-20",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-16T10:35:19.676Z",
-            "modified": "2025-01-16T11:25:30.267Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 27,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-17",
-            "intra_month_ref": 21,
-            "description": "Being Snack paid by MerCard",
-            "slug": "ja2501-21",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-17T15:58:25.427Z",
-            "modified": "2025-01-17T15:58:25.427Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 28,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-17",
-            "intra_month_ref": 22,
-            "description": "Being Snack paid by Paypay",
-            "slug": "ja2501-22",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-17T15:59:22.782Z",
-            "modified": "2025-01-17T17:40:42.220Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 29,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-18",
-            "intra_month_ref": 23,
-            "description": "Being ゆうちょ transfer to Paypay",
-            "slug": "ja2501-23",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-17T17:22:13.430Z",
-            "modified": "2025-01-17T17:22:13.430Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 30,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-18",
-            "intra_month_ref": 24,
-            "description": "Being ゆうちょ transfer to Paypay",
-            "slug": "ja2501-24",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-17T17:22:40.168Z",
-            "modified": "2025-01-17T17:22:40.168Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 31,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-18",
-            "intra_month_ref": 25,
-            "description": "Being Paypay paid to Dad accrual",
-            "slug": "ja2501-25",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-17T17:31:06.592Z",
-            "modified": "2025-01-17T17:31:06.592Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 32,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-18",
-            "intra_month_ref": 26,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-26",
-            "has_receipt": true,
-            "shop": 2,
-            "created_by": 1,
-            "created": "2025-01-18T06:19:11.790Z",
-            "modified": "2025-01-18T06:19:11.790Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 33,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-18",
-            "intra_month_ref": 27,
-            "description": "Being Clothing paid by Mercard",
-            "slug": "ja2501-27",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-19T16:15:39.255Z",
-            "modified": "2025-01-21T01:21:02.119Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 34,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-20",
-            "intra_month_ref": 28,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-28",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-20T04:25:12.696Z",
-            "modified": "2025-01-21T01:21:49.639Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 35,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-06",
-            "intra_month_ref": 29,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-29",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-21T01:27:03.212Z",
-            "modified": "2025-01-23T16:28:11.241Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 36,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-21",
-            "intra_month_ref": 30,
-            "description": "Being Cash transfer to Dad accrual",
-            "slug": "ja2501-30",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-21T08:17:37.940Z",
-            "modified": "2025-01-21T08:17:37.940Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 37,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-21",
-            "intra_month_ref": 31,
-            "description": "Being Service Fee paid by Cash",
-            "slug": "ja2501-31",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-21T08:18:32.237Z",
-            "modified": "2025-01-21T08:18:32.237Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 38,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-23",
-            "intra_month_ref": 32,
-            "description": "Being MealPrep paid by Mercard",
-            "slug": "ja2501-32",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-23T16:26:01.722Z",
-            "modified": "2025-01-23T16:26:01.722Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 39,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-24",
-            "intra_month_ref": 33,
-            "description": "Being MealPrep paid by Cash",
-            "slug": "ja2501-33",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-24T03:10:56.554Z",
-            "modified": "2025-01-24T03:10:56.554Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 40,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-24",
-            "intra_month_ref": 34,
-            "description": "Being SuperHotel AW transfer to ゆうちょ",
-            "slug": "ja2501-34",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-25T03:42:14.350Z",
-            "modified": "2025-01-25T03:42:14.350Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 41,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-24",
-            "intra_month_ref": 35,
-            "description": "Being En AW transfer to ゆうちょ",
-            "slug": "ja2501-35",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-25T03:44:11.357Z",
-            "modified": "2025-01-25T03:44:11.357Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 42,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-26",
-            "intra_month_ref": 36,
-            "description": "Being Snack calculated from MealPrep",
-            "slug": "ja2501-36",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-26T09:49:45.493Z",
-            "modified": "2025-01-27T14:52:58.718Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 43,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-26",
-            "intra_month_ref": 37,
-            "description": "Being ゆうちょ transfer to MerPay",
-            "slug": "ja2501-37",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-27T05:04:33.583Z",
-            "modified": "2025-01-27T05:04:33.583Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 44,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-26",
-            "intra_month_ref": 38,
-            "description": "Being Rent paid by ゆうちょ",
-            "slug": "ja2501-38",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-27T05:05:54.977Z",
-            "modified": "2025-01-27T05:05:54.977Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 45,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-26",
-            "intra_month_ref": 39,
-            "description": "Being Saxophone purchased by MerPay",
-            "slug": "ja2501-39",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-27T05:08:38.058Z",
-            "modified": "2025-01-27T05:08:38.058Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 46,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-26",
-            "intra_month_ref": 40,
-            "description": "Being MealPrep paid by MarCard",
-            "slug": "ja2501-40",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-27T06:18:17.194Z",
-            "modified": "2025-01-27T14:52:02.821Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 47,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-27",
-            "intra_month_ref": 41,
-            "description": "Being JASSO received to ゆうちょ",
-            "slug": "ja2501-41",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-28T01:59:33.770Z",
-            "modified": "2025-01-28T01:59:33.770Z"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 1,
-        "fields": {
-            "transaction": 1,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "486.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 2,
-        "fields": {
-            "transaction": 1,
-            "account": 14,
-            "entry_type": 2,
-            "amount": "486.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 3,
-        "fields": {
-            "transaction": 2,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "939.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 4,
-        "fields": {
-            "transaction": 2,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "939.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 5,
-        "fields": {
-            "transaction": 3,
-            "account": 39,
-            "entry_type": 1,
-            "amount": "167.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 6,
-        "fields": {
-            "transaction": 3,
-            "account": 13,
-            "entry_type": 2,
-            "amount": "167.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 7,
-        "fields": {
-            "transaction": 4,
-            "account": 15,
-            "entry_type": 2,
-            "amount": "135.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 8,
-        "fields": {
-            "transaction": 4,
-            "account": 36,
-            "entry_type": 1,
-            "amount": "135.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 9,
-        "fields": {
-            "transaction": 5,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "1372.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 10,
-        "fields": {
-            "transaction": 5,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "1372.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 11,
-        "fields": {
-            "transaction": 8,
-            "account": 13,
-            "entry_type": 1,
-            "amount": "900.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 12,
-        "fields": {
-            "transaction": 8,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "900.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 13,
-        "fields": {
-            "transaction": 9,
-            "account": 1,
-            "entry_type": 1,
-            "amount": "7951.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 14,
-        "fields": {
-            "transaction": 9,
-            "account": 9,
-            "entry_type": 1,
-            "amount": "255456.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 15,
-        "fields": {
-            "transaction": 9,
-            "account": 13,
-            "entry_type": 1,
-            "amount": "172.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 16,
-        "fields": {
-            "transaction": 9,
-            "account": 14,
-            "entry_type": 1,
-            "amount": "2064.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 17,
-        "fields": {
-            "transaction": 9,
-            "account": 15,
-            "entry_type": 1,
-            "amount": "736.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 18,
-        "fields": {
-            "transaction": 9,
-            "account": 17,
-            "entry_type": 1,
-            "amount": "10558.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 19,
-        "fields": {
-            "transaction": 9,
-            "account": 23,
-            "entry_type": 1,
-            "amount": "1.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 20,
-        "fields": {
-            "transaction": 9,
-            "account": 2,
-            "entry_type": 2,
-            "amount": "409656.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 21,
-        "fields": {
-            "transaction": 10,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "236.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 22,
-        "fields": {
-            "transaction": 10,
-            "account": 15,
-            "entry_type": 2,
-            "amount": "236.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 23,
-        "fields": {
-            "transaction": 11,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "693.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 24,
-        "fields": {
-            "transaction": 11,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "693.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 25,
-        "fields": {
-            "transaction": 9,
-            "account": 20,
-            "entry_type": 1,
-            "amount": "57488.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 26,
-        "fields": {
-            "transaction": 9,
-            "account": 21,
-            "entry_type": 1,
-            "amount": "24946.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 27,
-        "fields": {
-            "transaction": 9,
-            "account": 22,
-            "entry_type": 1,
-            "amount": "18084.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 28,
-        "fields": {
-            "transaction": 12,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "496.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 29,
-        "fields": {
-            "transaction": 12,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "496.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 30,
-        "fields": {
-            "transaction": 15,
-            "account": 36,
-            "entry_type": 1,
-            "amount": "117.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 31,
-        "fields": {
-            "transaction": 15,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "117.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 32,
-        "fields": {
-            "transaction": 16,
-            "account": 49,
-            "entry_type": 1,
-            "amount": "200.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 33,
-        "fields": {
-            "transaction": 16,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "200.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 34,
-        "fields": {
-            "transaction": 17,
-            "account": 49,
-            "entry_type": 1,
-            "amount": "600.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 35,
-        "fields": {
-            "transaction": 17,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "600.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 36,
-        "fields": {
-            "transaction": 18,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "168.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 37,
-        "fields": {
-            "transaction": 18,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "168.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 38,
-        "fields": {
-            "transaction": 9,
-            "account": 20,
-            "entry_type": 1,
-            "amount": "27050.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 39,
-        "fields": {
-            "transaction": 21,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "1224.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 40,
-        "fields": {
-            "transaction": 21,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "1224.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 41,
-        "fields": {
-            "transaction": 22,
-            "account": 9,
-            "entry_type": 1,
-            "amount": "18084.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 42,
-        "fields": {
-            "transaction": 22,
-            "account": 22,
-            "entry_type": 2,
-            "amount": "18084.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 43,
-        "fields": {
-            "transaction": 23,
-            "account": 44,
-            "entry_type": 1,
-            "amount": "1960.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 44,
-        "fields": {
-            "transaction": 23,
-            "account": 9,
-            "entry_type": 2,
-            "amount": "1960.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 45,
-        "fields": {
-            "transaction": 24,
-            "account": 9,
-            "entry_type": 1,
-            "amount": "26896.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 46,
-        "fields": {
-            "transaction": 24,
-            "account": 20,
-            "entry_type": 2,
-            "amount": "27050.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 47,
-        "fields": {
-            "transaction": 25,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "559.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 48,
-        "fields": {
-            "transaction": 25,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "559.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 49,
-        "fields": {
-            "transaction": 26,
-            "account": 51,
-            "entry_type": 1,
-            "amount": "70.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 50,
-        "fields": {
-            "transaction": 26,
-            "account": 15,
-            "entry_type": 2,
-            "amount": "70.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 51,
-        "fields": {
-            "transaction": 27,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "181.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 52,
-        "fields": {
-            "transaction": 27,
-            "account": 36,
-            "entry_type": 1,
-            "amount": "181.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 53,
-        "fields": {
-            "transaction": 28,
-            "account": 36,
-            "entry_type": 1,
-            "amount": "117.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 54,
-        "fields": {
-            "transaction": 28,
-            "account": 15,
-            "entry_type": 2,
-            "amount": "117.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 55,
-        "fields": {
-            "transaction": 29,
-            "account": 15,
-            "entry_type": 1,
-            "amount": "3000.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 56,
-        "fields": {
-            "transaction": 29,
-            "account": 9,
-            "entry_type": 2,
-            "amount": "3000.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 57,
-        "fields": {
-            "transaction": 30,
-            "account": 15,
-            "entry_type": 1,
-            "amount": "1000.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 58,
-        "fields": {
-            "transaction": 30,
-            "account": 9,
-            "entry_type": 2,
-            "amount": "1000.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 59,
-        "fields": {
-            "transaction": 31,
-            "account": 19,
-            "entry_type": 1,
-            "amount": "3550.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 60,
-        "fields": {
-            "transaction": 31,
-            "account": 15,
-            "entry_type": 2,
-            "amount": "3550.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 61,
-        "fields": {
-            "transaction": 32,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "1139.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 62,
-        "fields": {
-            "transaction": 32,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "1139.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 63,
-        "fields": {
-            "transaction": 33,
-            "account": 42,
-            "entry_type": 1,
-            "amount": "587.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 64,
-        "fields": {
-            "transaction": 33,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "587.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 65,
-        "fields": {
-            "transaction": 34,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "816.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 66,
-        "fields": {
-            "transaction": 34,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "816.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 67,
-        "fields": {
-            "transaction": 35,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "608.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 68,
-        "fields": {
-            "transaction": 35,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "608.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 69,
-        "fields": {
-            "transaction": 36,
-            "account": 19,
-            "entry_type": 1,
-            "amount": "2500.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 70,
-        "fields": {
-            "transaction": 36,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "2500.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 71,
-        "fields": {
-            "transaction": 37,
-            "account": 49,
-            "entry_type": 1,
-            "amount": "200.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 72,
-        "fields": {
-            "transaction": 37,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "200.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 73,
-        "fields": {
-            "transaction": 38,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "168.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 74,
-        "fields": {
-            "transaction": 38,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "168.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 75,
-        "fields": {
-            "transaction": 39,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "220.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 76,
-        "fields": {
-            "transaction": 39,
-            "account": 1,
-            "entry_type": 2,
-            "amount": "220.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 77,
-        "fields": {
-            "transaction": 24,
-            "account": 49,
-            "entry_type": 1,
-            "amount": "154.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 78,
-        "fields": {
-            "transaction": 40,
-            "account": 9,
-            "entry_type": 1,
-            "amount": "57488.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 79,
-        "fields": {
-            "transaction": 40,
-            "account": 20,
-            "entry_type": 2,
-            "amount": "57488.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 80,
-        "fields": {
-            "transaction": 41,
-            "account": 9,
-            "entry_type": 1,
-            "amount": "24946.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 81,
-        "fields": {
-            "transaction": 41,
-            "account": 21,
-            "entry_type": 2,
-            "amount": "24946.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 82,
-        "fields": {
-            "transaction": 42,
-            "account": 36,
-            "entry_type": 1,
-            "amount": "570.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 83,
-        "fields": {
-            "transaction": 42,
-            "account": 35,
-            "entry_type": 2,
-            "amount": "570.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 84,
-        "fields": {
-            "transaction": 9,
-            "account": 38,
-            "entry_type": 1,
-            "amount": "5150.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 85,
-        "fields": {
-            "transaction": 43,
-            "account": 16,
-            "entry_type": 1,
-            "amount": "54800.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 86,
-        "fields": {
-            "transaction": 43,
-            "account": 9,
-            "entry_type": 2,
-            "amount": "54800.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 87,
-        "fields": {
-            "transaction": 44,
-            "account": 50,
-            "entry_type": 1,
-            "amount": "48330.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 88,
-        "fields": {
-            "transaction": 44,
-            "account": 9,
-            "entry_type": 2,
-            "amount": "48330.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 89,
-        "fields": {
-            "transaction": 45,
-            "account": 52,
-            "entry_type": 1,
-            "amount": "54800.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 90,
-        "fields": {
-            "transaction": 45,
-            "account": 16,
-            "entry_type": 2,
-            "amount": "54800.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 91,
-        "fields": {
-            "transaction": 46,
-            "account": 35,
-            "entry_type": 1,
-            "amount": "282.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 92,
-        "fields": {
-            "transaction": 46,
-            "account": 23,
-            "entry_type": 2,
-            "amount": "351.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 93,
-        "fields": {
-            "transaction": 46,
-            "account": 36,
-            "entry_type": 1,
-            "amount": "69.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 94,
-        "fields": {
-            "transaction": 47,
-            "account": 9,
-            "entry_type": 1,
-            "amount": "48000.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 95,
-        "fields": {
-            "transaction": 47,
-            "account": 32,
-            "entry_type": 2,
-            "amount": "48000.00"
-        }
+{
+    "model": "transactions.transaction",
+    "pk": 1,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-01",
+        "intra_month_ref": 2,
+        "description": "Being MealPrep paid by FamiPay",
+        "slug": "ja2501-2",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-03T10:00:09.278Z",
+        "modified": "2025-01-13T08:59:15.200Z"
     }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 2,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-02",
+        "intra_month_ref": 3,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-3",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-04T03:21:39.657Z",
+        "modified": "2025-01-13T08:59:10.221Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 3,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-03",
+        "intra_month_ref": 4,
+        "description": "Being Train Ticket paid by Suica IC.",
+        "slug": "ja2501-4",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T05:06:16.959Z",
+        "modified": "2025-01-13T08:59:06.716Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 4,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-03",
+        "intra_month_ref": 5,
+        "description": "Being Snacks paid by PayPay",
+        "slug": "ja2501-5",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T05:20:16.482Z",
+        "modified": "2025-01-13T08:59:03.289Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 5,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-04",
+        "intra_month_ref": 6,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-6",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T06:52:06.483Z",
+        "modified": "2025-01-13T08:58:59.748Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 8,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-04",
+        "intra_month_ref": 7,
+        "description": "Being Cash transfer to Suica IC",
+        "slug": "ja2501-7",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T16:00:12.617Z",
+        "modified": "2025-01-13T08:58:55.546Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 9,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-01",
+        "intra_month_ref": 1,
+        "description": "Being previous year's balance brought into book",
+        "slug": "ja2501-1",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T16:19:57.821Z",
+        "modified": "2025-01-26T09:53:22.851Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 10,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-06",
+        "intra_month_ref": 8,
+        "description": "Being MealPrep paid by PayPay",
+        "slug": "ja2501-8",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-07T08:06:39.433Z",
+        "modified": "2025-01-13T08:58:46.817Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 11,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-07",
+        "intra_month_ref": 9,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-9",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-07T14:58:05.514Z",
+        "modified": "2025-01-13T08:58:39.741Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 12,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-08",
+        "intra_month_ref": 10,
+        "description": "Being MealPrep paid by Cash-in-hand",
+        "slug": "ja2501-10",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-08T05:09:17.124Z",
+        "modified": "2025-01-12T02:22:56.955Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 15,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 11,
+        "description": "Being Snack paid by MerCard",
+        "slug": "ja2501-11",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T00:53:42.309Z",
+        "modified": "2025-01-13T08:59:27.321Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 16,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 13,
+        "description": "Being Service Fee paid by Cash",
+        "slug": "ja2501-13",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T04:12:38.515Z",
+        "modified": "2025-01-12T01:34:28.616Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 17,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 12,
+        "description": "Being Service Fee paid by Cash",
+        "slug": "ja2501-12",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T04:13:39.589Z",
+        "modified": "2025-01-13T08:59:31.417Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 18,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-11",
+        "intra_month_ref": 14,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-14",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T04:14:46.065Z",
+        "modified": "2025-01-13T08:59:36.070Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 21,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-13",
+        "intra_month_ref": 15,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-15",
+        "has_receipt": true,
+        "shop": 2,
+        "created_by": 1,
+        "created": "2025-01-13T08:59:45.674Z",
+        "modified": "2025-01-26T06:23:34.527Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 22,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 16,
+        "description": "Being Katsuya Wage transfer to ゆうちょ",
+        "slug": "ja2501-16",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-13T12:26:14.625Z",
+        "modified": "2025-01-16T13:10:11.751Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 23,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-06",
+        "intra_month_ref": 17,
+        "description": "Being NHI paid by ゆうちよ",
+        "slug": "ja2501-17",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-13T12:27:53.498Z",
+        "modified": "2025-01-13T12:27:53.498Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 24,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-14",
+        "intra_month_ref": 18,
+        "description": "Being Superhotel Wage transfer to ゆうちょ",
+        "slug": "ja2501-18",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-16T10:09:05.120Z",
+        "modified": "2025-01-25T03:40:12.031Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 25,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-16",
+        "intra_month_ref": 19,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-19",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-16T10:10:23.036Z",
+        "modified": "2025-01-16T10:10:23.036Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 26,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-16",
+        "intra_month_ref": 20,
+        "description": "Being Book purschased with PayPay",
+        "slug": "ja2501-20",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-16T10:35:19.676Z",
+        "modified": "2025-01-16T11:25:30.267Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 27,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-17",
+        "intra_month_ref": 21,
+        "description": "Being Snack paid by MerCard",
+        "slug": "ja2501-21",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-17T15:58:25.427Z",
+        "modified": "2025-01-17T15:58:25.427Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 28,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-17",
+        "intra_month_ref": 22,
+        "description": "Being Snack paid by Paypay",
+        "slug": "ja2501-22",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-17T15:59:22.782Z",
+        "modified": "2025-01-17T17:40:42.220Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 29,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-18",
+        "intra_month_ref": 23,
+        "description": "Being ゆうちょ transfer to Paypay",
+        "slug": "ja2501-23",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-17T17:22:13.430Z",
+        "modified": "2025-01-17T17:22:13.430Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 30,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-18",
+        "intra_month_ref": 24,
+        "description": "Being ゆうちょ transfer to Paypay",
+        "slug": "ja2501-24",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-17T17:22:40.168Z",
+        "modified": "2025-01-17T17:22:40.168Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 31,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-18",
+        "intra_month_ref": 25,
+        "description": "Being Paypay paid to Dad accrual",
+        "slug": "ja2501-25",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-17T17:31:06.592Z",
+        "modified": "2025-01-17T17:31:06.592Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 32,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-18",
+        "intra_month_ref": 26,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-26",
+        "has_receipt": true,
+        "shop": 2,
+        "created_by": 1,
+        "created": "2025-01-18T06:19:11.790Z",
+        "modified": "2025-01-18T06:19:11.790Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 33,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-18",
+        "intra_month_ref": 27,
+        "description": "Being Clothing paid by Mercard",
+        "slug": "ja2501-27",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-19T16:15:39.255Z",
+        "modified": "2025-01-21T01:21:02.119Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 34,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-20",
+        "intra_month_ref": 28,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-28",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-20T04:25:12.696Z",
+        "modified": "2025-01-21T01:21:49.639Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 35,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-06",
+        "intra_month_ref": 29,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-29",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-21T01:27:03.212Z",
+        "modified": "2025-01-23T16:28:11.241Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 36,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-21",
+        "intra_month_ref": 30,
+        "description": "Being Cash transfer to Dad accrual",
+        "slug": "ja2501-30",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-21T08:17:37.940Z",
+        "modified": "2025-01-21T08:17:37.940Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 37,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-21",
+        "intra_month_ref": 31,
+        "description": "Being Service Fee paid by Cash",
+        "slug": "ja2501-31",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-21T08:18:32.237Z",
+        "modified": "2025-01-21T08:18:32.237Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 38,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-23",
+        "intra_month_ref": 32,
+        "description": "Being MealPrep paid by Mercard",
+        "slug": "ja2501-32",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-23T16:26:01.722Z",
+        "modified": "2025-01-23T16:26:01.722Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 39,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-24",
+        "intra_month_ref": 33,
+        "description": "Being MealPrep paid by Cash",
+        "slug": "ja2501-33",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-24T03:10:56.554Z",
+        "modified": "2025-01-24T03:10:56.554Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 40,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-24",
+        "intra_month_ref": 34,
+        "description": "Being SuperHotel AW transfer to ゆうちょ",
+        "slug": "ja2501-34",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-25T03:42:14.350Z",
+        "modified": "2025-01-25T03:42:14.350Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 41,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-24",
+        "intra_month_ref": 35,
+        "description": "Being En AW transfer to ゆうちょ",
+        "slug": "ja2501-35",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-25T03:44:11.357Z",
+        "modified": "2025-01-25T03:44:11.357Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 42,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-26",
+        "intra_month_ref": 36,
+        "description": "Being Snack calculated from MealPrep",
+        "slug": "ja2501-36",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-26T09:49:45.493Z",
+        "modified": "2025-01-27T14:52:58.718Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 43,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-26",
+        "intra_month_ref": 37,
+        "description": "Being ゆうちょ transfer to MerPay",
+        "slug": "ja2501-37",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-27T05:04:33.583Z",
+        "modified": "2025-01-27T05:04:33.583Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 44,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-26",
+        "intra_month_ref": 38,
+        "description": "Being Rent paid by ゆうちょ",
+        "slug": "ja2501-38",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-27T05:05:54.977Z",
+        "modified": "2025-01-27T05:05:54.977Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 45,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-26",
+        "intra_month_ref": 39,
+        "description": "Being Saxophone purchased by MerPay",
+        "slug": "ja2501-39",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-27T05:08:38.058Z",
+        "modified": "2025-01-27T05:08:38.058Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 46,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-26",
+        "intra_month_ref": 40,
+        "description": "Being MealPrep paid by MarCard",
+        "slug": "ja2501-40",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-27T06:18:17.194Z",
+        "modified": "2025-01-27T14:52:02.821Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 47,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-27",
+        "intra_month_ref": 41,
+        "description": "Being JASSO received to ゆうちょ",
+        "slug": "ja2501-41",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-28T01:59:33.770Z",
+        "modified": "2025-01-28T01:59:33.770Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 48,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-31",
+        "intra_month_ref": 42,
+        "description": "Being NHI paid with ゆうちょ",
+        "slug": "ja2501-42",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-01T05:29:16.483Z",
+        "modified": "2025-02-01T05:29:16.483Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 49,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-31",
+        "intra_month_ref": 43,
+        "description": "Being gain received",
+        "slug": "ja2501-43",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-01T05:32:26.767Z",
+        "modified": "2025-02-01T05:33:30.644Z"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 1,
+    "fields": {
+        "transaction": 1,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "486.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 2,
+    "fields": {
+        "transaction": 1,
+        "account": 14,
+        "entry_type": 2,
+        "amount": "486.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 3,
+    "fields": {
+        "transaction": 2,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "939.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 4,
+    "fields": {
+        "transaction": 2,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "939.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 5,
+    "fields": {
+        "transaction": 3,
+        "account": 39,
+        "entry_type": 1,
+        "amount": "167.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 6,
+    "fields": {
+        "transaction": 3,
+        "account": 13,
+        "entry_type": 2,
+        "amount": "167.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 7,
+    "fields": {
+        "transaction": 4,
+        "account": 15,
+        "entry_type": 2,
+        "amount": "135.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 8,
+    "fields": {
+        "transaction": 4,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "135.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 9,
+    "fields": {
+        "transaction": 5,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "1372.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 10,
+    "fields": {
+        "transaction": 5,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "1372.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 11,
+    "fields": {
+        "transaction": 8,
+        "account": 13,
+        "entry_type": 1,
+        "amount": "900.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 12,
+    "fields": {
+        "transaction": 8,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "900.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 13,
+    "fields": {
+        "transaction": 9,
+        "account": 1,
+        "entry_type": 1,
+        "amount": "7951.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 14,
+    "fields": {
+        "transaction": 9,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "255456.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 15,
+    "fields": {
+        "transaction": 9,
+        "account": 13,
+        "entry_type": 1,
+        "amount": "172.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 16,
+    "fields": {
+        "transaction": 9,
+        "account": 14,
+        "entry_type": 1,
+        "amount": "2064.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 17,
+    "fields": {
+        "transaction": 9,
+        "account": 15,
+        "entry_type": 1,
+        "amount": "736.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 18,
+    "fields": {
+        "transaction": 9,
+        "account": 17,
+        "entry_type": 1,
+        "amount": "10558.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 19,
+    "fields": {
+        "transaction": 9,
+        "account": 23,
+        "entry_type": 1,
+        "amount": "1.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 20,
+    "fields": {
+        "transaction": 9,
+        "account": 2,
+        "entry_type": 2,
+        "amount": "409656.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 21,
+    "fields": {
+        "transaction": 10,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "236.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 22,
+    "fields": {
+        "transaction": 10,
+        "account": 15,
+        "entry_type": 2,
+        "amount": "236.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 23,
+    "fields": {
+        "transaction": 11,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "693.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 24,
+    "fields": {
+        "transaction": 11,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "693.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 25,
+    "fields": {
+        "transaction": 9,
+        "account": 20,
+        "entry_type": 1,
+        "amount": "57488.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 26,
+    "fields": {
+        "transaction": 9,
+        "account": 21,
+        "entry_type": 1,
+        "amount": "24946.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 27,
+    "fields": {
+        "transaction": 9,
+        "account": 22,
+        "entry_type": 1,
+        "amount": "18084.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 28,
+    "fields": {
+        "transaction": 12,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "496.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 29,
+    "fields": {
+        "transaction": 12,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "496.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 30,
+    "fields": {
+        "transaction": 15,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "117.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 31,
+    "fields": {
+        "transaction": 15,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "117.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 32,
+    "fields": {
+        "transaction": 16,
+        "account": 49,
+        "entry_type": 1,
+        "amount": "200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 33,
+    "fields": {
+        "transaction": 16,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 34,
+    "fields": {
+        "transaction": 17,
+        "account": 49,
+        "entry_type": 1,
+        "amount": "600.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 35,
+    "fields": {
+        "transaction": 17,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "600.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 36,
+    "fields": {
+        "transaction": 18,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "168.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 37,
+    "fields": {
+        "transaction": 18,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "168.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 38,
+    "fields": {
+        "transaction": 9,
+        "account": 20,
+        "entry_type": 1,
+        "amount": "27050.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 39,
+    "fields": {
+        "transaction": 21,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "1224.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 40,
+    "fields": {
+        "transaction": 21,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "1224.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 41,
+    "fields": {
+        "transaction": 22,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "18084.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 42,
+    "fields": {
+        "transaction": 22,
+        "account": 22,
+        "entry_type": 2,
+        "amount": "18084.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 43,
+    "fields": {
+        "transaction": 23,
+        "account": 44,
+        "entry_type": 1,
+        "amount": "1960.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 44,
+    "fields": {
+        "transaction": 23,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "1960.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 45,
+    "fields": {
+        "transaction": 24,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "26896.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 46,
+    "fields": {
+        "transaction": 24,
+        "account": 20,
+        "entry_type": 2,
+        "amount": "27050.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 47,
+    "fields": {
+        "transaction": 25,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "559.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 48,
+    "fields": {
+        "transaction": 25,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "559.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 49,
+    "fields": {
+        "transaction": 26,
+        "account": 51,
+        "entry_type": 1,
+        "amount": "70.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 50,
+    "fields": {
+        "transaction": 26,
+        "account": 15,
+        "entry_type": 2,
+        "amount": "70.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 51,
+    "fields": {
+        "transaction": 27,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "181.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 52,
+    "fields": {
+        "transaction": 27,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "181.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 53,
+    "fields": {
+        "transaction": 28,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "117.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 54,
+    "fields": {
+        "transaction": 28,
+        "account": 15,
+        "entry_type": 2,
+        "amount": "117.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 55,
+    "fields": {
+        "transaction": 29,
+        "account": 15,
+        "entry_type": 1,
+        "amount": "3000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 56,
+    "fields": {
+        "transaction": 29,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "3000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 57,
+    "fields": {
+        "transaction": 30,
+        "account": 15,
+        "entry_type": 1,
+        "amount": "1000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 58,
+    "fields": {
+        "transaction": 30,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "1000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 59,
+    "fields": {
+        "transaction": 31,
+        "account": 19,
+        "entry_type": 1,
+        "amount": "3550.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 60,
+    "fields": {
+        "transaction": 31,
+        "account": 15,
+        "entry_type": 2,
+        "amount": "3550.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 61,
+    "fields": {
+        "transaction": 32,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "1139.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 62,
+    "fields": {
+        "transaction": 32,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "1139.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 63,
+    "fields": {
+        "transaction": 33,
+        "account": 42,
+        "entry_type": 1,
+        "amount": "587.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 64,
+    "fields": {
+        "transaction": 33,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "587.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 65,
+    "fields": {
+        "transaction": 34,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "816.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 66,
+    "fields": {
+        "transaction": 34,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "816.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 67,
+    "fields": {
+        "transaction": 35,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "608.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 68,
+    "fields": {
+        "transaction": 35,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "608.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 69,
+    "fields": {
+        "transaction": 36,
+        "account": 19,
+        "entry_type": 1,
+        "amount": "2500.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 70,
+    "fields": {
+        "transaction": 36,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "2500.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 71,
+    "fields": {
+        "transaction": 37,
+        "account": 49,
+        "entry_type": 1,
+        "amount": "200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 72,
+    "fields": {
+        "transaction": 37,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 73,
+    "fields": {
+        "transaction": 38,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "168.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 74,
+    "fields": {
+        "transaction": 38,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "168.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 75,
+    "fields": {
+        "transaction": 39,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "220.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 76,
+    "fields": {
+        "transaction": 39,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "220.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 77,
+    "fields": {
+        "transaction": 24,
+        "account": 49,
+        "entry_type": 1,
+        "amount": "154.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 78,
+    "fields": {
+        "transaction": 40,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "57488.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 79,
+    "fields": {
+        "transaction": 40,
+        "account": 20,
+        "entry_type": 2,
+        "amount": "57488.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 80,
+    "fields": {
+        "transaction": 41,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "24946.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 81,
+    "fields": {
+        "transaction": 41,
+        "account": 21,
+        "entry_type": 2,
+        "amount": "24946.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 82,
+    "fields": {
+        "transaction": 42,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "570.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 83,
+    "fields": {
+        "transaction": 42,
+        "account": 35,
+        "entry_type": 2,
+        "amount": "570.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 84,
+    "fields": {
+        "transaction": 9,
+        "account": 38,
+        "entry_type": 1,
+        "amount": "5150.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 85,
+    "fields": {
+        "transaction": 43,
+        "account": 16,
+        "entry_type": 1,
+        "amount": "54800.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 86,
+    "fields": {
+        "transaction": 43,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "54800.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 87,
+    "fields": {
+        "transaction": 44,
+        "account": 50,
+        "entry_type": 1,
+        "amount": "48330.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 88,
+    "fields": {
+        "transaction": 44,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "48330.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 89,
+    "fields": {
+        "transaction": 45,
+        "account": 52,
+        "entry_type": 1,
+        "amount": "54800.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 90,
+    "fields": {
+        "transaction": 45,
+        "account": 16,
+        "entry_type": 2,
+        "amount": "54800.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 91,
+    "fields": {
+        "transaction": 46,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "282.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 92,
+    "fields": {
+        "transaction": 46,
+        "account": 23,
+        "entry_type": 2,
+        "amount": "351.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 93,
+    "fields": {
+        "transaction": 46,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "69.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 94,
+    "fields": {
+        "transaction": 47,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "48000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 95,
+    "fields": {
+        "transaction": 47,
+        "account": 32,
+        "entry_type": 2,
+        "amount": "48000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 96,
+    "fields": {
+        "transaction": 48,
+        "account": 44,
+        "entry_type": 1,
+        "amount": "1960.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 97,
+    "fields": {
+        "transaction": 48,
+        "account": 9,
+        "entry_type": 2,
+        "amount": "1960.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 98,
+    "fields": {
+        "transaction": 49,
+        "account": 9,
+        "entry_type": 1,
+        "amount": "30000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 99,
+    "fields": {
+        "transaction": 49,
+        "account": 54,
+        "entry_type": 2,
+        "amount": "30000.00"
+    }
+}
 ]
