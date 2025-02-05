@@ -78,15 +78,15 @@ class TransactionConfirmView(LoginRequiredMixin, UserPassesTestMixin, DetailView
     template_name = "transactions/confirm_account_balance.html"
 
     def test_func(self):
-        self.account_list = self.request.session.get("account_list")
-        if self.account_list:
+        self.account_pk_list = self.request.session.get("account_pk_list") # session passed from FormValidation mixins
+        if self.account_pk_list:
             obj = self.get_object()
         return obj.created_by == self.request.user
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if self.account_list:        # Session data loaded in test_func
-            context["account_list"] = Account.objects.filter(code__in=self.account_list)
+        if self.account_pk_list:        # Session data loaded in test_func
+            context["account_list"] = Account.objects.filter(pk__in=self.account_pk_list)
         transaction = self.get_object()
         context["entries"] = transaction.entries.all()
         return context
