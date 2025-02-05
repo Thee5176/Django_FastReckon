@@ -2,24 +2,24 @@
 
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="bi bi-journals"></i> {% trans "Start Bookkeeping"%}
+    <i class="bi bi-journals"></i> {% trans "Start Bookkeeping" %}
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <li><a class="dropdown-item" href="{% url "book_list" %}">{% trans "Book of Account"%}</a></li>
-    <li><a class="dropdown-item" href="{% url "account_list" %}">{% trans "Chart of Account"%}</a></li>
-    <li><a class="dropdown-item" href="{% url "transaction_list" %}">{% trans "Transaction Record"%}</a></li>
+    <li><a class="dropdown-item" href="{% url "book_list" %}">{% trans "Book of Account" %}</a></li>
+    <li><a class="dropdown-item" href="{% url "account_list" %}">{% trans "Chart of Account" %}</a></li>
+    <li><a class="dropdown-item" href="{% url "transaction_list" %}">{% trans "Transaction Record" %}</a></li>
   </ul>
 </li>
 
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="bi bi-archive"></i> {% trans "Financial Statements"%}
+    <i class="bi bi-archive"></i> {% trans "Financial Statements" %}
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
     <li><a class="dropdown-item" href="#">{% trans "Balance Sheet" %}</a></li>
     <li><a class="dropdown-item" href="#">{% trans "Income Statement" %}</a></li>
     <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Cash Flow Statement" %}</a></li>
-    <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Statement of Stockholders’ Equity" %}</a></li>
-    <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Statement of Comprehensive Income" %}</a></li>
+    {% comment %} <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Statement of Stockholders’ Equity" %}</a></li> {% endcomment %}
+    {% comment %} <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Statement of Comprehensive Income" %}</a></li> {% endcomment %}
   </ul>
 </li>

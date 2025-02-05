@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-01 01:32+0000\n"
+"POT-Creation-Date: 2025-02-05 01:16+0000\n"
 "PO-Revision-Date: 2025-01-31 19:18+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,17 +19,41 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.5\n"
 
-#: django_project/settings.py:152
+#: django_project/settings.py:154
 msgid "English"
 msgstr "英語 (English)"
 
-#: django_project/settings.py:153
+#: django_project/settings.py:155
 msgid "Japanese"
 msgstr "日本語"
 
-#: django_project/settings.py:154
+#: django_project/settings.py:156
 msgid "Thai"
 msgstr "タイ語 (ไทย)"
+
+#: django_project/urls.py:44 django_project/urls.py:45
+msgid "accounts/"
+msgstr "アカウント"
+
+#: django_project/urls.py:46
+msgid "/"
+msgstr ""
+
+#: django_project/urls.py:47
+msgid "books/"
+msgstr "書籍"
+
+#: django_project/urls.py:48
+msgid "codes/"
+msgstr "コード"
+
+#: django_project/urls.py:49
+msgid "transactions/"
+msgstr "取引"
+
+#: django_project/urls.py:50
+msgid "i18n/"
+msgstr "国際化"
 
 #: templates/_base.html:8
 msgid "Comprehensable Accounting Solution"
@@ -57,36 +81,33 @@ msgid "Back to List"
 msgstr "リストに戻る"
 
 #: templates/acc_books/book_alter_form.html:24
-#: templates/acc_books/book_delete.html:3
-#: templates/acc_books/book_delete.html:7
+#: templates/acc_books/book_delete.html:5
+#: templates/acc_books/book_delete.html:8
 msgid "Delete Book"
 msgstr "帳簿を削除"
 
-#: templates/acc_books/book_delete.html:13
+#: templates/acc_books/book_delete.html:14
 #, python-format
 msgid ""
 "Are you sure you want to delete accounting book %(object.abbr)s:"
 "%(object.name)s?"
 msgstr "会計帳簿 %(object.abbr)s: %(object.name)s を削除してもよろしいですか？"
 
-#: templates/acc_books/book_delete.html:18
+#: templates/acc_books/book_delete.html:19
 #: templates/transactions/transaction_delete.html:15
 msgid "Delete"
 msgstr "削除"
 
-#: templates/acc_books/book_delete.html:19
+#: templates/acc_books/book_delete.html:20
 #: templates/transactions/transaction_delete.html:16
 msgid "Back"
 msgstr "戻る"
 
 #: templates/acc_books/book_list.html:4
-#, fuzzy
-#| msgid "accounts/"
 msgid "Account List"
 msgstr "アカウントリスト"
 
 #: templates/acc_books/book_list.html:8
-#: templates/partials/journals/nav_menu.html:8
 #: templates/partials/journals_nav_menu.html:8
 msgid "Book of Account"
 msgstr "勘定帳簿"
@@ -192,7 +213,8 @@ msgstr ""
 "                "
 
 #: templates/account/email_confirm.html:24
-#: templates/partials/choose_language.html:17
+#: templates/account/password_change.html:11
+#: templates/partials/language_selector.html:16
 msgid "Confirm"
 msgstr "確認"
 
@@ -219,6 +241,31 @@ msgstr ""
 msgid "issue a new email confirmation request"
 msgstr "新しいメール確認リクエストを発行してください。"
 
+#: templates/account/login.html:7
+msgid "User Login"
+msgstr "ログイン"
+
+#: templates/account/login.html:11
+msgid "FastReckon Login"
+msgstr "FastReckon ログイン"
+
+#: templates/account/login.html:15 templates/partials/header.html:48
+msgid "Login"
+msgstr "ログイン"
+
+#: templates/account/login.html:18
+msgid "Continue via GitHub"
+msgstr "GitHubで続ける"
+
+#: templates/account/login.html:22
+msgid "Continue via Google"
+msgstr "Googleで続ける"
+
+#: templates/account/password_change.html:5
+#: templates/account/password_change.html:8 templates/partials/header.html:34
+msgid "Change Password"
+msgstr "パースワード変更"
+
 #: templates/home.html:14
 msgid "Every Unrecorded Day is a Missed Opportunity."
 msgstr "記録されていない日々は、失われたチャンスです。"
@@ -243,25 +290,21 @@ msgstr "人生を予測で進めるのをやめ、今すぐ記録を始めまし
 msgid "Start Reckoning"
 msgstr "記録を始める"
 
-#: templates/partials/choose_language.html:9
-msgid "Choose Language:"
-msgstr "言語設定"
-
-#: templates/partials/footer.html:5 templates/partials/header.html:41
+#: templates/partials/footer.html:7 templates/partials/header.html:42
 msgid "Home"
 msgstr "ホーム"
 
-#: templates/partials/footer.html:6
+#: templates/partials/footer.html:8
 msgid "Features"
 msgstr "機能"
 
-#: templates/partials/footer.html:7
+#: templates/partials/footer.html:9
 msgid "Pricing"
 msgstr "料金"
 
-#: templates/partials/footer.html:9 templates/partials/header.html:44
+#: templates/partials/footer.html:11 templates/partials/header.html:45
 msgid "About"
-msgstr "について"
+msgstr ""
 
 #: templates/partials/header.html:32
 msgid "Profile"
@@ -271,15 +314,11 @@ msgstr "プロフィール"
 msgid "Setting"
 msgstr "設定"
 
-#: templates/partials/header.html:35
+#: templates/partials/header.html:36
 msgid "Logout"
 msgstr "ログアウト"
 
-#: templates/partials/header.html:47
-msgid "Login"
-msgstr "ログイン"
-
-#: templates/partials/header.html:50
+#: templates/partials/header.html:51
 msgid "Sign Up"
 msgstr "サインアップ"
 
@@ -288,52 +327,37 @@ msgstr "サインアップ"
 msgid "-ALL-"
 msgstr "-すべて-"
 
-#: templates/partials/journals/nav_menu.html:5
 #: templates/partials/journals_nav_menu.html:5
 msgid "Start Bookkeeping"
 msgstr "簿記を始める"
 
-#: templates/partials/journals/nav_menu.html:9
 #: templates/partials/journals_nav_menu.html:9
-msgid "Code of Account"
+msgid "Chart of Account"
 msgstr "勘定科目コード"
 
-#: templates/partials/journals/nav_menu.html:10
 #: templates/partials/journals_nav_menu.html:10
-msgid "Journal Record"
-msgstr "仕訳帳"
-
-#: templates/partials/journals/nav_menu.html:11
-msgid "Financial Report"
-msgstr "財務報告"
-
-#: templates/partials/journals_nav_menu.html:13
-#, fuzzy
-#| msgid "Financial Report"
-msgid "Financial Statements"
-msgstr "財務報告"
+msgid "Transaction Record"
+msgstr "取引"
 
 #: templates/partials/journals_nav_menu.html:16
-#, fuzzy
-#| msgid "Balance"
-msgid "Balance Sheet"
-msgstr "残高"
-
-#: templates/partials/journals_nav_menu.html:17
-msgid "Income Statement"
-msgstr ""
-
-#: templates/partials/journals_nav_menu.html:18
-msgid "Cash Flow Statement"
-msgstr ""
+msgid "Financial Statements"
+msgstr "財務諸表"
 
 #: templates/partials/journals_nav_menu.html:19
-msgid "Statement of Stockholders’ Equity"
-msgstr ""
+msgid "Balance Sheet"
+msgstr "貸借対照表"
 
 #: templates/partials/journals_nav_menu.html:20
-msgid "Statement of Comprehensive Income"
-msgstr ""
+msgid "Income Statement"
+msgstr "損益計算書"
+
+#: templates/partials/journals_nav_menu.html:21
+msgid "Cash Flow Statement"
+msgstr "キャッシュフロー計算書"
+
+#: templates/partials/language_selector.html:8
+msgid "Choose Language:"
+msgstr "言語設定:"
 
 #: templates/profile.html:6
 msgid "Edit Profile"
@@ -410,7 +434,7 @@ msgstr "土"
 
 #: templates/transactions/confirm_account_balance.html:7
 msgid "Account Balance Reconciliation"
-msgstr ""
+msgstr "残高消込"
 
 #: templates/transactions/confirm_account_balance.html:8
 #: templates/transactions/transaction_detail.html:9
@@ -418,8 +442,6 @@ msgid "Back to list"
 msgstr "リストに戻る"
 
 #: templates/transactions/confirm_account_balance.html:13
-#, fuzzy
-#| msgid "transactions/"
 msgid "Transaction"
 msgstr "取引"
 
@@ -460,8 +482,6 @@ msgstr "アカウント表"
 
 #: templates/transactions/partials/check_table.html:10
 #: templates/transactions/partials/ent_table.html:10
-#, fuzzy
-#| msgid "accounts/"
 msgid "Account"
 msgstr "アカウント"
 
@@ -496,8 +516,6 @@ msgstr "エントリを追加"
 #: templates/transactions/transaction_delete.html:5
 #: templates/transactions/transaction_delete.html:8
 #: templates/transactions/transaction_detail.html:28
-#, fuzzy
-#| msgid "transactions/"
 msgid "Delete Transaction"
 msgstr "取引を削除"
 
@@ -507,8 +525,6 @@ msgstr "本当に取引を削除しますか？"
 
 #: templates/transactions/transaction_detail.html:4
 #: templates/transactions/transaction_detail.html:8
-#, fuzzy
-#| msgid "transactions/"
 msgid "Transaction Detail"
 msgstr "取引の詳細"
 
@@ -529,22 +545,16 @@ msgid "Receipt Status"
 msgstr "領収書の状態"
 
 #: templates/transactions/transaction_detail.html:27
-#, fuzzy
-#| msgid "transactions/"
 msgid "Update Transaction"
 msgstr "取引を更新"
 
 #: templates/transactions/transaction_list.html:5
-#, fuzzy
-#| msgid "transactions/"
 msgid "Transaction Records"
 msgstr "取引"
 
 #: templates/transactions/transaction_list.html:9
-#, fuzzy
-#| msgid "transactions/"
 msgid "Transaction List"
-msgstr "取引"
+msgstr "取引リスト"
 
 #: templates/transactions/transaction_list.html:10
 msgid "Add Reckon"
@@ -558,23 +568,14 @@ msgstr "キーワードを入力"
 msgid "Search"
 msgstr "検索"
 
-#~ msgid "accounts/"
-#~ msgstr "アカウント"
+#~ msgid "Journal Record"
+#~ msgstr "仕訳帳"
 
-#~ msgid "books/"
-#~ msgstr "書籍"
-
-#~ msgid "codes/"
-#~ msgstr "コード"
-
-#~ msgid "transactions/"
-#~ msgstr "取引"
+#~ msgid "Financial Report"
+#~ msgstr "財務報告"
 
 #~ msgid "__debug__/"
 #~ msgstr "__デバッグ__"
-
-#~ msgid "i18n/"
-#~ msgstr "国際化"
 
 #~ msgid "Confirm Your Account Balance"
 #~ msgstr "アカウント残高を確認"

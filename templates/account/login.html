@@ -1,25 +1,26 @@
 {% extends "_base.html" %}
 {% load socialaccount %}
 {% load crispy_forms_tags %}
-
 {% load static %}
-{% block title %}User Login{% endblock title %}
+{% load i18n %}
+
+{% block title %}{% trans "User Login" %}{% endblock title %}
 
 {% block content %}
 <form method="post" class="form-control p-3">
-    <h2 class="mb-3">Login to FastReckon</h2>
+    <h2 class="mb-3">{% trans "FastReckon Login" %}</h2>
     {% csrf_token %}
     {{ form | crispy }}
     <div class="text-start">
-        <input class="btn btn-primary" type="submit" value="Login">
+        <input class="btn btn-primary" type="submit" value="{% trans "Login" %}">
         <span class="mx-2">or</span>
-        <a href="{% provider_login_url "github" %}" class="btn btn-dark ">
+        <a href="{% provider_login_url "github" %}" class="btn btn-light">
+            {% trans "Continue via GitHub" %}
             <img src="{% static "images/github.svg" %}">
-            Login via GitHub
         </a>
-        <a href="{% provider_login_url "google" %}" class="btn btn-dark ">
+        <a href="{% provider_login_url "google" %}" class="btn btn-light">
+            {% trans "Continue via Google" %}
             <img src="{% static "images/google.svg" %}">
-            Login via Google
         </a>
     </div>
 </form>
