@@ -31,7 +31,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="{% url "edit_profile" user.pk %}">{% trans "Profile" %}</a></li>
               <li><a class="dropdown-item disabled" href="#">{% trans "Setting" %}</a></li>
-              <li><a href="{% url 'account_password_change' %}" class="dropdown-item">{% trans "Change Password"%}</a></li>
+              <li><a href="{% url 'account_change_password' %}" class="dropdown-item">{% trans "Change Password"%}</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="{% url "account_logout" %}">{% trans "Logout" %}</a></li>
             </ul>
