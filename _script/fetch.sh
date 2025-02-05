@@ -1,5 +1,4 @@
-
-
+git stash
 git fetch -f
 git reset --hard origin/HEAD
 
@@ -8,3 +7,5 @@ chmod +x `ls _script/*.sh`
 
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py check
+
+git stash pop
