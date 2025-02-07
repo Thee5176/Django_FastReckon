@@ -13,7 +13,7 @@
         </thead>
         <tbody class="table-group-divider">
             {% for entry in entries %}
-            <tr class="table-{{ entry.color_by_code }} position-relative">
+            <tr class="table-{{ account.get_bs_color_code }} position-relative">  <!--always use template with "account" content-->
                 <td>
                     <a href="{% url "transaction_detail" entry.transaction.slug%}" class="stretched-link text-decoration-none text-uppercase text-dark">
                     {{ entry.entry_type }}

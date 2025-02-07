@@ -43,7 +43,7 @@ if settings.USE_I18N:
     urlpatterns += i18n_patterns(
         path(_("accounts/"), include('allauth.urls')),
         path(_("accounts/"), include('accounts.urls')),
-        path(_(""), include('pages.urls')),
+        path(_("/"), include('pages.urls')),
         path(_("books/"), include('acc_books.urls')),
         path(_("codes/"), include('acc_codes.urls')),
         path(_("transactions/"), include('transactions.urls')),

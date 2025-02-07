@@ -12,7 +12,11 @@ WORKDIR /code
 # Install dependencies
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+# optional: gnu gettest for locale files
 RUN apt-get update && apt-get install -y gettext
 
 # Copy project
 COPY . .
+
+# Expose port that Django will run on
+EXPOSE 8000
