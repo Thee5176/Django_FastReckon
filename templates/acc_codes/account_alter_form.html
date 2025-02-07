@@ -1,15 +1,24 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
-{% block title %}{{ view_name }} Account{% endblock title %}
+{% load i18n %}
+
+{% block title %}
+    {% blocktrans trimmed %}
+        {{ view_name }} Account
+    {% endblocktrans %}
+{% endblock title %}
 
 {% block content %}
-<h2 class="my-3">{{ view_name }} Account</h2>
+<h2 class="my-3">
+{% blocktrans trimmed %}
+    {{ view_name }} Account
+{% endblocktrans %}</h2>
 <form method="post" class="form-control p-3">
     {% csrf_token %}
     {{ form | crispy }}
     <div class="container d-flex justify-content-begin">
-        <input class="btn btn-primary" type="submit" value="{{ view_name }}">
-        <a class="btn btn-warning ms-auto" href="{% url "account_list" %}">Back to List</a>
+        <input class="btn btn-primary" type="submit" value="{% blocktrans trimmed %}{{ view_name }}{% endblocktrans %}">
+        <a class="btn btn-warning ms-auto" href="{% url "account_list" %}">{% trans "Back to List" %}</a>
     </div>
 </form>
 

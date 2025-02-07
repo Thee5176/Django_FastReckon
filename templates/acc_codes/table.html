@@ -1,15 +1,17 @@
 {% load static %}
+{% load i18n %}
+
 <div class="table-responsive-md">
     <table
         class="table table-hover table-light align-middle"
             >
         <thead class="table-light">
             <tr>
-                <th>Date</th>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Receipt</th>
-                <th>Amount</th>
+                <th>{% trans "Date" %}</th>
+                <th>{% trans "Code" %}</th>
+                <th>{% trans "Name" %}</th>
+                <th>{% trans "Receipt" %}</th>
+                <th>{% trans "Amount" %}</th>
             </tr>
         </thead>
         {% for entry in entry_list %}
@@ -33,18 +35,18 @@
             <tr
             class="table-light"
             >
-            <td colspan=6 class='text-danger'>No record associate with account</td>
+            <td colspan=6 class='text-danger'>{% trans "No record associate with account" %}</td>
         </tr>
         </tbody>
         {% endfor %}
         <tfoot>
             <tr>
-                <td colspan=4>remaining</td>
+                <td colspan=4>{% trans "remaining" %}</td>
                 <td>
                     <script>
                         var classQuery = "myamount";
                     </script>
-                    <script src="{% static "js/table_amount_footer.js"%}"></script>
+                    <script src="{% static "js/table_amount_footer.js" %}"></script>
                 </td>
             </tr>
         </tfoot>

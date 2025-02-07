@@ -1,23 +1,24 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
-{% block title %}Account List{% endblock title %}
+{% block title %}{% trans "Account List" %}{% endblock title %}
 
 {% block content %}
     <div class="row m-3 justify-content-between">
-        <h2 class="col-8 text-muted">Table of Account</h2>
-        <a class="btn btn-success col-4" href="{% url "account_create" %}">+ New Account</a>
+        <h2 class="col-8 text-muted">{% trans "Table of Account" %}</h2>
+        <a class="btn btn-success col-4" href="{% url "account_create" %}">{% trans "+ New Account" %}</a>
     </div>
     <hr />
-    <div class='row ms-auto'>
-        <div class='col-4'>
+    <div class="row ms-auto">
+        <div class="col-4">
             {% include "partials/htmx/acc_book_selector.html" %}
         </div>
-        <div class='col-8'>
-            <form method="get" action="{% url "account_list" %}" class='d-flex'>
-                <input class='form-control me-2' type="search" name="code" value="{{ request.GET.code|escape }}" placeholder='Enter code'>
-                <input class='form-control me-2' type="search" name="name" value="{{ request.GET.name|escape }}" placeholder='Enter account'>
-                <input class="btn btn-success" type="submit" value="Search">
+        <div class="col-8">
+            <form method="get" action="{% url "account_list" %}" class="d-flex">
+                <input class="form-control me-2" type="search" name="code" value="{{ request.GET.code|escape }}" placeholder="{% trans "Enter code" %}">
+                <input class="form-control me-2" type="search" name="name" value="{{ request.GET.name|escape }}" placeholder="{% trans "Enter account" %}">
+                <input class="btn btn-success" type="submit" value="{% trans "Search" %}">
             </form>
         </div>
     </div>

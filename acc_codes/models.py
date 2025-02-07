@@ -105,7 +105,7 @@ class Account(models.Model):
             print(f"Error: No color assigned to code {code}")
     
     def __str__(self):
-        return f"{self.code} | {self.name}"
+        return f"{self.book} | {self.code} | {self.name}"
     
     def get_absolute_url(self):
         return reverse("account_detail", kwargs={"pk": self.pk})

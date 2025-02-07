@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 01:16+0000\n"
+"POT-Creation-Date: 2025-02-07 05:46+0000\n"
 "PO-Revision-Date: 2025-01-31 19:18+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -70,12 +70,14 @@ msgid "%(view_name)s Book"
 msgstr "%(view_name)sの帳簿"
 
 #: templates/acc_books/book_alter_form.html:21
+#: templates/acc_codes/account_alter_form.html:20
 #: templates/transactions/transaction_alter_form.html:50
 #, python-format
 msgid "%(view_name)s"
 msgstr "%(view_name)s"
 
 #: templates/acc_books/book_alter_form.html:22
+#: templates/acc_codes/account_alter_form.html:21
 #: templates/transactions/transaction_alter_form.html:51
 msgid "Back to List"
 msgstr "リストに戻る"
@@ -94,6 +96,7 @@ msgid ""
 msgstr "会計帳簿 %(object.abbr)s: %(object.name)s を削除してもよろしいですか？"
 
 #: templates/acc_books/book_delete.html:19
+#: templates/acc_codes/account_delete.html:15
 #: templates/transactions/transaction_delete.html:15
 msgid "Delete"
 msgstr "削除"
@@ -103,7 +106,7 @@ msgstr "削除"
 msgid "Back"
 msgstr "戻る"
 
-#: templates/acc_books/book_list.html:4
+#: templates/acc_books/book_list.html:4 templates/acc_codes/account_list.html:5
 msgid "Account List"
 msgstr "アカウントリスト"
 
@@ -121,6 +124,9 @@ msgid "Abbreviation"
 msgstr "略語"
 
 #: templates/acc_books/book_list.html:21
+#: templates/acc_codes/partials/base_acc_table.html:12
+#: templates/acc_codes/partials/base_acc_table.html:58
+#: templates/acc_codes/table.html:12
 #: templates/transactions/partials/base_tran_table.html:13
 #: templates/transactions/partials/base_tran_table.html:57
 msgid "Name"
@@ -140,9 +146,153 @@ msgid "%(book.guideline)s"
 msgstr "%(book.guideline)s"
 
 #: templates/acc_books/book_list.html:50
+#: templates/acc_codes/partials/base_acc_table.html:53
 #: templates/transactions/partials/base_tran_table.html:52
 msgid "No Book Found"
 msgstr "帳簿が見つかりません"
+
+#: templates/acc_codes/account_alter_form.html:6
+#: templates/acc_codes/account_alter_form.html:13
+msgid "%(view_name)s Account"
+msgstr "%(view_name)sのアカウント"
+
+#: templates/acc_codes/account_delete.html:5
+#: templates/acc_codes/account_delete.html:8
+msgid "Delete Account"
+msgstr "アカウントを削除"
+
+#: templates/acc_codes/account_delete.html:16
+msgid "Back to  List"
+msgstr "リストに戻る"
+
+#: templates/acc_codes/account_detail.html:4
+msgid "Account Detail"
+msgstr "アカウント詳細"
+
+#: templates/acc_codes/account_detail.html:8
+msgid "Account Info"
+msgstr "アカウント情報"
+
+#: templates/acc_codes/account_detail.html:9
+#: templates/transactions/confirm_account_balance.html:8
+#: templates/transactions/transaction_detail.html:9
+msgid "Back to list"
+msgstr "リストに戻る"
+
+#: templates/acc_codes/account_detail.html:16
+msgid "Account Detail:"
+msgstr "アカウント詳細:"
+
+#: templates/acc_codes/account_detail.html:19
+msgid "Account Type: "
+msgstr "アカウントの種類:"
+
+#: templates/acc_codes/account_detail.html:23
+msgid "Group of Account: "
+msgstr "アカウントグループ:"
+
+#: templates/acc_codes/account_detail.html:27
+msgid "Root Account: "
+msgstr "ルートアカウント:"
+
+#: templates/acc_codes/account_detail.html:34
+msgid "Last Recorded: "
+msgstr "最新記録:"
+
+#: templates/acc_codes/account_detail.html:38
+msgid "! Update Account"
+msgstr "アカウントを更新"
+
+#: templates/acc_codes/account_detail.html:39
+msgid "- Delete Account"
+msgstr "アカウントを削除"
+
+#: templates/acc_codes/account_detail.html:42
+msgid "No Object Found"
+msgstr "オブジェクトが見つかりません"
+
+#: templates/acc_codes/account_list.html:9
+msgid "Table of Account"
+msgstr "アカウント表"
+
+#: templates/acc_codes/account_list.html:10
+msgid "+ New Account"
+msgstr "新しいアカウントを追加"
+
+#: templates/acc_codes/account_list.html:19
+msgid "Enter code"
+msgstr "コードを入力"
+
+#: templates/acc_codes/account_list.html:20
+msgid "Enter account"
+msgstr "アカウントを入力"
+
+#: templates/acc_codes/account_list.html:21
+#: templates/transactions/transaction_list.html:21
+msgid "Search"
+msgstr "検索"
+
+#: templates/acc_codes/partials/base_acc_table.html:11
+#: templates/acc_codes/partials/base_acc_table.html:57
+#: templates/acc_codes/table.html:11
+#: templates/transactions/partials/base_tran_table.html:12
+#: templates/transactions/partials/base_tran_table.html:56
+msgid "Code"
+msgstr "コード"
+
+#: templates/acc_codes/partials/base_acc_table.html:13
+msgid "Record Count"
+msgstr "記録数"
+
+#: templates/acc_codes/partials/base_acc_table.html:14
+#: templates/transactions/partials/check_table.html:11
+msgid "Balance"
+msgstr "残高"
+
+#: templates/acc_codes/partials/base_acc_table.html:32
+#, python-format
+msgid "No Account associated with %(book.name)s Book"
+msgstr "%(book.name)sの帳簿に関連するアカウントはありません"
+
+#: templates/acc_codes/partials/base_acc_table.html:41
+#: templates/transactions/partials/base_tran_table.html:36
+msgid "total"
+msgstr "合計"
+
+#: templates/acc_codes/partials/base_acc_table.html:56
+#: templates/acc_codes/table.html:10
+#: templates/transactions/partials/base_tran_table.html:11
+#: templates/transactions/partials/base_tran_table.html:55
+#: templates/transactions/transaction_detail.html:16
+msgid "Date"
+msgstr "日付"
+
+#: templates/acc_codes/partials/base_acc_table.html:59
+#: templates/acc_codes/table.html:13
+#: templates/transactions/partials/base_tran_table.html:14
+#: templates/transactions/partials/base_tran_table.html:58
+msgid "Receipt"
+msgstr "領収書"
+
+#: templates/acc_codes/partials/base_acc_table.html:60
+#: templates/acc_codes/table.html:14
+#: templates/transactions/partials/base_tran_table.html:15
+#: templates/transactions/partials/base_tran_table.html:59
+#: templates/transactions/partials/ent_table.html:11
+msgid "Amount"
+msgstr "金額"
+
+#: templates/acc_codes/partials/base_acc_table.html:65
+msgid "No Account loaded"
+msgstr "アカウントがロードされていません"
+
+#: templates/acc_codes/table.html:38
+msgid "No record associate with account"
+msgstr "アカウントに関連付けられた記録はありません"
+
+#: templates/acc_codes/table.html:44
+msgid "remaining"
+msgstr "残高"
 
 #: templates/account/email.html:5 templates/account/email.html:10
 msgid "Email Addresses"
@@ -436,40 +586,9 @@ msgstr "土"
 msgid "Account Balance Reconciliation"
 msgstr "残高消込"
 
-#: templates/transactions/confirm_account_balance.html:8
-#: templates/transactions/transaction_detail.html:9
-msgid "Back to list"
-msgstr "リストに戻る"
-
 #: templates/transactions/confirm_account_balance.html:13
 msgid "Transaction"
 msgstr "取引"
-
-#: templates/transactions/partials/base_tran_table.html:11
-#: templates/transactions/partials/base_tran_table.html:55
-#: templates/transactions/transaction_detail.html:16
-msgid "Date"
-msgstr "日付"
-
-#: templates/transactions/partials/base_tran_table.html:12
-#: templates/transactions/partials/base_tran_table.html:56
-msgid "Code"
-msgstr "コード"
-
-#: templates/transactions/partials/base_tran_table.html:14
-#: templates/transactions/partials/base_tran_table.html:58
-msgid "Receipt"
-msgstr "領収書"
-
-#: templates/transactions/partials/base_tran_table.html:15
-#: templates/transactions/partials/base_tran_table.html:59
-#: templates/transactions/partials/ent_table.html:11
-msgid "Amount"
-msgstr "金額"
-
-#: templates/transactions/partials/base_tran_table.html:36
-msgid "total"
-msgstr "合計"
 
 #: templates/transactions/partials/base_tran_table.html:45
 #: templates/transactions/partials/base_tran_table.html:64
@@ -484,10 +603,6 @@ msgstr "アカウント表"
 #: templates/transactions/partials/ent_table.html:10
 msgid "Account"
 msgstr "アカウント"
-
-#: templates/transactions/partials/check_table.html:11
-msgid "Balance"
-msgstr "残高"
 
 #: templates/transactions/partials/ent_table.html:9
 msgid "Type"
@@ -563,10 +678,6 @@ msgstr ""
 #: templates/transactions/transaction_list.html:19
 msgid "Enter keyword"
 msgstr "キーワードを入力"
-
-#: templates/transactions/transaction_list.html:21
-msgid "Search"
-msgstr "検索"
 
 #~ msgid "Journal Record"
 #~ msgstr "仕訳帳"
