@@ -1288,5 +1288,200 @@
         "guideline": "",
         "created_by": 1
     }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 58,
+    "fields": {
+        "book": 3,
+        "root": 1101,
+        "sub_account": "01",
+        "detailed_account": null,
+        "code": "110101",
+        "name": "Cash in hand",
+        "balance": 1,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 59,
+    "fields": {
+        "book": 3,
+        "root": 3002,
+        "sub_account": "01",
+        "detailed_account": null,
+        "code": "300201",
+        "name": "Capital Contribution",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 60,
+    "fields": {
+        "book": 3,
+        "root": 3002,
+        "sub_account": "02",
+        "detailed_account": null,
+        "code": "300202",
+        "name": "Capital Withdrawal",
+        "balance": 1,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 61,
+    "fields": {
+        "book": 3,
+        "root": 3001,
+        "sub_account": "01",
+        "detailed_account": null,
+        "code": "300101",
+        "name": "Preferred Stock",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 62,
+    "fields": {
+        "book": 3,
+        "root": 3001,
+        "sub_account": "02",
+        "detailed_account": null,
+        "code": "300102",
+        "name": "Additional Paid-in Capital",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 63,
+    "fields": {
+        "book": 3,
+        "root": 3001,
+        "sub_account": "03",
+        "detailed_account": null,
+        "code": "300103",
+        "name": "Retained Earning",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 64,
+    "fields": {
+        "book": 3,
+        "root": 3001,
+        "sub_account": "04",
+        "detailed_account": null,
+        "code": "300104",
+        "name": "Other Comprehensive Income",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 65,
+    "fields": {
+        "book": 3,
+        "root": 3001,
+        "sub_account": "05",
+        "detailed_account": null,
+        "code": "300105",
+        "name": "Treasury Stock",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 66,
+    "fields": {
+        "book": 3,
+        "root": 6100,
+        "sub_account": "00",
+        "detailed_account": null,
+        "code": "610000",
+        "name": "Operation Gains",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 67,
+    "fields": {
+        "book": 3,
+        "root": 6200,
+        "sub_account": "00",
+        "detailed_account": null,
+        "code": "620000",
+        "name": "Non-operation Gains",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 68,
+    "fields": {
+        "book": 3,
+        "root": 7100,
+        "sub_account": "00",
+        "detailed_account": null,
+        "code": "710000",
+        "name": "Operation Losses",
+        "balance": 1,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 69,
+    "fields": {
+        "book": 3,
+        "root": 7200,
+        "sub_account": "00",
+        "detailed_account": null,
+        "code": "720000",
+        "name": "Non-operation Losses",
+        "balance": 1,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 70,
+    "fields": {
+        "book": 2,
+        "root": 5109,
+        "sub_account": "02",
+        "detailed_account": null,
+        "code": "510902",
+        "name": "Insurance Expense",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
 }
 ]

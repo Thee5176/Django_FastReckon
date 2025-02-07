@@ -476,7 +476,7 @@
         "shop": null,
         "created_by": 1,
         "created": "2025-01-21T08:17:37.940Z",
-        "modified": "2025-01-21T08:17:37.940Z"
+        "modified": "2025-02-04T23:37:07.114Z"
     }
 },
 {
@@ -518,13 +518,13 @@
         "book": 2,
         "date": "2025-01-24",
         "intra_month_ref": 33,
-        "description": "Being MealPrep paid by Cash",
+        "description": "Being MealPrep paid in cash",
         "slug": "ja2501-33",
         "has_receipt": true,
         "shop": null,
         "created_by": 1,
         "created": "2025-01-24T03:10:56.554Z",
-        "modified": "2025-01-24T03:10:56.554Z"
+        "modified": "2025-02-07T02:03:34.528Z"
     }
 },
 {
@@ -604,7 +604,7 @@
         "shop": null,
         "created_by": 1,
         "created": "2025-01-27T05:05:54.977Z",
-        "modified": "2025-01-27T05:05:54.977Z"
+        "modified": "2025-02-07T04:44:50.120Z"
     }
 },
 {
@@ -628,7 +628,7 @@
     "pk": 46,
     "fields": {
         "book": 2,
-        "date": "2025-01-26",
+        "date": "2025-01-27",
         "intra_month_ref": 40,
         "description": "Being MealPrep paid by MarCard",
         "slug": "ja2501-40",
@@ -636,7 +636,7 @@
         "shop": 1,
         "created_by": 1,
         "created": "2025-01-27T06:18:17.194Z",
-        "modified": "2025-01-27T14:52:02.821Z"
+        "modified": "2025-02-07T02:05:08.154Z"
     }
 },
 {
@@ -680,11 +680,11 @@
         "intra_month_ref": 43,
         "description": "Being gain received",
         "slug": "ja2501-43",
-        "has_receipt": false,
+        "has_receipt": true,
         "shop": null,
         "created_by": 1,
         "created": "2025-02-01T05:32:26.767Z",
-        "modified": "2025-02-01T05:33:30.644Z"
+        "modified": "2025-02-07T01:58:41.654Z"
     }
 },
 {
@@ -700,7 +700,7 @@
         "shop": null,
         "created_by": 1,
         "created": "2025-02-01T06:35:11.892Z",
-        "modified": "2025-02-01T09:24:49.451Z"
+        "modified": "2025-02-04T01:47:13.042Z"
     }
 },
 {
@@ -728,11 +728,107 @@
         "intra_month_ref": 3,
         "description": "Being MealPrep paid by MerCard",
         "slug": "ja2502-3",
-        "has_receipt": false,
+        "has_receipt": true,
         "shop": null,
         "created_by": 1,
         "created": "2025-02-01T09:17:25.814Z",
-        "modified": "2025-02-01T09:17:25.814Z"
+        "modified": "2025-02-06T09:30:54.042Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 53,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-04",
+        "intra_month_ref": 4,
+        "description": "Being Cash received",
+        "slug": "ja2502-4",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-04T01:43:37.659Z",
+        "modified": "2025-02-06T03:26:17.984Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 54,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-04",
+        "intra_month_ref": 5,
+        "description": "Being MealPrep paid with Suica",
+        "slug": "ja2502-5",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-04T07:36:48.865Z",
+        "modified": "2025-02-06T09:30:39.115Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 55,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-04",
+        "intra_month_ref": 6,
+        "description": "Being Snack paid by Famipay",
+        "slug": "ja2502-6",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-04T23:35:05.899Z",
+        "modified": "2025-02-06T09:31:41.003Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 56,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-05",
+        "intra_month_ref": 7,
+        "description": "Being Snack paid with Famipay",
+        "slug": "ja2502-7",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-06T10:01:42.455Z",
+        "modified": "2025-02-06T10:02:05.796Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 57,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-30",
+        "intra_month_ref": 44,
+        "description": "Being MealPrep paid in cash",
+        "slug": "ja2501-44",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-07T02:06:33.935Z",
+        "modified": "2025-02-07T02:08:22.467Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 59,
+    "fields": {
+        "book": 2,
+        "date": "2025-02-05",
+        "intra_month_ref": 8,
+        "description": "Being MealPrep paid in cash",
+        "slug": "ja2502-8",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-02-07T02:08:00.660Z",
+        "modified": "2025-02-07T02:08:43.838Z"
     }
 },
 {
@@ -1602,7 +1698,7 @@
         "transaction": 44,
         "account": 50,
         "entry_type": 1,
-        "amount": "48330.00"
+        "amount": "48000.00"
     }
 },
 {
@@ -1732,7 +1828,7 @@
         "transaction": 50,
         "account": 23,
         "entry_type": 1,
-        "amount": "8471.00"
+        "amount": "8570.00"
     }
 },
 {
@@ -1742,7 +1838,7 @@
         "transaction": 50,
         "account": 9,
         "entry_type": 2,
-        "amount": "8570.00"
+        "amount": "8471.00"
     }
 },
 {
@@ -1791,8 +1887,148 @@
     "fields": {
         "transaction": 50,
         "account": 54,
-        "entry_type": 1,
+        "entry_type": 2,
         "amount": "99.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 107,
+    "fields": {
+        "transaction": 53,
+        "account": 1,
+        "entry_type": 1,
+        "amount": "30.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 108,
+    "fields": {
+        "transaction": 53,
+        "account": 54,
+        "entry_type": 2,
+        "amount": "30.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 109,
+    "fields": {
+        "transaction": 54,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "62.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 110,
+    "fields": {
+        "transaction": 54,
+        "account": 13,
+        "entry_type": 2,
+        "amount": "62.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 111,
+    "fields": {
+        "transaction": 55,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "138.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 112,
+    "fields": {
+        "transaction": 55,
+        "account": 14,
+        "entry_type": 2,
+        "amount": "132.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 113,
+    "fields": {
+        "transaction": 55,
+        "account": 54,
+        "entry_type": 2,
+        "amount": "6.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 114,
+    "fields": {
+        "transaction": 56,
+        "account": 36,
+        "entry_type": 1,
+        "amount": "181.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 115,
+    "fields": {
+        "transaction": 56,
+        "account": 14,
+        "entry_type": 2,
+        "amount": "181.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 116,
+    "fields": {
+        "transaction": 57,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "144.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 117,
+    "fields": {
+        "transaction": 57,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "144.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 120,
+    "fields": {
+        "transaction": 59,
+        "account": 35,
+        "entry_type": 1,
+        "amount": "1000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 121,
+    "fields": {
+        "transaction": 59,
+        "account": 1,
+        "entry_type": 2,
+        "amount": "1000.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 122,
+    "fields": {
+        "transaction": 44,
+        "account": 49,
+        "entry_type": 1,
+        "amount": "330.00"
     }
 }
 ]
