@@ -2,7 +2,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.conf import settings
 from django.db import models
 from django.urls import reverse
-
+from datetime import datetime
 class RootAccount(models.Model):
     BALANCE_TYPE = [
         (1, "Dr"),
@@ -86,6 +86,7 @@ class Account(models.Model):
     name = models.CharField(max_length=50)
     balance = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
     guideline = models.TextField(null=True, blank=True)
+    monthly_budget = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     #Meta
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name=("accounts"), on_delete=models.CASCADE)
     
@@ -118,6 +119,11 @@ class Account(models.Model):
             else:
                 balance -= entry.amount
         return balance
+    
+    def get_accumulated_budget(self):
+        if self.monthly_budget:
+            current_month = datetime.now().month
+            return self.monthly_budget * current_month
     
     def get_bs_color_code(self):
         color_by_code = {
