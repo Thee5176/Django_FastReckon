@@ -29,14 +29,48 @@ class RootAccount(models.Model):
         return f"{self.code} | {self.name}"
     
     @property
-    def get_type(self):
-        code = str(self.code)[0]
-        return code
+    def get_type(self, as_str=False):
+        TYPE_NAME = [
+            "Asset",
+            "Liability",
+            "Equity",
+            "Revenue",
+            "Expense",
+            "Gain",
+            "Loss",
+        ]
+        
+        code = int(str(self.code)[0])
+
+        if as_str == True:
+            return TYPE_NAME[code - 1]
+        else:
+            return code
     
     @property
-    def get_group(self):
-        code = str(self.code)[:2]
-        return code
+    def get_group(self, as_str=False):
+        GROUP_NAME = {
+            11 : "Current Asset",
+            12 : "Fixed Asset",
+            21 : "Current Liability",
+            22 : "Long-term Liability",
+            30 : "Equity",
+            41 : "Personal Revenue",
+            42 : "Corporate Revenue",
+            51 : "Personal Expense",
+            52 : "Corporate Expense",
+            61 : "Operation Gain",
+            62 : "Non-operation Gain",
+            71 : "Operation Loss",
+            72 : "Non-operation Loss",
+        }
+        
+        code = int(str(self.code)[:2])
+        
+        if as_str == True:
+            return GROUP_NAME[code - 1]
+        else:
+            return code
     
 class Account(models.Model):
     BALANCE_TYPE = [

@@ -16,9 +16,9 @@
     <i class="bi bi-archive"></i> {% trans "Financial Statements" %}
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-    <li><a class="dropdown-item" href="#">{% trans "Balance Sheet" %}</a></li>
-    <li><a class="dropdown-item" href="#">{% trans "Income Statement" %}</a></li>
-    <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Cash Flow Statement" %}</a></li>
+    <li><a class="dropdown-item" href="{% url "balance-sheet" %}">{% trans "Balance Sheet" %}</a></li>
+    <li><a class="dropdown-item" href="{% url "income-statement" %}">{% trans "Income Statement" %}</a></li>
+    <li><a class="dropdown-item" href="#">{% trans "Cash Flow Statement" %}</a></li>
     {% comment %} <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Statement of Stockholders’ Equity" %}</a></li> {% endcomment %}
     {% comment %} <li><a class="dropdown-item disabled" data-tooltip="coming soon" href="#">{% trans "Statement of Comprehensive Income" %}</a></li> {% endcomment %}
   </ul>

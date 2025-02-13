@@ -26,6 +26,7 @@ urlpatterns = [
     #accounting
     path("books/", include('acc_books.urls')),
     path("codes/", include('acc_codes.urls')),
+    path("reports/", include('reports.urls')),
     path("transactions/", include('transactions.urls')),
     path("i18n/", include('django.conf.urls.i18n')),
 ]
@@ -46,6 +47,7 @@ if settings.USE_I18N:
         path(_("/"), include('pages.urls')),
         path(_("books/"), include('acc_books.urls')),
         path(_("codes/"), include('acc_codes.urls')),
+        path(_("reports/"), include('reports.urls')),
         path(_("transactions/"), include('transactions.urls')),
         path(_("i18n/"), include('django.conf.urls.i18n')),
     )

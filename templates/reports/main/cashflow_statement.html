@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Cashflow Statement Reports" %}{% endblock title %}
+
+{% block content %}
+<h2>{% trans "Cashflow Statement C/F" %}</h2>
+<div class="container m-3">
+    <div
+        class="table-responsive d-flex"
+    >
+        <!--Debit Table-->
+        <table
+            class="table table-light"
+        >
+            <thead class="table-borderless">
+                <tr>
+                    <th>{% trans "Account" %}</th>
+                    <th>{% trans "Amount" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-primary">
+                    <th>{% trans "Revenue" %}</th>
+                    <td class="myamount dr"  rowspan='5'>{{ revenue }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Credit Table-->
+        <table
+            class="table table-light"
+        >
+            <thead class="table-borderless">
+                <tr>
+                    <th>{% trans "Account" %}</th>
+                    <th>{% trans "Amount" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-danger">
+                    <th>{% trans "Expense" %}</th>
+                    <td class="myamount cr">{{ expense }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+{% endblock content %}

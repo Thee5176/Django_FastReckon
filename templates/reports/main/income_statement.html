@@ -1,0 +1,80 @@
+{% extends "_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Income Statement" %}{% endblock title %}
+
+{% block content %}
+<h2>{% trans "Income Statement P/L" %}</h2>
+<div class="container m-3">
+    <div
+        class="table-responsive d-flex"
+    >
+        <!--Debit Table-->
+        <table
+            class="table table-light"
+        >
+            <thead class="table-borderless">
+                <tr>
+                    <th colspan=3>{% trans "Debitors" %}</th>
+                </tr>
+                <tr>
+                    <th>{% trans "Type" %}</th>
+                    <th>{% trans "Account" %}</th>
+                    <th>{% trans "Amount" %}</th>
+                </tr>
+            </thead>
+            <tbody class="d-flex">
+                <!--Expense-->
+                <tbody>
+                    <tr class="table-danger">
+                        <th>{% trans "Expense" %}</th>
+                        <td>
+                            <ul>
+                                {% for root_account,root_balance in expense.root_list.items %}
+                                <li>{{ root_account }} - {{ root_balance }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td class="myamount dr" rowspan=5>{{ expense.balance }}</td>
+                    </tr>
+                </tbody>
+
+                <!--Net Income-->
+                <tr class="table-warning">
+                    <th colspan=2>{% trans "Net Income" %}</th>
+                    <td class="myamount cr text-end">{{ net_income }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Credit Table-->
+        <table
+            class="table table-light"
+        >
+            <thead class="table-borderless">
+                <tr>
+                    <th colspan=3>{% trans "Creditors" %}</th>
+                </tr>
+                <tr>
+                    <th>{% trans "Type" %}</th>
+                    <th>{% trans "Account" %}</th>
+                    <th>{% trans "Amount" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-primary">
+                    <th>{% trans "Revenue" %}</th>
+                    <td>
+                        <ul>
+                            {% for root_account,root_balance in asset.root_list.items %}
+                            <li>{{ root_account }} - {{ root_balance }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td class="myamount dr" rowspan=5>{{ revenue.balance }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+{% endblock content %}

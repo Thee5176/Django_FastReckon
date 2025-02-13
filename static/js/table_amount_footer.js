@@ -1,6 +1,6 @@
-// must specify 'classQuery' before import this code
-if (typeof classQuery !== "undefined") {
-    var el = document.getElementsByClassName(classQuery);
+// must specify 'elementQuery' before import this code
+if (typeof elementQuery !== "undefined") {
+    var el = document.querySelectorAll(elementQuery);
     var sum = 0;
 
     console.log("Retrived amount element", el)
@@ -13,5 +13,5 @@ if (typeof classQuery !== "undefined") {
 
     document.write(sum);
 } else {
-    console.error("classQuery is not defined.");
+    console.error("elementQuery is not defined.");
 }
