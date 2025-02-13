@@ -1,3 +1,6 @@
+# backup record
+./_script/dumpdata.sh
+
 git stash
 git fetch -f
 git reset --hard origin/main
