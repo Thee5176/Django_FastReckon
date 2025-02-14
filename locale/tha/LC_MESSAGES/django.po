@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-07 05:46+0000\n"
+"POT-Creation-Date: 2025-02-14 06:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: django_project/settings.py:154
+#: django_project/settings.py:155
 msgid "English"
 msgstr "ภาษาอังกฤษ (English)"
 
-#: django_project/settings.py:155
+#: django_project/settings.py:156
 msgid "Japanese"
 msgstr "ภาษาญี่ปุ่น (日本語)"
 
-#: django_project/settings.py:156
+#: django_project/settings.py:157
 msgid "Thai"
 msgstr "ภาษาไทย"
 
-#: django_project/urls.py:44 django_project/urls.py:45
+#: django_project/urls.py:45 django_project/urls.py:46
 msgid "accounts/"
 msgstr "บัญชีผู้ใช้"
 
-#: django_project/urls.py:46
+#: django_project/urls.py:47
 msgid "/"
 msgstr ""
 
-#: django_project/urls.py:47
+#: django_project/urls.py:48
 msgid "books/"
 msgstr "หนังสือ"
 
-#: django_project/urls.py:48
+#: django_project/urls.py:49
 msgid "codes/"
 msgstr "รหัส"
 
-#: django_project/urls.py:49
+#: django_project/urls.py:50
+msgid "reports/"
+msgstr ""
+
+#: django_project/urls.py:51
 msgid "transactions/"
 msgstr "ธุรกรรม"
 
-#: django_project/urls.py:50
+#: django_project/urls.py:52
 msgid "i18n/"
 msgstr "i18n"
 
@@ -81,10 +85,15 @@ msgid "Back to List"
 msgstr "กลับไปยังรายการ"
 
 #: templates/acc_books/book_alter_form.html:24
-#: templates/acc_books/book_delete.html:5
-#: templates/acc_books/book_delete.html:8
 msgid "Delete Book"
 msgstr "ลบสมุดบัญชี"
+
+#: templates/acc_books/book_delete.html:5
+#: templates/acc_books/book_delete.html:8
+#, fuzzy
+#| msgid "Delete"
+msgid "Delete Ledger"
+msgstr "ลบ"
 
 #: templates/acc_books/book_delete.html:14
 #, python-format
@@ -104,14 +113,14 @@ msgstr "ลบ"
 msgid "Back"
 msgstr "กลับ"
 
-#: templates/acc_books/book_list.html:4 templates/acc_codes/account_list.html:5
-msgid "Account List"
-msgstr "รายการบัญชี"
+#: templates/acc_books/book_list.html:4
+msgid "General Ledger"
+msgstr ""
 
 #: templates/acc_books/book_list.html:8
 #: templates/partials/journals_nav_menu.html:8
-msgid "Book of Account"
-msgstr "สมุดบัญชี"
+msgid "General Ledger GL"
+msgstr ""
 
 #: templates/acc_books/book_list.html:9
 msgid "New Book"
@@ -123,10 +132,9 @@ msgstr "ตัวย่อ"
 
 #: templates/acc_books/book_list.html:21
 #: templates/acc_codes/partials/base_acc_table.html:12
-#: templates/acc_codes/partials/base_acc_table.html:58
+#: templates/acc_codes/partials/base_acc_table.html:60
 #: templates/acc_codes/table.html:12
-#: templates/transactions/partials/base_tran_table.html:13
-#: templates/transactions/partials/base_tran_table.html:57
+#: templates/transactions/partials/base_tran_table.html:60
 msgid "Name"
 msgstr "ชื่อ"
 
@@ -144,13 +152,14 @@ msgid "%(book.guideline)s"
 msgstr "%(book.guideline)s"
 
 #: templates/acc_books/book_list.html:50
-#: templates/acc_codes/partials/base_acc_table.html:53
-#: templates/transactions/partials/base_tran_table.html:52
+#: templates/acc_codes/partials/base_acc_table.html:55
+#: templates/transactions/partials/base_tran_table.html:55
 msgid "No Book Found"
 msgstr "ไม่พบสมุดบัญชี"
 
 #: templates/acc_codes/account_alter_form.html:6
 #: templates/acc_codes/account_alter_form.html:13
+#, python-format
 msgid "%(view_name)s Account"
 msgstr "บัญชีของ %(view_name)s"
 
@@ -209,9 +218,13 @@ msgstr "ลบบัญชี"
 msgid "No Object Found"
 msgstr "ไม่พบข้อมูล"
 
+#: templates/acc_codes/account_list.html:5
+msgid "Account List"
+msgstr "รายการบัญชี"
+
 #: templates/acc_codes/account_list.html:9
-msgid "Table of Account"
-msgstr "ตารางบัญชี"
+msgid "Subsidiary Ledger SL"
+msgstr ""
 
 #: templates/acc_codes/account_list.html:10
 msgid "+ New Account"
@@ -231,10 +244,10 @@ msgid "Search"
 msgstr "ค้นหา"
 
 #: templates/acc_codes/partials/base_acc_table.html:11
-#: templates/acc_codes/partials/base_acc_table.html:57
+#: templates/acc_codes/partials/base_acc_table.html:59
 #: templates/acc_codes/table.html:11
 #: templates/transactions/partials/base_tran_table.html:12
-#: templates/transactions/partials/base_tran_table.html:56
+#: templates/transactions/partials/base_tran_table.html:59
 msgid "Code"
 msgstr "รหัส"
 
@@ -243,44 +256,54 @@ msgid "Record Count"
 msgstr "จำนวนบันทึก"
 
 #: templates/acc_codes/partials/base_acc_table.html:14
+msgid "Budget"
+msgstr ""
+
+#: templates/acc_codes/partials/base_acc_table.html:15
 #: templates/transactions/partials/check_table.html:11
 msgid "Balance"
 msgstr "ยอดคงเหลือ"
 
-#: templates/acc_codes/partials/base_acc_table.html:32
+#: templates/acc_codes/partials/base_acc_table.html:34
 #, python-format
 msgid "No Account associated with %(book.name)s Book"
 msgstr "ไม่มีบัญชีที่เชื่อมโยงกับหนังสือ %(book.name)s"
 
-#: templates/acc_codes/partials/base_acc_table.html:41
+#: templates/acc_codes/partials/base_acc_table.html:43
 #: templates/transactions/partials/base_tran_table.html:36
 msgid "total"
 msgstr "รวม"
 
-#: templates/acc_codes/partials/base_acc_table.html:56
+#: templates/acc_codes/partials/base_acc_table.html:58
 #: templates/acc_codes/table.html:10
 #: templates/transactions/partials/base_tran_table.html:11
-#: templates/transactions/partials/base_tran_table.html:55
+#: templates/transactions/partials/base_tran_table.html:58
 #: templates/transactions/transaction_detail.html:16
 msgid "Date"
 msgstr "วันที่"
 
-#: templates/acc_codes/partials/base_acc_table.html:59
+#: templates/acc_codes/partials/base_acc_table.html:61
 #: templates/acc_codes/table.html:13
 #: templates/transactions/partials/base_tran_table.html:14
-#: templates/transactions/partials/base_tran_table.html:58
+#: templates/transactions/partials/base_tran_table.html:61
 msgid "Receipt"
 msgstr "ใบเสร็จรับเงิน"
 
-#: templates/acc_codes/partials/base_acc_table.html:60
+#: templates/acc_codes/partials/base_acc_table.html:62
 #: templates/acc_codes/table.html:14
+#: templates/reports/main/balance_sheet.html:24
+#: templates/reports/main/balance_sheet.html:54
+#: templates/reports/main/cashflow_statement.html:19
+#: templates/reports/main/cashflow_statement.html:36
+#: templates/reports/main/income_statement.html:23
+#: templates/reports/main/income_statement.html:62
 #: templates/transactions/partials/base_tran_table.html:15
-#: templates/transactions/partials/base_tran_table.html:59
+#: templates/transactions/partials/base_tran_table.html:62
 #: templates/transactions/partials/ent_table.html:11
 msgid "Amount"
 msgstr "จำนวนเงิน"
 
-#: templates/acc_codes/partials/base_acc_table.html:65
+#: templates/acc_codes/partials/base_acc_table.html:67
 msgid "No Account loaded"
 msgstr "ไม่มีบัญชีที่โหลดอยู่"
 
@@ -485,6 +508,7 @@ msgid "Balance Sheet"
 msgstr "งบแสดงฐานะการเงิน(งบดุล)"
 
 #: templates/partials/journals_nav_menu.html:20
+#: templates/reports/main/income_statement.html:4
 msgid "Income Statement"
 msgstr "งบกำไรขาดทุน"
 
@@ -503,6 +527,110 @@ msgstr "แก้ไขโปรไฟล์"
 #: templates/profile.html:11
 msgid "Confirm Change"
 msgstr "ยืนยันการเปลี่ยนแปลง"
+
+#: templates/reports/financial_index.html:5
+#: templates/reports/financial_index.html:8
+msgid "Financial Index"
+msgstr "ดัชนีทางการเงิน"
+
+#: templates/reports/main/balance_sheet.html:5
+msgid "Balance Sheet Reports"
+msgstr "รายงานงบดุล"
+
+#: templates/reports/main/balance_sheet.html:8
+msgid "Balance Sheet B/S"
+msgstr "งบดุล B/S"
+
+#: templates/reports/main/balance_sheet.html:19
+#: templates/reports/main/income_statement.html:18
+msgid "Debitors"
+msgstr "ลูกหนี้"
+
+#: templates/reports/main/balance_sheet.html:22
+#: templates/reports/main/balance_sheet.html:52
+#: templates/reports/main/income_statement.html:21
+#: templates/reports/main/income_statement.html:60
+#: templates/transactions/partials/ent_table.html:9
+msgid "Type"
+msgstr "ประเภท"
+
+#: templates/reports/main/balance_sheet.html:23
+#: templates/reports/main/balance_sheet.html:53
+#: templates/reports/main/cashflow_statement.html:18
+#: templates/reports/main/cashflow_statement.html:35
+#: templates/reports/main/income_statement.html:22
+#: templates/reports/main/income_statement.html:61
+#: templates/transactions/partials/check_table.html:10
+#: templates/transactions/partials/ent_table.html:10
+msgid "Account"
+msgstr "บัญชี"
+
+#: templates/reports/main/balance_sheet.html:29
+msgid "Asset"
+msgstr "สินทรัพย์"
+
+#: templates/reports/main/balance_sheet.html:49
+#: templates/reports/main/income_statement.html:57
+msgid "Creditors"
+msgstr "เจ้าหนี้"
+
+#: templates/reports/main/balance_sheet.html:59
+msgid "Liability"
+msgstr "หนี้สิน"
+
+#: templates/reports/main/balance_sheet.html:73
+msgid "Net Equity"
+msgstr "ส่วนของเจ้าของสุทธิ"
+
+#: templates/reports/main/balance_sheet.html:76
+#, fuzzy
+#| msgid "Net Equity"
+msgid "Equity : "
+msgstr "ส่วนของเจ้าของสุทธิ"
+
+#: templates/reports/main/balance_sheet.html:77
+#, fuzzy
+#| msgid "Net Income"
+msgid "Net Income : "
+msgstr "กำไรสุทธิ"
+
+#: templates/reports/main/balance_sheet.html:78
+msgid "Other Gain/Loss : "
+msgstr ""
+
+#: templates/reports/main/cashflow_statement.html:4
+msgid "Cashflow Statement Reports"
+msgstr "รายงานกระแสเงินสด"
+
+#: templates/reports/main/cashflow_statement.html:7
+msgid "Cashflow Statement C/F"
+msgstr "กระแสเงินสด C/F"
+
+#: templates/reports/main/cashflow_statement.html:24
+#: templates/reports/main/income_statement.html:67
+msgid "Revenue"
+msgstr "รายได้"
+
+#: templates/reports/main/cashflow_statement.html:41
+#: templates/reports/main/income_statement.html:30
+msgid "Expense"
+msgstr "ค่าใช้จ่าย"
+
+#: templates/reports/main/income_statement.html:7
+msgid "Income Statement P/L"
+msgstr "งบกำไรขาดทุน P/L"
+
+#: templates/reports/main/income_statement.html:46
+msgid "Net Income"
+msgstr "กำไรสุทธิ"
+
+#: templates/reports/trail_balance.html:5
+msgid "Trail Balance Reports"
+msgstr "รายงานงบทดลอง"
+
+#: templates/reports/trail_balance.html:8
+msgid "Trail Balance T/B"
+msgstr "งบทดลอง T/B"
 
 #: templates/socialaccount/login.html:5
 msgid "Sign In"
@@ -575,23 +703,19 @@ msgstr ""
 msgid "Transaction"
 msgstr "ธุรกรรม"
 
-#: templates/transactions/partials/base_tran_table.html:45
-#: templates/transactions/partials/base_tran_table.html:64
+#: templates/transactions/partials/base_tran_table.html:13
+#: templates/transactions/transaction_detail.html:20
+msgid "Description"
+msgstr "คำอธิบายรายการ"
+
+#: templates/transactions/partials/base_tran_table.html:48
+#: templates/transactions/partials/base_tran_table.html:67
 msgid "No Transaction loaded"
 msgstr "โหลดไม่พบธุรกรรม"
 
 #: templates/transactions/partials/check_table.html:4
 msgid "Account Table"
 msgstr "ตารางบัญชี"
-
-#: templates/transactions/partials/check_table.html:10
-#: templates/transactions/partials/ent_table.html:10
-msgid "Account"
-msgstr "บัญชี"
-
-#: templates/transactions/partials/ent_table.html:9
-msgid "Type"
-msgstr "ประเภท"
 
 #: templates/transactions/partials/entry_form.html:10
 msgid "HTMX request finished!"
@@ -636,10 +760,6 @@ msgstr "สมุดบัญชี"
 msgid "Monthly Ref"
 msgstr "อ้างอิงรายเดือน"
 
-#: templates/transactions/transaction_detail.html:20
-msgid "Description"
-msgstr "คำอธิบาย"
-
 #: templates/transactions/transaction_detail.html:21
 msgid "Receipt Status"
 msgstr "สถานะใบเสร็จ"
@@ -649,11 +769,8 @@ msgid "Update Transaction"
 msgstr "แก้ไขธุรกรรม"
 
 #: templates/transactions/transaction_list.html:5
-msgid "Transaction Records"
-msgstr "บันทึกธุรกรรม"
-
 #: templates/transactions/transaction_list.html:9
-msgid "Transaction List"
+msgid "Journal Entries"
 msgstr "รายการธุรกรรม"
 
 #: templates/transactions/transaction_list.html:10
@@ -664,11 +781,17 @@ msgstr ""
 msgid "Enter keyword"
 msgstr "กรอกคำค้นหา"
 
+#~ msgid "Book of Account"
+#~ msgstr "สมุดบัญชี"
+
+#~ msgid "Table of Account"
+#~ msgstr "ตารางบัญชี"
+
+#~ msgid "Transaction Records"
+#~ msgstr "บันทึกธุรกรรม"
+
 #~ msgid "Journal Record"
 #~ msgstr "บันทึกบัญชี"
-
-#~ msgid "Financial Report"
-#~ msgstr "รายงานงบการเงิน"
 
 #~ msgid "__debug__/"
 #~ msgstr "ดีบัก"

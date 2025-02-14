@@ -2,11 +2,11 @@
 {% load crispy_forms_tags %}
 {% load i18n %}
 
-{% block title %}{% trans "Transaction Records" %}{% endblock title %}
+{% block title %}{% trans "Journal Entries" %}{% endblock title %}
 
 {% block content %}
     <div class="row m-3 justify-content-between">
-        <h2 class="col-8 text-muted">{% trans "Transaction List" %}</h2>
+        <h2 class="col-8 text-muted">{% trans "Journal Entries" %}</h2>
         <a class="btn btn-success col-4" href="{% url "transaction_create" %}">{% trans "Add Reckon" %}</a>
     </div>
     <hr />

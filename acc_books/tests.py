@@ -38,7 +38,7 @@ class TestBook(TestCase):
     def test_book_listview(self):
         response = self.client.get(reverse("book_list"))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Book of Account")
+        self.assertContains(response, "General Ledger GL")
 
     def test_book_createview(self):
         response = self.client.get(reverse("book_create"))

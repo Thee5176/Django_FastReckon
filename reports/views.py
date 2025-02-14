@@ -82,7 +82,9 @@ class BalanceSheetView(LoginRequiredMixin, AccountDataMixin, TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["net_equity"] = context["equity"]["balance"] + (context["revenue"]["balance"]-context["expense"]["balance"]) + (context["gain"]["balance"]-context["loss"]["balance"])
+        context["net_income"] = context["revenue"]["balance"]-context["expense"]["balance"]
+        context["other_gain_loss"] = context["gain"]["balance"]-context["loss"]["balance"]
+        context["net_equity"] = context["equity"]["balance"] + context["net_income"] + context["other_gain_loss"]
         return context
     
 class IncomeView(LoginRequiredMixin, AccountDataMixin, TemplateView):

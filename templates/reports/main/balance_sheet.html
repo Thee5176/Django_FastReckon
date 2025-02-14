@@ -30,7 +30,9 @@
                     <td>
                         <ul>
                             {% for root_account,root_balance in asset.root_list.items %}
+                            {% if root_balance != 0 %}
                             <li>{{ root_account }} - {{ root_balance }}</li>
+                            {% endif %}
                             {% endfor %}
                         </ul>
                     </td>
@@ -58,7 +60,9 @@
                     <td>
                         <ul>
                             {% for root_account,root_balance in liability.root_list.items %}
-                            <li>{{ root_account }} - {{ root_balance }}</li>
+                                {% if root_balance != 0 %}
+                                <li>{{ root_account }} - {{ root_balance }}</li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </td>
@@ -66,24 +70,15 @@
                 </tr>
                 
                 <tr class="table-warning">
-                    <th colspan=2>{% trans "Net Equity" %}</th>
+                    <th>{% trans "Net Equity" %}</th>
+                    <td>
+                        <ul>
+                            <li>{% trans "Equity : " %}{{ equity.balance }}</li>
+                            <li>{% trans "Net Income : " %}{{ net_income }}</li>
+                            <li>{% trans "Other Gain/Loss : " %}{{ other_gain_loss }}</li>
+                        </ul>
+                    </td>
                     <td class="myamount cr">{{ net_equity }}</td>
-                    {% comment %} <td>
-                        <table class="table mb-0">
-                            <tr class="table-warning">
-                                <th>{% trans "Gross Equity" %}</th>
-                                <td class="myamount cr equity">{{ equity }}</td>
-                            </tr>
-                            <tr class="table-warning">
-                                <th>{% trans "Gross Profit" %}</th>
-                                <td class="myamount cr equity">{{ revenue_expense }}</td>
-                            </tr>
-                            <tr class="table-warning">
-                                <th>{% trans "Gain/Loss" %}</th>
-                                <td class="myamount cr equity">{{ gain_loss }}</td>
-                            </tr>
-                        </table>
-                    </td> {% endcomment %}
                 </tr>
             </tbody>
         </table>

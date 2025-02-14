@@ -31,7 +31,9 @@
                         <td>
                             <ul>
                                 {% for root_account,root_balance in expense.root_list.items %}
+                                {% if root_balance != 0 %}
                                 <li>{{ root_account }} - {{ root_balance }}</li>
+                                {% endif %}
                                 {% endfor %}
                             </ul>
                         </td>
@@ -65,8 +67,10 @@
                     <th>{% trans "Revenue" %}</th>
                     <td>
                         <ul>
-                            {% for root_account,root_balance in asset.root_list.items %}
-                            <li>{{ root_account }} - {{ root_balance }}</li>
+                            {% for root_account,root_balance in revenue.root_list.items %}
+                                {% if root_balance != 0 %}
+                                <li>{{ root_account }} - {{ root_balance }}</li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </td>
