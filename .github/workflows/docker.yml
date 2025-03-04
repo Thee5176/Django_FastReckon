@@ -55,6 +55,10 @@ jobs:
 
         # Legacy: _script/setup.sh
 
+      - name: Recreate .env file from Base64
+        run: |
+          printf "%s" "${{ secrets.ENV_FILE_BASE64 }}" | base64 --decode > .env
+
       - name: Build Docker image and test DB
         run: |
           docker-compose up -d --build
