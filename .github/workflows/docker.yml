@@ -51,9 +51,7 @@ jobs:
 
 
           # Manage Docker user script from https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
-          sudo groupadd docker
           sudo usermod -aG docker $USER
-          newgrp docker
 
         # Legacy: _script/setup.sh
 

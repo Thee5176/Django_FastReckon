@@ -28,8 +28,6 @@ jobs:
           echo "Running backup..."
           ./_script/backup.sh
 
-          git stash
-
           # Fetch
           echo "Fetching latest code..."
           ./_script/fetch.sh
@@ -39,5 +37,4 @@ jobs:
           docker-compose exec web python manage.py migrate
           docker-compose exec web python manage.py check
 
-          git stash pop
           EOF

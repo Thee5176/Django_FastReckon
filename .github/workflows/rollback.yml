@@ -1,0 +1,28 @@
+name: Rollback CI
+
+on:
+  workflow_run:
+    workflows: ["Deploy to OCI Instance"]
+    types:
+      - completed
+  
+jobs:
+  rollback:
+    if: ${{ github.event.workflow_run.conclusion == "failure" }}
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    
+    - name: Rollback to prevous version
+      run: |
+        ssh -o ScrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} << 'EOF'
+        # Restore backup
+        echo "Restoring backup..."
+        ./_script/restore.sh
