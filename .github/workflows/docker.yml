@@ -1,12 +1,7 @@
 name: Docker CI
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:  # Trigger this after clone repo
 
 jobs:
   build-and-test:
@@ -16,56 +11,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        run: |
-          #!/usr/bin/bash
-
-          # Setup script from Grepper
-          # Update the apt package index
-          sudo apt-get update
-
-          # Install packages to allow apt to use a repository over HTTPS
-          sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
-
-          # Add Docker's official GPG key
-          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-          # Add Docker's stable repository
-          echo \
-            "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-            $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-          # Update the apt package index again
-          sudo apt-get update
-
-          # Install the Docker dependencies
-          sudo apt-get install -y docker-ce docker-ce-cli docker-compose containerd.io
-          # Start Docker service
-          sudo systemctl start docker
-
-          # Enable Docker to start on boot
-          sudo systemctl enable docker
-
-          # Verify Docker installation
-          sudo docker run hello-world
-
-
-          # Manage Docker user script from https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
-          sudo usermod -aG docker $USER
-
-        # Legacy: _script/setup.sh
-
-      - name: Recreate .env file from Base64
-        run: |
-          printf "%s" "${{ secrets.ENV_FILE_BASE64 }}" | base64 --decode > .env
-
-      - name: Build Docker image and test DB
-        run: |
-          docker-compose up -d --build
-          docker-compose exec web python manage.py check
-        # Legacy: _script/run.sh
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Allow bash script excecution
         run: |
           chmod +x `ls _script/*.sh`
         # grant excecution for new bash script
+
+      - name: Set up Docker with script
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} 'bash -s' < ./_script/build.sh
+
+      
+      - name: Recreate .env file from Base64
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} << 'EOF'
+          printf "%s" "${{ secrets.ENV_FILE_BASE64 }}" | base64 --decode > .env
+          EOF
+
+      - name: Build Docker image and test DB
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} << 'EOF'
+          docker-compose up -d --build
+          docker-compose exec web python manage.py check
+          EOF

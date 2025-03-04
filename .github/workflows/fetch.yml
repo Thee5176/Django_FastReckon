@@ -5,6 +5,9 @@ on:
     workflows: ["Docker CI"]
     types:
       - completed
+    pull_request:
+      branches:
+        - main
   
 jobs:
   deploy:
@@ -20,21 +23,6 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Run commands on OCI instance
+      - name: Run deployment script on OCI instance
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} << 'EOF'
-          
-          # Backup
-          echo "Running backup..."
-          ./_script/backup.sh
-
-          # Fetch
-          echo "Fetching latest code..."
-          ./_script/fetch.sh
-          
-          # Migrate
-          echo "Migration and check database..."
-          docker-compose exec web python manage.py migrate
-          docker-compose exec web python manage.py check
-
-          EOF
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} 'bash -s' < ./_script/deploy.sh
