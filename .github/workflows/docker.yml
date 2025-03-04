@@ -1,0 +1,39 @@
+name: Docker CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      # Legacy: _script/setup.sh
+
+      - name: Define Docker Alias
+        run: |
+          alias dk='docker-compose'
+          alias dkpyman='docker-compose exec web python manage.py'
+          alias dkpsql='docker-compose exec db psql -U postgres'
+        # for manual ssh handling
+
+      - name: Build Docker image and test DB
+        run: |
+          docker-compose up -d --build
+          docker-compose exec web python manage.py check
+        # Legacy: _script/run.sh
+
+      - name: Allow bash script excecution
+        run: |
+          chmod +x `ls _script/*.sh`
+        # grant excecution for new bash script
