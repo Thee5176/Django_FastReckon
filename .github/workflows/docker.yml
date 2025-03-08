@@ -18,23 +18,18 @@ jobs:
 
       - name: Allow bash script excecution
         run: |
-          chmod +x `ls _script/*.sh`
-        # grant excecution for new bash script
-
-      - name: Set up Docker with script
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} 'bash -s' < ./_script/build.sh
-
-      
-      - name: Recreate .env file from Base64
-        run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} << 'EOF'
+          
+          cd FastReckon
+          chmod +x _script/*.sh
+          
+          # Run Script
+          bash ./_script/build.sh
+
+          # Decode .env file
           printf "%s" "${{ secrets.ENV_FILE_BASE64 }}" | base64 --decode > .env
-          EOF
 
-      - name: Build Docker image and test DB
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.OCI_INSTANCE_IP }} << 'EOF'
+          # Build docker container
           docker-compose up -d --build
           docker-compose exec web python manage.py check
           EOF
