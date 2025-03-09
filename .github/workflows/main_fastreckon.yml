@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12'      
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -32,7 +32,7 @@ jobs:
           pwd
           printf "%s" "${{ secrets.ENV_FILE_BASE64 }}" | base64 --decode > .env
       
-      - name: Docker Build
+      - name: Docker image and set up Django
         run: |
           ls -a
           chmod +x ./_script/*.sh
@@ -40,7 +40,7 @@ jobs:
           docker compose up -d
           ./_script/loaddata.sh
           docker compose exec web python manage.py check
-        # TODO: docker compose is not for production! -> Try Kubernetes
+      # TODO: docker compose is not for production! -> Try Kubernetes
 
       - name: Save Docker image as artifact
         run: |
