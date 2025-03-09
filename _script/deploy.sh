@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-cd FastReckon
-pwd
-ls -a
-
 # Backup
 echo "Running backup..."
 ./_script/backup.sh
