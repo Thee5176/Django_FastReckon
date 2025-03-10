@@ -37,17 +37,16 @@ jobs:
           ls -a
           chmod +x ./_script/*.sh
           docker build -t fastreckon:latest .
-          docker compose up -d
-          ./_script/loaddata.sh
-          docker compose exec web python manage.py check
-      # TODO: docker compose is not for production! -> Try Kubernetes
 
+      # TODO: docker compose is not for production! -> Try Kubernetes
+      
+      - name: Run tests
+        run: |
+          docker run --rm fastreckon:latest python manage.py test
       - name: Save Docker image as artifact
         run: |
           docker save fastreckon:latest -o fastreckon-image.tar
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
@@ -72,6 +71,12 @@ jobs:
         run: |
           docker load -i fastreckon-image.tar
       
+
+      - name: Migrate Django models
+        run: |
+          docker run --rm db python manage.py migrate
+          docker run --rm web python manage.py check
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
