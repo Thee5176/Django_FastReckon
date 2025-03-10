@@ -31,18 +31,21 @@ jobs:
         run: |
           pwd
           printf "%s" "${{ secrets.ENV_FILE_BASE64 }}" | base64 --decode > .env
-      
+          
       - name: Docker image and set up Django
         run: |
           ls -a
           chmod +x ./_script/*.sh
           docker build -t fastreckon:latest .
-
-      # TODO: docker compose is not for production! -> Try Kubernetes
-      
-      - name: Run tests
+        
+        # TODO: docker compose is not for production! -> Try Kubernetes
+        
+      - name: Run check
         run: |
-          docker run --rm fastreckon:latest python manage.py test
+          pwd
+          ls -a
+          docker run --rm fastreckon:latest python manage.py check
+
       - name: Save Docker image as artifact
         run: |
           docker save fastreckon:latest -o fastreckon-image.tar
