@@ -60,7 +60,7 @@ class AccountCreateView(LoginRequiredMixin, CreateView):
 class AccountUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Account
     template_name = "acc_codes/account_alter_form.html"
-    fields = ["name","root","sub_account","detailed_account","guideline","monthly_budget"]
+    fields = ["name","root","sub_account","detailed_account","guideline","monthly_budget","last_balance_check"]
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -89,6 +89,7 @@ class Account(models.Model):
     monthly_budget = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     #Meta
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name=("accounts"), on_delete=models.CASCADE)
+    last_balance_check = models.DateField()
     
     class Meta:
         ordering = ["root","sub_account","detailed_account"]
