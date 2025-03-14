@@ -56,7 +56,7 @@ class TransactionFormValidator:
             except Exception as e:
                 print("Error saving entry:", e)
 
-            # send list of account instance via session
+            #Send list of account instance via session
             self.request.session['account_pk_list'] = [entry.account.pk for entry in all_entries]
             print(f"Save session: {all_entries}")
         else:

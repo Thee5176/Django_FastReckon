@@ -13,11 +13,14 @@ class TransactionForm(forms.ModelForm):
                 attrs={
                     'type':'date',
                     'autocomplete':'off',
-                    'value':datetime.today().strftime('%Y-%m-%d')
                 },
             )
         }
-        
+    
+    def _init_(self, *args, **kwargs):
+        super()._init_(*args, **kwargs)
+        self.fields['date'].initial = datetime.now().date() 
+    
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry

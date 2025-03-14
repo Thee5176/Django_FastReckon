@@ -51,9 +51,28 @@ class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormVi
     form_class = TransactionForm        
     template_name = "transactions/transaction_alter_form.html"
     
+    def get_initial(self):
+        initial = super().get_initial()
+        slug_param = self.request.GET.get("slug")
+        if slug_param:
+            existing_transaction = get_object_or_404(Transaction, slug=slug_param)
+            initial.update({
+                'book': existing_transaction.book,
+                'description': existing_transaction.description,
+                'shop': existing_transaction.shop,
+                'has_receipt': existing_transaction.has_receipt,
+            })
+        return initial
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["entry_formset"] = EntryInlineFormSet(queryset=Entry.objects.none())
+        # Get the Entry initial from the URL
+        if self.request.GET.get("slug"):
+            query_string = Book.objects.get(slug=self.request.GET.get("slug"))
+        else:
+            query_string = Book.objects.none()
+            
+        context["entry_formset"] = EntryInlineFormSet(queryset=query_string)
         context["view_name"] = "Create"
         return context
         

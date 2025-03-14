@@ -13,6 +13,7 @@ from .views import (
 urlpatterns = [
     path("", TransactionListView.as_view(), name="transaction_list"),
     path("create/", TransactionCreateView.as_view(), name="transaction_create"),
+    path("create/with-base/<slug:slug>", TransactionCreateView.as_view(), name="transaction_create"),
     path("<slug:slug>", TransactionDetailView.as_view(), name="transaction_detail"),
     path("<slug:slug>/confirm/", TransactionConfirmView.as_view(), name="transaction_confirm"),
     path("<slug:slug>/update/", TransactionUpdateView.as_view(), name="transaction_update"),

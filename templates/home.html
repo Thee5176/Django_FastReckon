@@ -17,7 +17,8 @@
         <p class="lead">{% trans "And without clarity, your plans are just guesses." %}</p>
         <p class="lead">{% trans "Stop guessing through life and start records today." %}</p>
         <p>
-          <a class="btn btn-dark text-white btn-lg">
+          <a class="btn btn-dark text-white btn-lg"
+             href="{% url "transaction_create" %}">
             {% trans "Start Reckoning" %}
           </a>
         </p>
