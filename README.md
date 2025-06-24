@@ -28,18 +28,35 @@ To get started with FastReckon, follow these steps:
 
 2. **Set Credential Key for Environment files**
 
-   ```bash
-    nano .env
+   ```
+   DJANGO_SECRET_KEY='7i&$x%%lq3v-cebdutn2^$b@#k76d*e*m*-b%ksgnmns4-@!+5'
+   DJANGO_DEBUG='False'
+
+   POSTGRES_USER='fastreckon-admin'
+   POSTGRES_PASSWORD='password'
+   POSTGRES_DB='fastreckon'
+
+   SENDGRID_PASSWORD=''
+
+   SOCIALACCOUNT_GOOGLE_CLIENT_ID=''
+   SOCIALACCOUNT_GOOGLE_SECRET=''
+
+   SOCIALACCOUNT_GITHUB_CLIENT_ID=''
+   SOCIALACCOUNT_GITHUB_SECRET=''
    ```
 
 3. **Run SetUp Script**
 
    ```bash
-   chmod +x run.sh
-   ./run.sh
-   # fresh start use:run_wo_data.sh
+   docker-compose up -d --build
+   docker-compose exec web python manage.py migrate
+   docker-compose exec web python manage.py loaddata _testdata/backup.json
    ```
+4. **Visit Landing Page**
+localhost:8009
 
+- username: admin
+- password: Pass_1234
 ## 📈 Development
 
 ### Set up Phrase
