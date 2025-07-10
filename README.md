@@ -48,7 +48,8 @@ To get started with FastReckon, follow these steps:
 3. **Run SetUp Script**
 
    ```bash
-   docker-compose up -d --build
+   docker compose build
+   docker compose up -d
    docker-compose exec web python manage.py migrate
    docker-compose exec web python manage.py loaddata _testdata/backup.json
    ```
